@@ -1,0 +1,24 @@
+.signup {
+  text-align: left;
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+
+.signup-container {
+  background-color: #3e86c6;
+}
+
+.google-form {
+  height: 1200px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .google-form {
+    height: 1250px;
+    width: 100%;
+  }
+}
