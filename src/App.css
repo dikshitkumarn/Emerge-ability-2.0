@@ -1,13 +1,54 @@
+@import url("https://db.onlinewebfonts.com/c/82023538f68f7bb9cc6cd054af2a0aa8?family=Riffic");
 .App {
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
+  z-index: 1;
+  background-image: url("./assets/images/BackGround Images/BackgroundElements.png");
+  animation: slide 100s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -400vh;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .content {
   margin-top: 79px;
 }
 
+.slim-description {
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.heading {
+  font-size: 60px !important;
+  font-weight: 800;
+  font-family: "Riffic", sans-serif !important;
+}
+
+.mini-heading {
+  font-size: 30px !important;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif !important;
+}
+
 @media (max-width: 700px) {
+  .heading {
+    font-size: 38px !important;
+  }
+  .mini-heading {
+    font-size: 25px !important;
+  }
   .content {
     margin-top: 50px;
   }
@@ -33,6 +74,10 @@
   padding-bottom: 150px;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 @media (max-width: 600px) {
   h3 {
     font-size: 19px !important;
@@ -42,18 +87,26 @@
   }
 }
 
-.heading {
-  /* color: #3e86c6; */
-  color: #cc5417;
-  padding-bottom: 20px;
+p {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: rgba(51, 50, 50, 0.83);
+  line-height: 30px;
 }
 
-.heading h3 {
-  font-weight: bold;
+.light-weight {
+  font-weight: lighter !important;
 }
 
 .green {
   color: #8faf3d;
+}
+.red {
+  color: #fd2955;
+}
+
+.dark-red {
+  color: #84071d;
 }
 
 .dark {
@@ -61,7 +114,15 @@
 }
 
 .blue {
-  color: #3e86c6;
+  color: #3e92c6;
+}
+
+.yellow {
+  color: #fee67d;
+}
+
+.sky-blue {
+  color: #3ebfc6;
 }
 
 .dark-blue {
@@ -70,6 +131,22 @@
 
 .orange {
   color: #cc5417;
+}
+.light-orange {
+  color: #ce5619b6;
+}
+.faded-orange {
+  color: #fca674;
+}
+.faded-pink {
+  color: #ffd4dd;
+}
+.violet {
+  color: #7265d9;
+}
+
+.violet-fade {
+  color: #7354a4;
 }
 
 .zero {
@@ -127,12 +204,20 @@ label {
   background-color: #cc5417;
 }
 
+.bg-faded-orange {
+  background-color: #fa6a18;
+}
+
 .bg-yellow {
   background-color: #ffc16a;
 }
 
 .bg-pale-yellow {
   background-color: #ffe5b0;
+}
+
+.bg-red {
+  background-color: #fd2655d0;
 }
 
 .bg-green {
@@ -285,4 +370,18 @@ label {
 /* font sizes */
 .font-size-small {
   font-size: small;
+}
+
+@media (max-width: 600px) {
+  .responsive-small {
+    font-size: x-small !important;
+  }
+}
+
+.hide-scroll-bar {
+  display: block;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none !important;
 }

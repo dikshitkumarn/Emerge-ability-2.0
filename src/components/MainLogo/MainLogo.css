@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,900&display=swap");
+.one {
+  width: 100vw;
+  height: 130vh;
+}
+
+.main-logo-heading {
+  position: absolute;
+  top: 100px;
+  left: 10%;
+}
+
+@keyframes grow-top {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 150px;
+  }
+}
+
+.logo {
+  background-image: url("../../assets/images/logo/top-logo.png");
+  width: 180px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 95% 95%;
+  animation: grow-top 1s forwards;
+}
+
+.rainbow {
+  background-image: url("../../assets/images/BackGround\ Images/20127.png");
+  width: 90vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: grow-right 1s forwards;
+}
+
+@keyframes grow-right {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .rainbow {
+    background-size: cover;
+    width: 100vw !important;
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50vh;
+  left: -160px;
+  transform: rotate(270deg);
+  z-index: 100;
+  animation: from-left 1s forwards;
+}
+
+@keyframes from-left {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: -160px;
+  }
+}
+
+.social-links p {
+  margin-left: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .main-logo-heading {
+    top: 50px;
+    left: 100px;
+  }
+  .one {
+    height: 100vh;
+  }
+}

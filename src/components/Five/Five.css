@@ -1,0 +1,82 @@
+.controlled {
+  max-width: 750px;
+  margin-left: 100px;
+  transform: rotate(5deg);
+}
+
+@font-face {
+  font-family: "Pistilli-Roman";
+  src: url("../../assets/Font/Pistilli-Roman\ \(numbers\)/Pistilli-Roman.otf")
+    format("opentype");
+}
+
+.number {
+  font-family: "Pistilli-Roman";
+  font-size: 200px !important;
+}
+
+.each-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.para {
+  max-width: 350px;
+  padding: 10px;
+}
+
+.empty-div {
+  width: 200px;
+}
+
+.empty-div-2 {
+  width: 50px;
+}
+
+.part-1 {
+  width: 120vw;
+  margin-left: -40px;
+  transform: rotate(5deg);
+  margin-top: 60px;
+}
+
+.part-3 {
+  width: 120vw;
+  margin-left: -40px;
+  transform: rotate(-5deg);
+  margin-top: 60px;
+}
+
+@media (max-width: 700px) {
+  .empty-div,
+  .empty-div-2 {
+    display: none;
+  }
+  .controlled {
+    margin: auto;
+    padding: 10px;
+  }
+  .controlled h1 {
+    font-size: 20px !important;
+  }
+  .each-row {
+    justify-content: left;
+    margin-left: 100px !important;
+  }
+  .part-3,
+  .part-1 {
+    margin-left: -100px;
+    margin-top: 10px;
+    width: 150vw;
+  }
+}
+
+.no-rotate {
+  transform: rotate(-5deg);
+}
+
+.no-rotate-2 {
+  transform: rotate(5deg);
+}
