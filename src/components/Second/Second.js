@@ -11,7 +11,7 @@ const Second = (props) => {
           md="12"
           sm="12"
           xs="12"
-          className="d-flex justify-content-center d-flex justify-content-center"
+          className="d-flex justify-content-center"
           style={{ maxHeight: 300 }}
         >
           <div className="slim-description text-left">

@@ -35,6 +35,34 @@
   font-weight: 800;
   font-family: "Riffic", sans-serif !important;
 }
+.heading-with-background {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+}
+.heading-with-background h1 {
+  font-size: 120px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 800;
+  white-space: nowrap;
+  opacity: 0.1;
+}
+
+.heading-with-background h1,
+.heading-with-background h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@font-face {
+  font-family: "Riffic";
+  src: url("./assets/Font/Riffic\(heading\)/RifficFree-Bold.ttf")
+    format("truetype");
+}
 
 .mini-heading {
   font-size: 30px !important;
@@ -42,9 +70,15 @@
   font-family: "Poppins", sans-serif !important;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1100px) and (min-width: 701px) {
+  .heading-with-background h1 {
+    font-size: 80px !important;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 501px) {
   .heading {
-    font-size: 38px !important;
+    font-size: 30px !important;
   }
   .mini-heading {
     font-size: 25px !important;
@@ -52,10 +86,44 @@
   .content {
     margin-top: 50px;
   }
+  .heading-with-background h1 {
+    font-size: 60px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 30px !important;
+  }
+  .mini-heading {
+    font-size: 25px !important;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  .heading-with-background h1 {
+    font-size: 60px !important;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .text-left {
   text-align: left;
+}
+.margin-auto {
+  margin: auto;
+}
+.shadow {
+  text-shadow: 2px 2px 2px 2px black;
+  color: white !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  /* color: rgb(66, 65, 65) !important; */
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .give-top-space {
@@ -101,6 +169,12 @@ p {
 .green {
   color: #8faf3d;
 }
+.light-green {
+  color: #7ac054;
+}
+.yellowgreen {
+  color: yellowgreen;
+}
 .red {
   color: #fd2955;
 }
@@ -141,12 +215,18 @@ p {
 .faded-pink {
   color: #ffd4dd;
 }
+.pink {
+  color: #e36df9;
+}
 .violet {
   color: #7265d9;
 }
 
 .violet-fade {
   color: #7354a4;
+}
+.purple {
+  color: #a356ff;
 }
 
 .zero {

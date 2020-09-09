@@ -15,10 +15,10 @@ const Fourth = (props) => {
           md="12"
           sm="12"
           xs="12"
-          className="d-flex justify-content-end"
-          style={{ maxHeight: 300 }}
+          className="d-flex justify-content-center"
+          style={{ maxHeight: 300, position: "relative" }}
         >
-          <div className="slim-description text-left">
+          <div className="slim-description text-left flexy">
             <h1 className="mini-heading sky-blue">
               “Every child deserves a future. ”
             </h1>

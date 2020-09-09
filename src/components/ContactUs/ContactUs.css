@@ -1,0 +1,36 @@
+.emp {
+  width: 20%;
+}
+
+.contact-us-para {
+  max-width: 300px !important;
+  margin-top: 50px;
+}
+
+.contact-us-number {
+  font-size: 200px !important;
+  font-family: "Pistilli-Roman";
+}
+
+@font-face {
+  font-family: "Pistilli-Roman";
+  src: url("../../assets/Font/Pistilli-Roman\ \(numbers\)/Pistilli-Roman.otf")
+    format("opentype");
+}
+
+@media (max-width: 700px) {
+  .contact-us-number {
+    font-size: 70px !important;
+  }
+  .each-contact-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .emp {
+    display: none;
+  }
+  .contact-us-para {
+    margin-top: 0;
+  }
+}

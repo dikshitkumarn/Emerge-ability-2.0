@@ -1,0 +1,48 @@
+.aboutus-image {
+  position: relative;
+  width: 600px;
+  margin: auto;
+  height: 700px;
+  background-image: url("../../assets/images/Chidren/11.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aboutus-image h1 {
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.about-us-content {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}
+
+@media (max-width: 500px) {
+  .aboutus-image h1 {
+    display: none;
+  }
+  .about-us-content {
+    position: relative !important;
+    top: 0;
+  }
+  .aboutus-image {
+    width: 90%;
+    height: 340px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 501px) {
+  .about-us-content {
+    position: relative !important;
+    top: 0;
+  }
+  .aboutus-image {
+    width: 90%;
+    height: 340px;
+  }
+}

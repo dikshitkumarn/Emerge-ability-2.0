@@ -20,26 +20,56 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  /* margin-left: 50px; */
+  max-width: 100vw;
 }
-
+.odd {
+  justify-content: flex-end;
+}
 .para {
-  max-width: 350px;
+  max-width: 600px;
   padding: 10px;
 }
 
 .empty-div {
+  width: 150px;
+  height: 150px;
+  background-image: url("../../assets/images/Chidren/brain.png");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-color: transparent !important;
+  margin-right: 20px;
+}
+.brain-2 {
+  background-image: url("../../assets/images/Chidren/brain-2.png");
+}
+.brain-3 {
+  background-image: url("../../assets/images/Chidren/brain-3.png") !important;
+}
+.odd-part .empty-div {
+  background-image: url("../../assets/images/Chidren/red-brain.png");
+}
+/* .empty-div-img {
   width: 200px;
-}
-
-.empty-div-2 {
-  width: 50px;
-}
+  height: 200px;
+  color: red;
+  filter: grayscale(100%);
+  filter: saturate(3);
+  filter: contrast(160%);
+  filter: brightness(0.25);
+  filter: blur(3px);
+  filter: invert(100%);
+  filter: sepia(100%);
+  filter: hue-rotate(180deg);
+  filter: opacity(50%);
+} */
 
 .part-1 {
   width: 120vw;
   margin-left: -40px;
   transform: rotate(5deg);
   margin-top: 60px;
+  min-height: fit-content;
 }
 
 .part-3 {
@@ -47,12 +77,64 @@
   margin-left: -40px;
   transform: rotate(-5deg);
   margin-top: 60px;
+  min-height: fit-content;
+}
+
+@media (max-width: 1050px) and (min-width: 701px) {
+  .empty-div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .odd {
+    flex-direction: column-reverse;
+  }
+  .number {
+    font-size: 70px !important;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .controlled {
+    margin: auto;
+    padding: 10px;
+  }
+  .para {
+    max-width: 550px;
+  }
+  .controlled h1 {
+    font-size: 20px !important;
+  }
+  .each-row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 100px !important;
+    position: relative;
+  }
+  .part-3,
+  .part-1 {
+    margin-left: -100px;
+    margin-top: 10px;
+    width: 150vw;
+    padding: 100px 10px;
+  }
 }
 
 @media (max-width: 700px) {
-  .empty-div,
-  .empty-div-2 {
-    display: none;
+  .empty-div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .number {
+    font-size: 70px !important;
+    position: relative;
+    left: 0;
+    top: 0;
   }
   .controlled {
     margin: auto;
@@ -62,14 +144,20 @@
     font-size: 20px !important;
   }
   .each-row {
-    justify-content: left;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin-left: 100px !important;
+    position: relative;
+  }
+  .odd {
+    flex-direction: column-reverse;
   }
   .part-3,
   .part-1 {
     margin-left: -100px;
     margin-top: 10px;
     width: 150vw;
+    padding: 100px 10px;
   }
 }
 

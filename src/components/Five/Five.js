@@ -28,14 +28,17 @@ const Five = (props) => {
                   impulsive behaviors.
                 </p>
               </div>
-              <div className="empty-div"></div>
+              <div className="empty-div">
+                {/* <img
+                  src={require("../../assets/images/Chidren/brain.png")}
+                  alt=" "
+                  className="empty-div-img"
+                /> */}
+              </div>
             </div>
 
-            <div className="each-row">
-              <div className="empty-div"></div>
-              <div style={{ margin: 10 }}>
-                <h1 className="number light-orange">02</h1>
-              </div>
+            <div className="each-row odd">
+              <div className="empty-div brain-2"></div>
               <div className="para text-left">
                 <h5 className="bold yellow">Autism Spectrum Conditions</h5>
                 <p className="bold white light-weight">
@@ -45,10 +48,12 @@ const Five = (props) => {
                   communication.
                 </p>
               </div>
+              <div style={{ margin: 10 }}>
+                <h1 className="number light-orange">02</h1>
+              </div>
             </div>
 
             <div className="each-row">
-              <div className="empty-div-2"></div>
               <div style={{ margin: 10 }}>
                 <h1 className="number light-orange">03</h1>
               </div>
@@ -62,11 +67,12 @@ const Five = (props) => {
                   language.
                 </p>
               </div>
+              <div className="empty-div"></div>
             </div>
           </div>
         </div>
 
-        <div className="part-1">
+        <div className="part-1 odd-part">
           <div className="no-rotate">
             <div className="each-row">
               <div style={{ margin: 10 }}>
@@ -82,24 +88,23 @@ const Five = (props) => {
               <div className="empty-div"></div>
             </div>
 
-            <div className="each-row">
+            <div className="each-row odd">
               <div className="empty-div"></div>
-              <div style={{ margin: 10 }}>
-                <h1 className="number faded-pink">05</h1>
-              </div>
               <div className="para text-left">
                 <h5 className="bold sky-blue">Dyscalculia</h5>
                 <p className="bold">
                   Dyscalculia is a math learning disability that impairs an
                   individual's ability to learn number-related concepts, peorm
                   accurate math calculations, reason and problem solve, and
-                  peorm other basic math skills
+                  peorm other basic math skills.
                 </p>
+              </div>
+              <div style={{ margin: 10 }}>
+                <h1 className="number faded-pink">05</h1>
               </div>
             </div>
 
             <div className="each-row">
-              <div className="empty-div-2"></div>
               <div style={{ margin: 10 }}>
                 <h1 className="number faded-pink">06</h1>
               </div>
@@ -110,6 +115,7 @@ const Five = (props) => {
                   06 impairs writing ability and ne motor skills.
                 </p>
               </div>
+              <div className="empty-div brain-3"></div>
             </div>
           </div>
         </div>
@@ -133,11 +139,8 @@ const Five = (props) => {
               <div className="empty-div"></div>
             </div>
 
-            <div className="each-row">
-              <div className="empty-div"></div>
-              <div style={{ margin: 10 }}>
-                <h1 className="number faded-orange">08</h1>
-              </div>
+            <div className="each-row odd">
+              <div className="empty-div brain-2"></div>
               <div className="para text-left">
                 <h5 className="bold dark-red">Tourette’s Syndrome</h5>
                 <p className="bold">
@@ -146,6 +149,9 @@ const Five = (props) => {
                   that they can't control. For example, someone with Touree's
                   might blink or clear their throat over and over again.
                 </p>
+              </div>
+              <div style={{ margin: 10 }}>
+                <h1 className="number faded-orange">08</h1>
               </div>
             </div>
           </div>

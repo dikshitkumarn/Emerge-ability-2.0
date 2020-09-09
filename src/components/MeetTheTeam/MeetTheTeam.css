@@ -1,0 +1,43 @@
+.MeetTheTeam {
+  min-height: 1000px;
+  position: relative;
+}
+
+.adjust-team-1 {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+
+.adjust-team-2 {
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1500px) {
+  .MeetTheTeam {
+    min-height: fit-content;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+
+  .adjust-team-1 {
+    position: relative !important;
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .adjust-team-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    left: 0;
+  }
+}

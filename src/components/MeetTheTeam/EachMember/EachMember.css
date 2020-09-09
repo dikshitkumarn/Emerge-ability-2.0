@@ -1,0 +1,65 @@
+.member-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.each-member-content {
+  position: relative;
+}
+
+.email {
+  cursor: pointer;
+}
+
+.member-image {
+  width: 300px;
+  height: 340px;
+}
+
+.member-container {
+  max-width: 350px;
+}
+
+@media (max-width: 500px) {
+  .member-container {
+    width: 280px;
+  }
+  .member-image {
+    width: 240px;
+  }
+  .name {
+    white-space: inherit !important;
+  }
+  .social-cont {
+    left: -15px !important;
+  }
+}
+
+.name {
+  font-weight: bolder !important;
+  font-size: 23px !important;
+  color: black;
+}
+
+.badge {
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -30px;
+  top: 40px;
+  z-index: 10;
+}
+.badge p {
+  font-size: 10px !important;
+}
+
+.adjust {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-cont {
+  position: absolute;
+  top: 235px;
+  left: -20px;
+}

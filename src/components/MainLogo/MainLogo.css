@@ -90,8 +90,13 @@
 
 @media (max-width: 600px) {
   .main-logo-heading {
-    top: 50px;
-    left: 100px;
+    top: 100px;
+    left: 70px;
+  }
+  .main-logo-heading .logo {
+    width: 90px;
+    min-height: 50px;
+    max-height: 80px;
   }
   .one {
     height: 100vh;
