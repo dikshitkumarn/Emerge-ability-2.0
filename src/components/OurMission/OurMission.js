@@ -1,6 +1,7 @@
 import React from "react";
 import "./OurMission.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const OurMission = (props) => {
   return (
@@ -16,6 +17,16 @@ const OurMission = (props) => {
               Brain
               <br /> Video
             </h1>
+            <div className="our-mission-button">
+              <MagneticButton
+                id="our-mission-magnetic-button"
+                name="P L A Y &nbsp; V I D E O"
+                onClick={() => {}}
+                align="right"
+                width="200px"
+                height="200px"
+              />
+            </div>
           </div>
         </Col>
         <Col

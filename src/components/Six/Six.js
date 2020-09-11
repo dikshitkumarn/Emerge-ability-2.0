@@ -1,10 +1,11 @@
 import React from "react";
 import "./Six.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Six = (props) => {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <br />
       <br />
       <br />
@@ -26,7 +27,7 @@ const Six = (props) => {
           xs="12"
           className="d-flex justify-content-center d-flex justify-content-center"
         >
-          <div className="slim-description text-left">
+          <div className="slim-description text-left six-align">
             <h1 className="mini-heading purple">
               “Neurodiversity it’s not a symptom, it’s a feature.. ”
             </h1>
@@ -42,6 +43,16 @@ const Six = (props) => {
           </div>
         </Col>
       </Row>
+      <div className="six-button">
+        <MagneticButton
+          id="six-magnetic-button"
+          name="K E E P &nbsp; S C R O L L I N G"
+          onClick={() => {}}
+          rotate="20deg"
+          width="150px"
+          height="150px"
+        />
+      </div>
     </div>
   );
 };

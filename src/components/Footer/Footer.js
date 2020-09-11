@@ -2,6 +2,10 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = (props) => {
+  const gotoMyWebsite = () => {
+    window.open("http://www.dikshit.live", "_blank");
+  };
+
   return (
     <div className="Footer">
       <img
@@ -15,7 +19,10 @@ const Footer = (props) => {
         <i className="fa fa-facebook shadow" />
       </div>
       <p className="copyright white light-weight">
-        &copy; 2020 All Rights Reserved to EmergeAbility. Developed by Dikshit
+        &copy; 2020 All Rights Reserved to EmergeAbility. Developed by{" "}
+        <span style={{ cursor: "pointer" }} onClick={gotoMyWebsite}>
+          Dikshit
+        </span>
       </p>
     </div>
   );

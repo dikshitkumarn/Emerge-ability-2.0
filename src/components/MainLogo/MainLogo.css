@@ -2,6 +2,8 @@
 .one {
   width: 100vw;
   height: 130vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .main-logo-heading {
@@ -61,13 +63,13 @@
 .social-links {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   width: fit-content;
   height: fit-content;
   position: absolute;
   top: 50vh;
-  left: -160px;
+  left: -140px;
   transform: rotate(270deg);
   z-index: 100;
   animation: from-left 1s forwards;
@@ -78,13 +80,20 @@
     left: -100vw;
   }
   100% {
-    left: -160px;
+    left: -140px;
   }
 }
 
+.button-container {
+  position: absolute;
+  bottom: 230px;
+  right: 30%;
+  transform: translateX(-30%);
+}
+
 .social-links p {
-  margin-left: 50px;
-  margin-top: 0;
+  margin-left: 30px;
+  margin-top: -10px;
   margin-bottom: 0;
 }
 
@@ -101,4 +110,43 @@
   .one {
     height: 100vh;
   }
+  .button-container {
+    bottom: 100px;
+  }
+  .social-links {
+    left: -110px !important;
+  }
+  .social-links div {
+    margin-left: 20px;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+}
+
+.hamburgur-container {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.green-hover:hover {
+  transition: all 0.3s ease-out;
+  color: #77bf51 !important;
+}
+
+.red-hover:hover {
+  transition: all 0.3s ease-out;
+  color: #fe5578 !important;
+}
+
+.yellow-hover:hover {
+  transition: all 0.3s ease-out;
+  color: #ddc736 !important;
+}
+
+.social-icons-main {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
 }

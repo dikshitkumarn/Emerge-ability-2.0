@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b7f72c6f.chunk.css",
-    "main.js": "/static/js/main.3d9613d9.chunk.js",
-    "main.js.map": "/static/js/main.3d9613d9.chunk.js.map",
+    "main.css": "/static/css/main.da817d7f.chunk.css",
+    "main.js": "/static/js/main.7bcd35b3.chunk.js",
+    "main.js.map": "/static/js/main.7bcd35b3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5c7ef8c4.js",
     "runtime-main.js.map": "/static/js/runtime-main.5c7ef8c4.js.map",
     "static/css/2.49c38c8a.chunk.css": "/static/css/2.49c38c8a.chunk.css",
-    "static/js/2.956f226b.chunk.js": "/static/js/2.956f226b.chunk.js",
-    "static/js/2.956f226b.chunk.js.map": "/static/js/2.956f226b.chunk.js.map",
+    "static/js/2.468db452.chunk.js": "/static/js/2.468db452.chunk.js",
+    "static/js/2.468db452.chunk.js.map": "/static/js/2.468db452.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.777bfabf9d4285ece2a6f8847546e4c3.js": "/precache-manifest.777bfabf9d4285ece2a6f8847546e4c3.js",
+    "precache-manifest.2f1a5fb615a2b5a31b2e9ed42a3849cd.js": "/precache-manifest.2f1a5fb615a2b5a31b2e9ed42a3849cd.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.49c38c8a.chunk.css.map": "/static/css/2.49c38c8a.chunk.css.map",
-    "static/css/main.b7f72c6f.chunk.css.map": "/static/css/main.b7f72c6f.chunk.css.map",
-    "static/js/2.956f226b.chunk.js.LICENSE.txt": "/static/js/2.956f226b.chunk.js.LICENSE.txt",
+    "static/css/main.da817d7f.chunk.css.map": "/static/css/main.da817d7f.chunk.css.map",
+    "static/js/2.468db452.chunk.js.LICENSE.txt": "/static/js/2.468db452.chunk.js.LICENSE.txt",
     "static/media/Second.css": "/static/media/2.43d9b98d.jpg",
     "static/media/Seven.css": "/static/media/9.a45f58d1.jpg",
     "static/media/AboutUs.css": "/static/media/11.bfd2ed78.jpg",
@@ -23,23 +23,23 @@
     "static/media/17.jpg": "/static/media/17.9ae594b6.jpg",
     "static/media/18.jpg": "/static/media/18.e23fe3bf.jpg",
     "static/media/Projects.css": "/static/media/20.52a76256.jpg",
-    "static/media/MainLogo.css": "/static/media/top-logo.3a4aa0ce.png",
+    "static/media/SideBar.css": "/static/media/20127.2d0cdbcb.png",
     "static/media/Third.css": "/static/media/4.d1518c00.jpg",
     "static/media/Fourth.css": "/static/media/6.e0d54566.jpg",
     "static/media/Six.css": "/static/media/8.c5ab5fa0.jpg",
     "static/media/App.css": "/static/media/RifficFree-Bold.a1caf164.ttf",
     "static/media/ContactUs.css": "/static/media/Pistilli-Roman.4e3824d5.otf",
     "static/media/index.css": "/static/media/Product Sans Regular.eae9c18c.ttf",
-    "static/media/Five.css": "/static/media/red-brain.90a839f0.png",
     "static/media/email.png": "/static/media/email.fcc31763.png",
     "static/media/Footer.css": "/static/media/footer-bg.df6086b0.png",
-    "static/media/footer-logo.png": "/static/media/footer-logo.646610df.png"
+    "static/media/footer-logo.png": "/static/media/footer-logo.646610df.png",
+    "static/media/MainLogo.css": "/static/media/top-logo.3a4aa0ce.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5c7ef8c4.js",
     "static/css/2.49c38c8a.chunk.css",
-    "static/js/2.956f226b.chunk.js",
-    "static/css/main.b7f72c6f.chunk.css",
-    "static/js/main.3d9613d9.chunk.js"
+    "static/js/2.468db452.chunk.js",
+    "static/css/main.da817d7f.chunk.css",
+    "static/js/main.7bcd35b3.chunk.js"
   ]
 }

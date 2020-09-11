@@ -5,10 +5,17 @@ body {
   /* font-family: "arial", sans-serif !important; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-x: hidden !important; */
+  /* max-width: 100vw !important; */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -20,8 +27,4 @@ html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-html {
-  scroll-behavior: smooth;
 }

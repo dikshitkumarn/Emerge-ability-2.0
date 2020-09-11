@@ -37,8 +37,14 @@
 
 .WhatWeDo-content-1 div {
   margin-top: 100px;
-  width: 500px;
+  width: 550px;
   margin-left: 100px;
+}
+
+.WhatWeDo-content-1 div p,
+.WhatWeDo-content-2 div p {
+  font-size: 27px !important;
+  line-height: 45px !important;
 }
 
 .WhatWeDo-content-2 div {

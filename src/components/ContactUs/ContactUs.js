@@ -1,9 +1,10 @@
 import React from "react";
 import "./ContactUs.css";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const ContactUs = (props) => {
   return (
-    <div>
+    <div id="contact" style={{ position: "relative" }}>
       <div className="heading-with-background">
         <h1 className="pink">Contact Us</h1>
         <h2 className="mini-heading pink">Contact Us</h2>
@@ -16,9 +17,22 @@ const ContactUs = (props) => {
           Feel free to drop an email for further communications
         </h1>
       </div>
+      <div className="contactus-button">
+        <MagneticButton
+          id="contactus-magnetic-button"
+          name="C O N T A C T &nbsp;&nbsp; T O &nbsp; U S"
+          rotate="-30deg"
+          onClick={() => {}}
+          align="right"
+          width="150px"
+          height="150px"
+          color="pink"
+          align="center"
+        />
+      </div>
       <br />
       <br />
-      <div>
+      {/* <div>
         <div className="each-contact-row d-flex justify-content-left">
           <div className="emp"></div>
           <div style={{ margin: 10 }}>
@@ -66,7 +80,7 @@ const ContactUs = (props) => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

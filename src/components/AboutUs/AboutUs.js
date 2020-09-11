@@ -1,10 +1,11 @@
 import React from "react";
 import "./AboutUs.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const AboutUs = (props) => {
   return (
-    <div className="about-us">
+    <div className="about-us" id="about">
       <div className="heading-with-background">
         <h1 className="red">About Us</h1>
         <h2 className="mini-heading red">About Us</h2>
@@ -35,6 +36,16 @@ const AboutUs = (props) => {
               Rubix
               <br /> Video
             </h1>
+            <div className="aboutus-button">
+              <MagneticButton
+                id="aboutus-magnetic-button"
+                name="P L A Y &nbsp; V I D E O"
+                onClick={() => {}}
+                align="right"
+                width="200px"
+                height="200px"
+              />
+            </div>
           </div>
         </Col>
       </Row>

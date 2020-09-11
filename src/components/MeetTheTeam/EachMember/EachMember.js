@@ -12,7 +12,7 @@ const EachMember = (props) => {
         </div>
         <div className="each-member-content text-left">
           <div style={{ position: "relative" }}>
-            <img src={props.image} className="member-image" />
+            <img src={props.image} alt=" " className="member-image" />
           </div>
           <p className="name"> {props.name}</p>
           <p> {props.job} </p>

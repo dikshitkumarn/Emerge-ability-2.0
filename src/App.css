@@ -1,10 +1,31 @@
 @import url("https://db.onlinewebfonts.com/c/82023538f68f7bb9cc6cd054af2a0aa8?family=Riffic");
 .App {
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden !important;
   z-index: 1;
   background-image: url("./assets/images/BackGround Images/BackgroundElements.png");
   animation: slide 100s linear infinite;
+}
+
+.scroll-to-top-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(211, 220, 220);
+  opacity: 0.75;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  color: white;
+}
+
+.scroll-to-top-button:hover {
+  opacity: 1;
 }
 
 @keyframes slide {
@@ -31,7 +52,7 @@
 }
 
 .heading {
-  font-size: 60px !important;
+  font-size: 100px !important;
   font-weight: 800;
   font-family: "Riffic", sans-serif !important;
 }
@@ -156,8 +177,8 @@
 }
 
 p {
-  font-size: 18px !important;
-  font-weight: 600 !important;
+  font-size: 18px;
+  font-weight: 600;
   color: rgba(51, 50, 50, 0.83);
   line-height: 30px;
 }
@@ -186,7 +207,6 @@ p {
 .dark {
   color: #1d2434 !important;
 }
-
 .blue {
   color: #3e92c6;
 }
@@ -210,7 +230,7 @@ p {
   color: #ce5619b6;
 }
 .faded-orange {
-  color: #fca674;
+  color: #eca67d;
 }
 .faded-pink {
   color: #ffd4dd;

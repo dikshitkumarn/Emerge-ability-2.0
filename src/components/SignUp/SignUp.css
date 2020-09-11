@@ -59,9 +59,20 @@
   .textbox-label {
     font-size: 20px !important;
   }
+  .signup-button {
+    bottom: 10px !important;
+    position: relative !important;
+    right: 0 !important;
+  }
 }
 
 .select-container {
   width: 80vw;
   margin: auto;
+}
+
+.signup-button {
+  position: absolute;
+  bottom: -150px;
+  right: 200px;
 }

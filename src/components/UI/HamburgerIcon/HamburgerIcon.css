@@ -1,0 +1,54 @@
+.HamburgerIcon {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transition: all 1s ease-out;
+  cursor: pointer;
+}
+
+.HamburgerIcon div:hover {
+  animation: move-collapse 1s forwards;
+}
+
+@keyframes move-collapse {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.HamburgerIcon div {
+  width: 50px;
+  height: 5px;
+  background-color: white !important;
+  margin: 5px;
+}
+
+.HamburgerIcon :nth-child(odd) {
+  width: 25px;
+}
+
+.HamburgerIcon .last {
+  margin-left: 25px;
+}
+
+@media (max-width: 700px) {
+  .HamburgerIcon div {
+    background-color: black !important;
+    width: 40px;
+    height: 3px;
+    margin: 3px;
+  }
+  .HamburgerIcon :nth-child(odd) {
+    width: 20px;
+  }
+
+  .HamburgerIcon .last {
+    margin-left: 20px;
+  }
+}

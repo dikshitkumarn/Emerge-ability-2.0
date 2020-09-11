@@ -21,7 +21,7 @@ const Third = (props) => {
           xs="12"
           className="d-flex justify-content-center d-flex justify-content-center"
         >
-          <div className="slim-description text-left">
+          <div className="slim-description text-left six-align">
             <h1 className="mini-heading red">“I am different, not less”</h1>
             <p className="bold">
               75 million school-aged children and youth are in desperate need of

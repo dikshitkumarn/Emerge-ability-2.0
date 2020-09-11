@@ -5,11 +5,11 @@
 }
 
 .img-7 {
-  width: 480px;
+  width: 450px;
   height: 400px;
   position: absolute;
   top: 60px;
-  right: 30px;
+  right: 50px;
   background-image: url("../../assets/images/Chidren/7.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -17,12 +17,12 @@
 }
 
 .img-7-shade {
-  width: 480px;
+  width: 450px;
   height: 400px;
   position: absolute;
   z-index: 1;
   top: 60px;
-  right: 30px;
+  right: 50px;
   background-color: #a356ff;
   background-position: center center;
   opacity: 0.25;
@@ -38,7 +38,7 @@
   height: 200px;
   position: absolute;
   top: 480px;
-  left: 300px;
+  right: 255px;
   background-image: url("../../assets/images/Chidren/8.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -51,7 +51,7 @@
   position: absolute;
   z-index: 1;
   top: 480px;
-  left: 300px;
+  right: 255px;
   background-color: #a356ff;
   background-position: center center;
   opacity: 0.25;
@@ -75,6 +75,9 @@
     width: 250px;
     height: 170px;
   }
+  .six-button {
+    bottom: -50px !important;
+  }
 }
 
 @media (max-width: 991px) and (min-width: 500px) {
@@ -96,5 +99,18 @@
   .img-8,
   .img-8-shade {
     left: 10%;
+  }
+}
+
+.six-button {
+  position: absolute;
+  right: 30%;
+  transform: translateX(-30%);
+  bottom: 20px;
+}
+
+@media (min-width: 1050px) {
+  .six-align {
+    margin-left: -200px !important;
   }
 }

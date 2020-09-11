@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e1ba3599cdcb701d9493fec5d7747fd",
+    "revision": "c2648b1abc816e22ce3929f07673edfb",
     "url": "/index.html"
   },
   {
-    "revision": "e7010441f497c841d1bf",
+    "revision": "bde8e84b7e850b0d1cb7",
     "url": "/static/css/2.49c38c8a.chunk.css"
   },
   {
-    "revision": "de79d9a50469a0894683",
-    "url": "/static/css/main.b7f72c6f.chunk.css"
+    "revision": "45de3d515c9b4378b930",
+    "url": "/static/css/main.da817d7f.chunk.css"
   },
   {
-    "revision": "e7010441f497c841d1bf",
-    "url": "/static/js/2.956f226b.chunk.js"
+    "revision": "bde8e84b7e850b0d1cb7",
+    "url": "/static/js/2.468db452.chunk.js"
   },
   {
-    "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/static/js/2.956f226b.chunk.js.LICENSE.txt"
+    "revision": "0a5ae5ec143aed3a385f84ce8bb73d2e",
+    "url": "/static/js/2.468db452.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de79d9a50469a0894683",
-    "url": "/static/js/main.3d9613d9.chunk.js"
+    "revision": "45de3d515c9b4378b930",
+    "url": "/static/js/main.7bcd35b3.chunk.js"
   },
   {
     "revision": "d23e04e4217e87605958",
@@ -128,18 +128,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/RifficFree-Bold.a1caf164.ttf"
   },
   {
-    "revision": "ccf473534a4b71333c2094954641a00c",
-    "url": "/static/media/brain-2.ccf47353.png"
-  },
-  {
-    "revision": "022f12e840cac0e432a41b9462283a55",
-    "url": "/static/media/brain-3.022f12e8.png"
-  },
-  {
-    "revision": "eda83510c2ddbb5e9aa4c90593fe9121",
-    "url": "/static/media/brain.eda83510.png"
-  },
-  {
     "revision": "fcc317634b5b00a21c516e8482c0f597",
     "url": "/static/media/email.fcc31763.png"
   },
@@ -150,10 +138,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "646610df148b2571ee8db6fe06d8a4a6",
     "url": "/static/media/footer-logo.646610df.png"
-  },
-  {
-    "revision": "90a839f0e17708bbbccc7276df9c55d4",
-    "url": "/static/media/red-brain.90a839f0.png"
   },
   {
     "revision": "3a4aa0ce7b2b718bd1e6d8c3bb907edc",

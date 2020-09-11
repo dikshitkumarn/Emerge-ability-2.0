@@ -1,16 +1,17 @@
 import React from "react";
 import "./Projects.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Projects = (props) => {
   return (
-    <div>
+    <div id="project">
       <div className="heading-with-background">
         <h1 className="light-orange">Projects</h1>
         <h2 className="orange mini-heading">Projects</h2>
       </div>
       <div className="projects-content">
-        <div className="My-Projects">
+        <div className="My-Projects" style={{ position: "relative" }}>
           <Row className="d-flex justify-content-center">
             <Col lg="4">
               <div className="slim-description text-left margin-auto">
@@ -63,6 +64,19 @@ const Projects = (props) => {
               <div className="img-20-shade"></div>
             </Col>
           </Row>
+          <div className="projects-button">
+            <MagneticButton
+              id="projects-magnetic-button"
+              name="S U R V E Y &nbsp; L I N K"
+              rotate="-30deg"
+              onClick={() => {}}
+              align="right"
+              width="150px"
+              height="150px"
+              color="orange"
+              align="center"
+            />
+          </div>
         </div>
       </div>
     </div>

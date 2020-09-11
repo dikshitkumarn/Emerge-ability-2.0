@@ -6,7 +6,7 @@
 .adjust-team-1 {
   position: absolute;
   top: 200px;
-  left: 300px;
+  left: 25vw;
 }
 
 .adjust-team-2 {
@@ -25,19 +25,21 @@
     position: relative !important;
     top: 0;
     left: 0;
-    margin: auto;
+    margin: auto !important;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    width: 100vw;
   }
 
   .adjust-team-2 {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: auto;
     left: 0;
+    width: 100vw;
   }
 }
