@@ -29,12 +29,13 @@ const Six = (props) => {
         >
           <div className="slim-description text-left six-align">
             <h1 className="mini-heading purple">
-              “Neurodiversity it’s not a symptom, it’s a feature.. ”
+              “Neurodiversity is not a symptom, it’s a feature.. ”
             </h1>
             <p className="bold">
               Neurodiversity considers brain dierences as normal, rather than
               decits. Embracing this concept can benet children and young people
               with learning and thinking differences.
+              <br />
               <br />
               Inclusive education advocates that all children can learn and that
               all pupils, including many considered to be disabled, need some

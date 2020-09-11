@@ -3,10 +3,12 @@
 }
 
 .contact-us-para {
-  max-width: 300px !important;
+  max-width: 350px !important;
   margin-top: 50px;
 }
-
+.contact-us-para:nth-child(2) {
+  margin-top: 1opx;
+}
 .contact-us-number {
   font-size: 200px !important;
   font-family: "Pistilli-Roman";
@@ -41,6 +43,6 @@
 }
 .contactus-button {
   position: absolute;
-  bottom: -70px;
-  right: 200px;
+  bottom: -60px;
+  right: 30%;
 }

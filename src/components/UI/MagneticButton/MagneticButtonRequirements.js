@@ -15,6 +15,7 @@ export class MagneticButtonRequirements {
 
   attachEventsListener() {
     window.addEventListener("mousemove", (e) => this.onMouseMove(e));
+    window.addEventListener("mouseover", (e) => this.calculatePosition(e));
     window.addEventListener("resize", (e) => this.calculatePosition(e));
     window.addEventListener("scroll", (e) => this.calculatePosition(e));
   }

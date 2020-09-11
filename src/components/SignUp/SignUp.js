@@ -76,7 +76,7 @@ const SignUp = (props) => {
             <p className="bold">
               Are you interested in driving change in education? If you are
               interested in collaborating with us, please ll in the form below.
-              The more detail you can share, the beer
+              The more detail you can share, the better
             </p>
           </div>
         </div>
@@ -127,8 +127,8 @@ const SignUp = (props) => {
           label="FirstName"
           textboxName="firstName"
           required
-          borderColor="red"
-          color="blue"
+          borderColor="skyblue"
+          color="skyblue"
           width="30vw"
           height="50px"
         />
@@ -139,8 +139,8 @@ const SignUp = (props) => {
           label="Last Name"
           textboxName="lastName"
           required
-          borderColor="red"
-          color="blue"
+          borderColor="skyblue"
+          color="skyblue"
           width="30vw"
           height="50px"
         />
@@ -153,7 +153,7 @@ const SignUp = (props) => {
           textboxName="email"
           required
           borderColor="violet"
-          color="violet"
+          color="#EE82EE"
           width="80vw"
           height="50px"
         />
@@ -161,7 +161,9 @@ const SignUp = (props) => {
         <div className="text-left select-container">
           <label className="label">
             <p className="red">*</p>
-            <h1 className={`textbox-label yellow`}>I am intrested as a</h1>
+            <h1 className={`textbox-label`} style={{ color: "#81C35E" }}>
+              I am intrested as a
+            </h1>
           </label>
           <p>&nbsp;&nbsp;Please Select an Option</p>
           {interestedAsOptions.map((el) => (
@@ -186,7 +188,7 @@ const SignUp = (props) => {
           label="Location"
           textboxName="location"
           required
-          borderColor="violet"
+          borderColor="orange"
           color="orange"
           width="80vw"
           height="50px"
@@ -197,7 +199,7 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="Why would you like to become an EmergeAbility Champion?"
           textboxName="whyChampion"
-          borderColor="violet"
+          borderColor="red"
           color="red"
           width="80vw"
           height="70px"
@@ -208,8 +210,8 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="What challenges are you trying to address?"
           textboxName="whatChallenges"
-          borderColor="violet"
-          color="yellowgreen"
+          borderColor="yellow"
+          color="yellow"
           width="80vw"
           height="70px"
         />
@@ -219,7 +221,7 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="Enter the URL of Your website"
           textboxName="website"
-          borderColor="violet"
+          borderColor="blue"
           color="blue"
           width="80vw"
           height="70px"
@@ -230,6 +232,8 @@ const SignUp = (props) => {
             id="signup-magnetic-button"
             disabled={!valid()}
             type="submit"
+            color="green"
+            hoverColor="green"
             name="S I G N &nbsp; U P"
             rotate="-30deg"
             onClick={() => {}}

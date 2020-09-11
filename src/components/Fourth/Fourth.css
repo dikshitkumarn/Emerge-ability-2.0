@@ -116,6 +116,6 @@
 
 .flexy {
   position: absolute;
-  right: -60px;
+  right: 0 !important;
   top: 100px;
 }

@@ -8,8 +8,8 @@
   width: 380px;
   height: 400px;
   position: absolute;
-  top: 0;
-  left: 40px;
+  top: 40px;
+  left: 60px;
   background-image: url("../../assets/images/Chidren/1.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -21,8 +21,8 @@
   height: 400px;
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 40px;
+  top: 40px;
+  left: 60px;
   background-color: rgba(255, 132, 0, 0.591);
   background-position: center center;
   opacity: 0.5;
@@ -37,8 +37,8 @@
   width: 250px;
   height: 450px;
   position: absolute;
-  top: 50px;
-  left: 450px;
+  top: 90px;
+  left: 470px;
   background-image: url("../../assets/images/Chidren/2.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -50,8 +50,8 @@
   height: 450px;
   position: absolute;
   z-index: 1;
-  top: 50px;
-  left: 450px;
+  top: 90px;
+  left: 470px;
   background-color: rgba(255, 132, 0, 0.591);
   background-position: center center;
   opacity: 0.5;

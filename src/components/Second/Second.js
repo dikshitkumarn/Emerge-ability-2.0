@@ -4,7 +4,7 @@ import { Row, Col } from "reactstrap";
 
 const Second = (props) => {
   return (
-    <div>
+    <div id="two">
       <Row className="d-flex justify-content-center second">
         <Col
           lg="4"
@@ -16,9 +16,10 @@ const Second = (props) => {
         >
           <div className="slim-description text-left secont-adjust">
             <h1 className="mini-heading orange">
-              Abilities Beyond Boundaries.
+              "Abilities Beyond Boundaries."
             </h1>
             <p className="bold">
+              <br />
               Education is not a privilege, it is a fundamental human right. The
               UNESCO: Global Education 2030 Agenda Sustainable Development Goal
               (SDG) 4 on education calls for inclusive and equitable quality

@@ -15,6 +15,9 @@ const ContactUs = (props) => {
           style={{ maxWidth: 500, margin: "auto" }}
         >
           Feel free to drop an email for further communications
+          <br />
+          <br />
+          <br />
         </h1>
       </div>
       <div className="contactus-button">

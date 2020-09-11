@@ -9,6 +9,10 @@
   background-size: cover;
 }
 
+.our-mission {
+  margin-top: 100px;
+}
+
 .ourmission-image h1 {
   position: absolute;
   left: 30px;
@@ -20,40 +24,48 @@
   position: absolute;
   left: 0;
   bottom: 50%;
+  top: 150px;
 }
 
 @media (max-width: 500px) {
   .ourmission-image h1 {
     display: none;
   }
+  .our-mission {
+    margin-top: 0px;
+  }
   .our-mission-content {
     position: relative !important;
-    top: 0;
+    top: -20px;
   }
   .ourmission-image {
     width: 90%;
     height: 340px;
   }
   .our-mission-button {
-    top: 40% !important;
+    bottom: -50px !important;
     position: absolute !important;
-    right: 40% !important;
+    right: 60px !important;
+  }
+  .change-in-mobile {
+    flex-direction: column-reverse;
   }
 }
 
 @media (max-width: 1000px) and (min-width: 501px) {
   .our-mission-content {
     position: relative !important;
-    top: 0;
+    top: 150px;
   }
   .ourmission-image {
     width: 90%;
-    height: 340px;
+    max-width: 500px;
+    height: 450px;
   }
 }
 
 .our-mission-button {
   position: absolute;
   bottom: -100px;
-  right: -100px;
+  right: -110px;
 }

@@ -3,6 +3,10 @@
   position: relative;
 }
 
+#team {
+  margin-top: 100px;
+}
+
 .adjust-team-1 {
   position: absolute;
   top: 200px;
@@ -12,6 +16,12 @@
 .adjust-team-2 {
   position: absolute;
   left: 0;
+}
+
+@media (max-width: 500px) {
+  #team {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 1500px) {

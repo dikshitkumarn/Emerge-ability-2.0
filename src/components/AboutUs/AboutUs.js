@@ -38,6 +38,7 @@ const AboutUs = (props) => {
             </h1>
             <div className="aboutus-button">
               <MagneticButton
+                hoverColor="#FEC205"
                 id="aboutus-magnetic-button"
                 name="P L A Y &nbsp; V I D E O"
                 onClick={() => {}}

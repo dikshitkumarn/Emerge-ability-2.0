@@ -64,7 +64,7 @@ const SideBar = (props) => {
       </div>
       <div className="sidebar-button">
         <MagneticButton
-          id="sidebutton"
+          id="side-bar-mag-netic-button"
           name="B A C K"
           rotate="-20deg"
           onClick={props.onClick}

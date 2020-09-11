@@ -18,7 +18,10 @@ const Fourth = (props) => {
           className="d-flex justify-content-center"
           style={{ maxHeight: 300, position: "relative" }}
         >
-          <div className="slim-description text-left flexy">
+          <div
+            className="slim-description text-left flexy"
+            style={{ maxWidth: 250 }}
+          >
             <h1 className="mini-heading sky-blue">
               “Every child deserves a future. ”
             </h1>
@@ -26,6 +29,8 @@ const Fourth = (props) => {
               They often face a multitude of barriers from an inaccessible
               learning environment to a lack of suppo and understanding of their
               unique learning and thinking processes.
+              <br />
+              <br />
             </p>
           </div>
         </Col>

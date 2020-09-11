@@ -10,7 +10,7 @@ const OurMission = (props) => {
         <h1 className="pink">Our Mission</h1>
         <h2 className="mini-heading pink">Our Mission</h2>
       </div>
-      <Row className="d-flex justify-content-center">
+      <Row className="d-flex justify-content-center change-in-mobile">
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
           <div className="ourmission-image">
             <h1 className="heading pink">
@@ -23,8 +23,8 @@ const OurMission = (props) => {
                 name="P L A Y &nbsp; V I D E O"
                 onClick={() => {}}
                 align="right"
-                width="200px"
-                height="200px"
+                width="250px"
+                height="250px"
               />
             </div>
           </div>

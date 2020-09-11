@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: white;
 }
 
 .each-member-content {
@@ -18,7 +19,7 @@
 }
 
 .member-container {
-  max-width: 350px;
+  max-width: 360px;
 }
 
 @media (max-width: 500px) {
@@ -27,12 +28,14 @@
   }
   .member-image {
     width: 240px;
+    height: 300px;
   }
   .name {
     white-space: inherit !important;
   }
   .social-cont {
     left: -15px !important;
+    top: 200px !important;
   }
 }
 

@@ -149,15 +149,15 @@
 }
 
 @media (max-width: 991px) {
-  .flexy {
+  .flexy-our-vision {
     position: relative !important;
     top: 0 !important;
     right: 0 !important;
   }
 }
 
-.flexy {
+.flexy-our-vision {
   position: absolute;
-  right: -60px;
-  top: 100px;
+  right: -40px;
+  top: 200px;
 }

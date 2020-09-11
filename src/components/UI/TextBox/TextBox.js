@@ -6,7 +6,12 @@ const TextBox = (props) => {
     <div className="TextBox">
       <label className="label">
         {props.required ? <p className="red">*</p> : null}
-        <h1 className={`textbox-label ${props.color}`}>{props.label}</h1>
+        <h1
+          style={{ color: props.color ? props.color : "black" }}
+          className={`textbox-label`}
+        >
+          {props.label}
+        </h1>
       </label>
       <input
         style={{

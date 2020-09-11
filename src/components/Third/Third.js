@@ -5,6 +5,12 @@ import { Row, Col } from "reactstrap";
 const Third = (props) => {
   return (
     <div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Row className="d-flex justify-content-center third">
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
           <div className="absolute-container-third">
@@ -22,7 +28,12 @@ const Third = (props) => {
           className="d-flex justify-content-center d-flex justify-content-center"
         >
           <div className="slim-description text-left six-align">
-            <h1 className="mini-heading red">“I am different, not less”</h1>
+            <br />
+            <br />
+            <br />
+            <h1 className="mini-heading red">
+              “I am different,&nbsp;&nbsp;&nbsp; not less”
+            </h1>
             <p className="bold">
               75 million school-aged children and youth are in desperate need of
               educational suppo, either in danger of, or already missing out on
@@ -32,6 +43,8 @@ const Third = (props) => {
               conditions are the most marginalised and vulnerable in many
               countries, and they are most likely to be excluded from education
               and future employment.
+              <br />
+              <br />
             </p>
           </div>
         </Col>

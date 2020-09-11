@@ -33,7 +33,7 @@
 
 .rainbow {
   background-image: url("../../assets/images/BackGround\ Images/20127.png");
-  width: 90vw;
+  width: 80vw !important;
   height: 100vh;
   position: absolute;
   right: 0;

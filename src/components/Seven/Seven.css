@@ -1,7 +1,7 @@
 .seven {
   min-height: 600px;
   max-height: 1000vh !important;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .img-9 {
@@ -34,8 +34,8 @@
 }
 
 .img-10 {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   position: absolute;
   top: 500px;
   left: 300px;
@@ -46,8 +46,8 @@
 }
 
 .img-10-shade {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   position: absolute;
   z-index: 1;
   top: 500px;
@@ -87,10 +87,11 @@
 }
 
 @media (max-width: 991px) {
-  .flexy {
+  .flexy-seven {
     position: relative !important;
     top: 0 !important;
     right: 0 !important;
+    padding: 20px;
   }
 }
 
@@ -101,8 +102,9 @@
   }
 }
 
-.flexy {
+.flexy-seven {
   position: absolute;
   right: -60px;
   top: 100px;
+  max-width: 400px;
 }

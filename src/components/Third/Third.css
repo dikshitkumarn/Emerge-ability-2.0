@@ -97,6 +97,7 @@
 
 @media (max-width: 991px) {
   .third {
+    margin-top: -200px;
     flex-direction: column-reverse;
   }
 }

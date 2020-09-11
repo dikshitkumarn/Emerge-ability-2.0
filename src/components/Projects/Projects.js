@@ -14,18 +14,20 @@ const Projects = (props) => {
         <div className="My-Projects" style={{ position: "relative" }}>
           <Row className="d-flex justify-content-center">
             <Col lg="4">
-              <div className="slim-description text-left margin-auto">
+              <div className="slim-description text-left flexy-projects">
                 <h1 className="mini-heading light-orange bold">
-                  “We rise by lifting others.... ”
+                  “Inclusion is within everyone’s ability....”
                 </h1>
                 <p className="bold">
                   The aim of this survey is to give us, a snapshot of the
                   perceptions of educators towards inclusive education, and to
                   get respondents’ views of relevant training, as well as to
                   identify what is working well and what the gaps are.
+                  <br />
+                  <br />
                   Understanding the educators' knowledge and skills required to
-                  create an inclusive environment, the involvement of suppo in
-                  inclusive education and eective training programmes.
+                  create an inclusive environment, the involvement of support in
+                  inclusive education and effective training programmes.
                 </p>
               </div>
             </Col>
@@ -39,16 +41,15 @@ const Projects = (props) => {
               <div className="img-20"></div>
               <div className="img-20-shade"></div>
             </Col>
-            <Col lg="2">
+            <Col lg="3">
               <div className="slim-description text-left top-down">
                 <h1 className="mini-heading light-orange bold">
-                  “Those who are happiest are those who do the most for
-                  others.... ”
+                  “Not all classrooms have four walls....”
                 </h1>
                 <p className="bold">
-                  If you are a Preschool/ Higher Secondary school Principal/
-                  teacher/tutor/counsellor kindly paicipate in our research
-                  survey.
+                  If you are a Preschool/ Higher Secondary school
+                  Principal/teacher/tutor/counsellor kindly participate in our
+                  research survey.
                 </p>
               </div>
             </Col>
@@ -66,6 +67,7 @@ const Projects = (props) => {
           </Row>
           <div className="projects-button">
             <MagneticButton
+              hoverColor="orange"
               id="projects-magnetic-button"
               name="S U R V E Y &nbsp; L I N K"
               rotate="-30deg"

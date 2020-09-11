@@ -17,9 +17,11 @@
 @media (max-width: 700px) {
   .Footer {
     height: 250px;
+    background-size: cover;
   }
   .copyright {
     font-size: x-small !important;
+    margin: 0 !important;
   }
   .footer-social-links i {
     width: 30px !important;
@@ -53,6 +55,7 @@
   transform: translateX(-50%);
   bottom: 10px;
   white-space: nowrap;
+  margin: 0 !important;
 }
 
 .footer-logo {

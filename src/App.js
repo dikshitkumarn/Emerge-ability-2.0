@@ -18,7 +18,7 @@ import ContactUs from "./components/ContactUs/ContactUs";
 import SignUp from "./components/SignUp/SignUp";
 import Footer from "./components/Footer/Footer";
 import SideBar from "./components/UI/SideBar/SideBar";
-import { Badge } from "reactstrap";
+import { Parallax } from "react-parallax";
 
 function App() {
   // const [backgroundImage, setBackgroundImage] = useState(
@@ -46,50 +46,50 @@ function App() {
   };
 
   return (
-    // <Parallax speed={0.1}>
-    <div
-      className="App"
-      id="app"
-      // style={{
-      //   backgroundImage: `url('` + backgroundImage + `')`,
-      // }}
-    >
-      {/* {show ? ( */}
-      <SideBar show={show} onClick={toggle} />
-      {/* ) : ( */}
-      {/* <Fragment> */}
-      <MainLogo onClick={toggle} />
-      <Second />
-      <Third />
-      <Fourth />
-      <Five />
-      <Six />
-      <Seven />
-      <AboutUs />
-      <OurMission />
-      <OurVision />
-      <WhatWeDo />
-      <MeetTheTeam />
-      <Projects />
-      <ContactUs />
-      <SignUp />
-      <Footer />
+    <Parallax strength={0.1}>
       <div
-        className="scroll-to-top-button"
-        onClick={() => {
-          window.location.href = "#home";
-        }}
+        className="App"
+        id="app"
+        // style={{
+        //   backgroundImage: `url('` + backgroundImage + `')`,
+        // }}
       >
-        <img
-          src={require("./assets/images/icons/top.png")}
-          alt=" "
-          width="30px"
-          height="30px"
-        />
+        {/* {show ? ( */}
+        <SideBar show={show} onClick={toggle} />
+        {/* ) : ( */}
+        {/* <Fragment> */}
+        <MainLogo onClick={toggle} />
+        <Second />
+        <Third />
+        <Fourth />
+        <Five />
+        <Six />
+        <Seven />
+        <AboutUs />
+        <OurMission />
+        <OurVision />
+        <WhatWeDo />
+        <MeetTheTeam />
+        <Projects />
+        <ContactUs />
+        <SignUp />
+        <Footer />
+        <div
+          className="scroll-to-top-button"
+          onClick={() => {
+            window.location.href = "#home";
+          }}
+        >
+          <img
+            src={require("./assets/images/icons/top.png")}
+            alt=" "
+            width="30px"
+            height="30px"
+          />
+        </div>
+        {/* </Fragment> */}
       </div>
-      {/* </Fragment> */}
-    </div>
-    // </Parallax>
+    </Parallax>
   );
 }
 

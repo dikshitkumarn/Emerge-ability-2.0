@@ -10,8 +10,8 @@ const OurVision = (props) => {
       <br />
       <br />
       <div className="heading-with-background">
-        <h1 className="orange">Our Vission</h1>
-        <h2 className="mini-heading orange">Our Vission</h2>
+        <h1 className="orange">Our Vision</h1>
+        <h2 className="mini-heading orange">Our Vision</h2>
       </div>
       <Row className="d-flex justify-content-center our-vision">
         <Col
@@ -22,9 +22,9 @@ const OurVision = (props) => {
           className="d-flex justify-content-center"
           style={{ maxHeight: 300, position: "relative" }}
         >
-          <div className="slim-description text-left flexy">
+          <div className="slim-description text-left flexy-our-vision">
             <h1 className="mini-heading orange">
-              “Lifting up with hands of help... ”
+              "Empowering by embracing difference"
             </h1>
             <p className="bold">
               Enable individuals to reach their full potential by highlighting

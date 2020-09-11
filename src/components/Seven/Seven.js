@@ -20,18 +20,30 @@ const Seven = (props) => {
           style={{ position: "relative" }}
           //   className="flexy"
         >
-          <div className="slim-description text-left flexy">
+          <div className="slim-description text-left flexy-seven">
             <h1 className="mini-heading light-green">
-              “Neurodiversity it’s not a symptom, it’s a feature.. ”
+              “Let your abilities define you.. ”
             </h1>
             <p className="bold">
-              Neurodiversity considers brain dierences as normal, rather than
-              decits. Embracing this concept can benet children and young people
-              with learning and thinking differences.
+              The understanding of inclusive education is different across
+              various regions of the world. One of the key difficulties
+              surrounding inclusive education in developing countries is the
+              lack of research about education in these countries. The studies
+              show that there are serious gaps in the developing nations’
+              education system to make it fit for everyone in a community.
               <br />
-              Inclusive education advocates that all children can learn and that
-              all pupils, including many considered to be disabled, need some
-              form of suppo in learning during their time at school.
+              <br />
+              Children with special needs have the right to receive the
+              schooling and social supports they need within the ordinary
+              structures available in their local communities. Strong advocacy
+              is needed for this to happen. In particular parents need to be
+              empowered, communities mobilised and professionals trained in new
+              ways of working.
+              <br />
+              <br />
+              EmergeAbility aims to make education more inclusive for all
+              children to reach their true potential by shaping and promoting
+              future-ready paradigms for learning beyond boundaries.
             </p>
           </div>
         </Col>

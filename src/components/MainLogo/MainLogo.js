@@ -64,24 +64,26 @@ const MainLogo = (props) => {
       <div className="rainbow"></div>
 
       <div className="main-logo-heading">
-        <Parallax speed={0.4}>
-          <div className="logo"></div>
-          <div className="main-heading">
-            <h1 className="heading">
-              <span className="blue">Emerge</span>
-              <span className="violet-fade">Ability</span>
-            </h1>
-            <p className="uppercase font-size-small bold responsive-small">
-              A b i l i t i e s &nbsp; B e y o n d &nbsp; B o u n d a r i e s .
-            </p>
-          </div>
-        </Parallax>
+        {/* <Parallax speed={0.4}> */}
+        <div className="logo"></div>
+        <div className="main-heading">
+          <h1 className="heading">
+            <span className="blue">Emerge</span>
+            <span className="violet-fade">Ability</span>
+          </h1>
+          <p className="uppercase font-size-small bold responsive-small">
+            A b i l i t i e s &nbsp; B e y o n d &nbsp; B o u n d a r i e s .
+          </p>
+        </div>
+        {/* </Parallax> */}
       </div>
       <div className="button-container">
         <MagneticButton
           id="mainLogoButton"
           name="E &nbsp;&nbsp;X &nbsp;&nbsp;P &nbsp;&nbsp;L &nbsp;&nbsp;O &nbsp;&nbsp;R &nbsp;&nbsp;E"
-          onClick={() => {}}
+          onClick={() => {
+            window.location.href = "#two";
+          }}
           rotate={"-30deg"}
           width="180px"
           height="180px"
