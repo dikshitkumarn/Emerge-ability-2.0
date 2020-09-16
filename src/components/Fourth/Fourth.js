@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Fourth.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Fourth = (props) => {
+  const [fourthRef] = useState(props.getFourthRef());
+  const [fifthRef] = useState(props.getFifthRef());
   return (
-    <div>
+    <div ref={fourthRef} id="four" style={{ boxSizing: "border-box" }}>
+      <br />
       <br />
       <br />
       <br />
@@ -31,6 +35,17 @@ const Fourth = (props) => {
               unique learning and thinking processes.
               <br />
               <br />
+              <a href="#five" style={{ textAlign: "right" }}>
+                <MagneticButton
+                  rotate="30deg"
+                  hoverColor="#3e92c6"
+                  name="K E E P &nbsp; E X P L O R I N G"
+                  id="_"
+                  onClick={() => {
+                    window.scroll(0, fifthRef.current.offsetTop);
+                  }}
+                />
+              </a>
             </p>
           </div>
         </Col>
@@ -43,6 +58,13 @@ const Fourth = (props) => {
           </div>
         </Col>
       </Row>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

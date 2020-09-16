@@ -65,7 +65,7 @@
 
 @media (max-width: 700px) {
   .rounded-button {
-    width: 100px !important;
-    height: 100px !important;
+    max-width: 150px;
+    max-height: 150px;
   }
 }

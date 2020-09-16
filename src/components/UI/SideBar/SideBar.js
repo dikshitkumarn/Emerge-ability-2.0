@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SideBar.css";
 import CloseIcon from "../CloseIcon/CloseIcon";
 import MagneticButton from "../MagneticButton/MagneticButton";
 
 const SideBar = (props) => {
+  const [homeref] = useState(props.getHomeRef());
   const [menuLinks, setMenuLinks] = useState([
     { name: "Home", id: "01", goto: "#home", color: "yellow", active: true },
     { name: "About", id: "02", goto: "#about", color: "red", active: false },
-    { name: "Team", id: "03", goto: "#team", color: "#FF69B4", active: false },
-    {
-      name: "Contact",
-      id: "04",
-      goto: "#contact",
-      color: "#A97AD0",
-      active: false,
-    },
     {
       name: "Project",
       id: "05",
-      goto: "#project",
+      goto: "#projeccts",
       color: "purple",
       active: false,
     },
     { name: "Blog", id: "06", goto: "#blog", color: "#00BFFF", active: false },
+    {
+      name: "Team",
+      id: "03",
+      goto: "#theteam",
+      color: "#FF69B4",
+      active: false,
+    },
     {
       name: "Sign Up",
       id: "07",
@@ -30,8 +30,24 @@ const SideBar = (props) => {
       color: "green",
       active: false,
     },
+    {
+      name: "Contact",
+      id: "04",
+      goto: "#contact",
+      color: "#A97AD0",
+      active: false,
+    },
   ]);
-
+  useEffect(() => {
+    setMenuLinks((prev) => {
+      prev.map((el, index) => {
+        console.log(props.refs[index]);
+        el.goto = props.refs[index];
+      });
+      return prev;
+    });
+  }, []);
+  var classNames = ["SideBar", props.show ? "open" : "close"];
   const setActive = (id) => {
     setMenuLinks((prev) => {
       let clone = prev.map((el) => {
@@ -49,34 +65,95 @@ const SideBar = (props) => {
   const goto = (link) => {
     window.open(link, "_blank");
   };
-
-  console.log(menuLinks);
-  let classNames = ["SideBar", props.show ? "open" : "close"];
-
+  console.log(props.refs);
   return (
     <div
       className={classNames.join(" ")}
+      id="sidebar"
       // style={{  transform: props.show ? "translateX(0)" : "translateX(200vw)" }}
     >
       <div className="rainbow-sidebar"></div>
       <div className="mobile-only">
-        <CloseIcon onClick={props.onClick} />
+        <CloseIcon
+          onClick={() => {
+            window.scroll(
+              0,
+              homeref.current.offsetTop
+              // props.ref.current.getBoundingClientRect().height + window.scrollY
+            );
+            props.onClick();
+          }}
+        />
       </div>
       <div className="sidebar-button">
         <MagneticButton
           id="side-bar-mag-netic-button"
           name="B A C K"
           rotate="-20deg"
-          onClick={props.onClick}
+          onClick={() => {
+            window.scroll(
+              0,
+              homeref.current.offsetTop
+              // props.ref.current.getBoundingClientRect().height + window.scrollY
+            );
+            props.onClick();
+          }}
         />
       </div>
       <img
         src={require("../../../assets/images/BackGround Images/footer-logo.png")}
         alt=" "
+        onClick={() => {
+          window.scroll(
+            0,
+            homeref.current.offsetTop
+            // props.ref.current.getBoundingClientRect().height + window.scrollY
+          );
+          setActive("01");
+          props.onClick();
+        }}
+        style={{ cursor: "pointer" }}
         className="sidebar-logo"
       />
       <div className="sidebar-social-links">
-        <i
+        <MagneticButton
+          onClick={() => window.open("https://jsonplaceholder.com", "_blank")}
+          className="fa fa-twitter shadow"
+          width="30px"
+          // noInner
+          height="30px"
+          id={"tw-social-1"}
+          noimage
+          includeHoverInside
+          hoverColor="#1C9CEA"
+          color={"white"}
+          borderWidth={0}
+        />
+        <MagneticButton
+          className="fa fa-linkedin shadow"
+          onClick={() => window.open("https://jsonplaceholder.com", "_blank")}
+          // noInner
+          width="30px"
+          height="30px"
+          id={"ln-social-2"}
+          noimage
+          includeHoverInside
+          hoverColor="#2464AD"
+          color={"white"}
+          borderWidth={0}
+        />
+        <MagneticButton
+          className="fa fa-facebook shadow"
+          onClick={() => window.open("https://jsonplaceholder.com", "_blank")}
+          width="30px"
+          height="30px"
+          id={"fb-social-3"}
+          noimage
+          hoverColor="#3D548E"
+          color={"white"}
+          borderWidth={0}
+        />
+        {/* <i
           onClick={() => goto("http://jsonplaceholder.com")}
           className="fa fa-twitter shadow white"
           style={{ color: "white", cursor: "pointer" }}
@@ -90,7 +167,7 @@ const SideBar = (props) => {
           onClick={() => goto("http://jsonplaceholder.com")}
           className="fa fa-facebook shadow white"
           style={{ color: "white", cursor: "pointer" }}
-        />
+        /> */}
       </div>
       <div className="sidebar-social-links-words">
         <MagneticButton
@@ -112,7 +189,7 @@ const SideBar = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#A050FF"
+          hoverColor="#7354A4"
           width="fit-content"
           height="fit-content"
           name="Linkedin"
@@ -126,7 +203,7 @@ const SideBar = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#ddc736"
+          hoverColor="#5FB434"
           width="fit-content"
           height="fit-content"
           name="Twitter"
@@ -146,14 +223,25 @@ const SideBar = (props) => {
               style={{ cursor: "pointer" }}
               className="nav-name"
               onClick={() => {
-                window.location.href = el.goto;
+                // window.location.href = el.goto;
+                // console.log(props.ids);
+                // props.ids[11].scrollIntoView();
+                let ref = el.goto();
+                window.scroll(
+                  0,
+                  ref.current.offsetTop
+                  // props.ref.current.getBoundingClientRect().height + window.scrollY
+                );
                 setActive(el.id);
                 props.onClick();
               }}
             >
-              <h1 style={{ color: el.color, opacity: el.active ? 1 : 0.15 }}>
+              <a
+                style={{ color: el.color, opacity: el.active ? 1 : 0.15 }}
+                href={el.goto}
+              >
                 {el.name}
-              </h1>
+              </a>
             </div>
           </div>
         ))}

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ContactUs.css";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const ContactUs = (props) => {
+  const [ref] = useState(props.getTeamRef());
+  const [contactRef] = useState(props.getContactRef());
+
   return (
-    <div id="contact" style={{ position: "relative" }}>
+    <div
+      ref={contactRef}
+      id="contact"
+      style={{ position: "relative" }}
+      style={{ boxSizing: "border-box" }}
+    >
       <div className="heading-with-background">
         <h1 className="pink">Contact Us</h1>
         <h2 className="mini-heading pink">Contact Us</h2>
@@ -23,9 +31,15 @@ const ContactUs = (props) => {
       <div className="contactus-button">
         <MagneticButton
           id="contactus-magnetic-button"
-          name="C O N T A C T &nbsp;&nbsp; T O &nbsp; U S"
+          name="C O N T A C T &nbsp;&nbsp; U S"
           rotate="-30deg"
-          onClick={() => {}}
+          onClick={() => {
+            window.scroll(
+              0,
+              ref.current.offsetTop + 60
+              // props.ref.current.getBoundingClientRect().height + window.scrollY
+            );
+          }}
           align="right"
           width="150px"
           height="150px"

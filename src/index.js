@@ -5,6 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css/animate.min.css";
+// import "scrollbar.css";
 
 ReactDOM.render(
   <React.StrictMode>

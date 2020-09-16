@@ -6,8 +6,7 @@
   top: 0;
   right: 0;
   background-color: white;
-  overflow-y: scroll;
-  overflow-x: hidden !important;
+  overflow: hidden;
 }
 
 .SideBar .mobile-only {
@@ -30,9 +29,26 @@
   background-repeat: no-repeat;
   z-index: -1;
 }
-
-.each-nav h1:hover {
+.each-nav a {
+  text-decoration: none;
+}
+.each-nav a:hover {
   opacity: 0.75 !important;
+  text-decoration: none;
+}
+
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .rainbow-sidebar {
+    width: 80vw;
+    height: 95vh;
+  }
+  .each-nav .nav-name a {
+    font-size: 40px !important;
+  }
+  .sidebar-button {
+    right: 35vw !important;
+    bottom: 50px !important;
+  }
 }
 
 @media (max-width: 800px) {
@@ -63,7 +79,7 @@
     height: 30px !important;
     -webkit-text-stroke: 1px black !important;
     color: white !important;
-    background-color: transparent !important;
+    background-color: transparent;
   }
   .sidebar-social-links-words {
     display: none;
@@ -73,8 +89,8 @@
     width: 100vw !important;
     top: 70vh;
   }
-  .each-nav .nav-name h1 {
-    font-size: 1px !important;
+  .each-nav .nav-name a {
+    font-size: 50px !important;
   }
   .each-nav {
     margin: 2px !important;
@@ -84,6 +100,19 @@
   }
   .navs {
     top: 100px !important;
+  }
+}
+
+@media (max-height: 690px) {
+  .each-nav .nav-name a {
+    font-size: 50px !important;
+  }
+  .SideBar {
+    height: fit-content;
+    overflow: scroll;
+  }
+  .sidebar-social-links {
+    position: fixed;
   }
 }
 
@@ -154,7 +183,7 @@
   flex-wrap: nowrap;
   margin: 20px;
 }
-.each-nav h1 {
+.each-nav a {
   transition: all 0.3s ease-out;
 }
 .each-nav .nav-number {
@@ -171,8 +200,8 @@
   right: 10px;
 }
 
-.each-nav .nav-name h1 {
-  font-size: 50px !important;
+.each-nav .nav-name a {
+  font-size: 50px;
   font-family: "Poppins", sans-serif !important;
   font-weight: 800;
   white-space: nowrap;

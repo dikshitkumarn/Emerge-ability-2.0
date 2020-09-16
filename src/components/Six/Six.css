@@ -9,7 +9,7 @@
   height: 400px;
   position: absolute;
   top: 60px;
-  right: 50px;
+  right: 150px;
   background-image: url("../../assets/images/Chidren/7.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -22,7 +22,7 @@
   position: absolute;
   z-index: 1;
   top: 60px;
-  right: 50px;
+  right: 150px;
   background-color: #a356ff;
   background-position: center center;
   opacity: 0.25;
@@ -38,7 +38,7 @@
   height: 200px;
   position: absolute;
   top: 480px;
-  right: 255px;
+  right: 355px;
   background-image: url("../../assets/images/Chidren/8.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -51,32 +51,47 @@
   position: absolute;
   z-index: 1;
   top: 480px;
-  right: 255px;
+  right: 355px;
   background-color: #a356ff;
   background-position: center center;
   opacity: 0.25;
   background-size: 100% 100%;
 }
 
-@media (max-width: 500px) {
-  .absolute-container-six {
-    height: 500px !important;
-  }
+@media (max-width: 1550px) and (min-width: 1100px) {
   .img-7,
   .img-7-shade {
-    width: 280px;
-    height: 200px;
-    right: 30px;
+    width: 400px;
+    height: 350px;
   }
   .img-8,
   .img-8-shade {
-    top: 270px;
+    width: 250px;
+    height: 180px;
+    top: 430px;
+  }
+}
+
+@media (max-width: 500px) {
+  .absolute-container-six {
+    height: 600px !important;
+  }
+  .img-7,
+  .img-7-shade {
+    width: 260px;
+    height: 250px;
+    right: 50px;
+  }
+  .img-8,
+  .img-8-shade {
+    top: 340px;
     left: 30px;
     width: 250px;
     height: 170px;
   }
   .six-button {
-    bottom: -50px !important;
+    bottom: -70px !important;
+    right: 30px !important;
   }
 }
 
@@ -111,6 +126,6 @@
 
 @media (min-width: 1050px) {
   .six-align {
-    margin-left: -200px !important;
+    /* margin-left: -200px !important; */
   }
 }

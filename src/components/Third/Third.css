@@ -3,7 +3,6 @@
   max-height: 1000vh !important;
   overflow: hidden;
 }
-
 .img-3 {
   width: 500px;
   height: 400px;
@@ -58,13 +57,46 @@
   background-size: 100% 100%;
 }
 
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .img-3,
+  .img-3-shade {
+    width: 350px;
+    height: 250px;
+    top: 50px;
+  }
+  .img-4,
+  .img-4-shade {
+    width: 250px;
+    height: 180px;
+    top: 350px;
+  }
+  .three-align {
+    margin-left: 0 !important;
+    max-width: 300px !important;
+  }
+}
+.three-align {
+  margin-left: 100px;
+  max-width: 320px;
+}
 @media (max-width: 500px) {
+  .three-align {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+  .three-button {
+    display: none;
+  }
+  .three-align h1 {
+    max-width: 250px;
+    margin-bottom: 20px;
+  }
   .absolute-container-third {
     height: 500px !important;
   }
   .img-3,
   .img-3-shade {
-    width: 280px;
+    width: 260px;
     height: 200px;
     left: 30px;
   }

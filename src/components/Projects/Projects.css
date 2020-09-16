@@ -8,8 +8,8 @@
   width: 300px;
   height: 200px;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 0px;
+  left: -100px;
   background-image: url("../../assets/images/Chidren/19.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -31,12 +31,12 @@
     margin-left: 300px;
   }
 }
-@media (max-width: 1700px) {
+@media (max-width: 1950px) {
   .projects-content {
     margin-left: 300px;
   }
   .top-down {
-    left: 0px !important;
+    margin-left: 0px;
   }
 }
 .img-19-shade {
@@ -44,8 +44,8 @@
   height: 200px;
   position: absolute;
   z-index: 1;
-  top: 50px;
-  left: 50px;
+  top: 0px;
+  left: -100px;
   background-color: #cc5417;
   background-position: center center;
   opacity: 0.5;
@@ -56,8 +56,8 @@
   width: 250px;
   height: 300px;
   position: absolute;
-  left: -10px;
-  top: 280px;
+  left: -150px;
+  top: 230px;
   background-image: url("../../assets/images/Chidren/20.jpg");
   background-position: center center;
   background-size: 100% 100%;
@@ -69,15 +69,41 @@
   height: 300px;
   position: absolute;
   z-index: 1;
-  left: -10px;
-  top: 280px;
-  background-color: #cc5417;
+  left: -150px;
+  top: 230px;
+  background-color: transparent;
   background-position: center center;
   opacity: 0.5;
   background-size: 100% 100%;
 }
 
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .img-19,
+  .img-19-shade {
+    width: 200px;
+    height: 150px;
+    left: -60px;
+  }
+  .img-20,
+  .img-20-shade {
+    width: 200px;
+    height: 250px;
+    left: -100px;
+    top: 200px !important;
+  }
+  .flexy-projects {
+    width: 100%;
+    right: 150px !important;
+  }
+  .top-down {
+    margin-top: 100px !important;
+  }
+}
+
 @media (max-width: 500px) {
+  .My-Projects {
+    min-height: 1600px;
+  }
   .img-19,
   .img-19-shade {
     top: 50px;
@@ -89,11 +115,13 @@
     position: relative !important;
     margin: auto !important;
     right: 0 !important;
+    padding: 20px;
   }
   .top-down {
     margin-left: 0 !important;
     margin: auto !important;
     margin-top: 50px !important;
+    padding: 0 20px;
   }
   .hide-in-mobile {
     display: none;
@@ -104,7 +132,7 @@
     width: 100vw !important;
   }
   .projects-button {
-    bottom: -100px !important;
+    bottom: 30px !important;
     position: absolute !important;
     left: 40% !important;
   }
@@ -114,28 +142,37 @@
 }
 
 .top-down {
-  margin-top: 200px;
-  margin-left: 0;
-  max-width: 200px;
+  margin-top: 100px;
+  max-width: 80%;
+  margin-left: -100px;
 }
 
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   .top-down {
     position: absolute;
-    top: 50px;
+    top: 0px;
     left: -250px;
   }
-}
-@media (min-width: 900px) and (max-width: 1400px) {
+} */
+@media (min-width: 1100px) and (max-width: 1400px) {
   .top-down {
-    left: -100px;
+    margin-top: 0 !important;
+    margin-left: -100px;
+    max-width: 100%;
+  }
+  .projects-button {
+    bottom: 200px !important;
+    right: 100px !important;
   }
 }
 
 .flexy-projects {
   position: absolute;
-  right: 100px;
+  right: 300px;
+  width: 350px;
 }
+
+/* @media() */
 
 @media (max-width: 999px) and (min-width: 501px) {
   .hide-in-mobile {
@@ -143,6 +180,9 @@
   }
   .projects-content {
     margin-left: 0 !important;
+  }
+  .projects-button {
+    bottom: 100px !important;
   }
   .img-19,
   .img-19-shade {
@@ -152,6 +192,7 @@
     height: 170px;
   }
   .top-down {
+    position: relative;
     margin-left: 0 !important;
     margin: auto !important;
     margin-top: 50px !important;
@@ -183,6 +224,6 @@
 
 .projects-button {
   position: absolute;
-  bottom: 0;
-  right: 200px;
+  bottom: 100px;
+  right: 300px;
 }

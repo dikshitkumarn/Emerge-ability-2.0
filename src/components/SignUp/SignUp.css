@@ -18,6 +18,12 @@
   margin-left: 10px;
 }
 
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .odd-one {
+    margin-left: 300px;
+  }
+}
+
 @media (max-width: 600px) {
   .input {
     width: 90vw !important;
@@ -36,10 +42,6 @@
   margin-left: 10px;
 }
 
-.label h1 {
-  margin: 0;
-}
-
 .TextBox {
   width: fit-content;
   margin: 20px auto;
@@ -49,10 +51,31 @@
   justify-content: left;
 }
 
+.signup-scroll {
+  position: absolute;
+  right: -150px;
+  bottom: -20px;
+}
+
 .textbox-label {
   font-size: 30px !important;
   text-align: left;
   margin: 2px 5px;
+}
+.mani-p {
+  font-size: 20px !important;
+}
+@media (max-width: 500px) {
+  .mani-p {
+    font-size: 15px !important;
+    padding: 2px 10px;
+  }
+  .signup-scroll {
+    display: none;
+  }
+  .contact-us-number {
+    margin-left: calc(-100vw + 150px);
+  }
 }
 
 @media (max-width: 600px) {

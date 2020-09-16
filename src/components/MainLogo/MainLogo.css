@@ -30,7 +30,15 @@
   background-size: 95% 95%;
   animation: grow-top 1s forwards;
 }
-
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .main-logo-heading {
+    top: 80px;
+    left: 130px;
+  }
+  .heading {
+    font-size: 60px !important;
+  }
+}
 .rainbow {
   background-image: url("../../assets/images/BackGround\ Images/20127.png");
   width: 80vw !important;
@@ -55,6 +63,8 @@
 
 @media (max-width: 800px) {
   .rainbow {
+    top: 20vh;
+    height: 80vh;
     background-size: cover;
     width: 100vw !important;
   }
@@ -92,9 +102,10 @@
 }
 
 .social-links p {
+  margin: auto;
   margin-left: 30px;
-  margin-top: -10px;
-  margin-bottom: 0;
+  /* margin-top: -10px; */
+  /* margin-bottom: 0; */
 }
 
 @media (max-width: 600px) {
@@ -111,15 +122,17 @@
     height: 100vh;
   }
   .button-container {
-    bottom: 100px;
+    bottom: 70px;
   }
   .social-links {
     left: -110px !important;
+    display: none;
   }
-  .social-links div {
-    margin-left: 20px;
-    margin-top: -10px;
-    margin-bottom: 0;
+  .social-links p {
+    margin: auto;
+    /* margin-left: 20px;
+    margin-top: -10px; */
+    /* margin-bottom: 0; */
   }
 }
 
@@ -127,7 +140,7 @@
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .green-hover:hover {

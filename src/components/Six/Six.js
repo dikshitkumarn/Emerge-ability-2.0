@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Six.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Six = (props) => {
+  const [sixthRef] = useState(props.getSixthRef());
+  const [seventhRef] = useState(props.getSeventhRef());
   return (
-    <div style={{ position: "relative" }}>
+    <div ref={sixthRef} style={{ position: "relative" }}>
       <br />
       <br />
       <br />
       <br />
       <br />
-      <Row className="d-flex justify-content-center six">
+      <Row className="d-flex justify-content-center six" id="six">
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
           <div className="absolute-container-six">
             <div className="img-7"></div>
@@ -46,9 +48,12 @@ const Six = (props) => {
       </Row>
       <div className="six-button">
         <MagneticButton
-          id="six-magnetic-button"
-          name="K E E P &nbsp; S C R O L L I N G"
-          onClick={() => {}}
+          id="sixth-magnetic-button"
+          name="K E E P &nbsp;E X P L O R I N G"
+          onClick={() => {
+            window.scroll(0, seventhRef.current.offsetTop);
+          }}
+          hoverColor="#a356ff"
           rotate="20deg"
           width="150px"
           height="150px"

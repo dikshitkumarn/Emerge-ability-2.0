@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Projects = (props) => {
+  const [projectRef] = useState(props.getProjectRef);
   return (
-    <div id="project">
+    <div ref={projectRef} id="project" style={{ boxSizing: "border-box" }}>
       <div className="heading-with-background">
-        <h1 className="light-orange">Projects</h1>
+        <h1 className="light-orange" id="projeccts">
+          Projects
+        </h1>
         <h2 className="orange mini-heading">Projects</h2>
       </div>
       <div className="projects-content">
         <div className="My-Projects" style={{ position: "relative" }}>
           <Row className="d-flex justify-content-center">
-            <Col lg="4">
-              <div className="slim-description text-left flexy-projects">
+            <Col>
+              <div className="text-left flexy-projects">
                 <h1 className="mini-heading light-orange bold">
                   “Inclusion is within everyone’s ability....”
                 </h1>
@@ -41,8 +44,8 @@ const Projects = (props) => {
               <div className="img-20"></div>
               <div className="img-20-shade"></div>
             </Col>
-            <Col lg="3">
-              <div className="slim-description text-left top-down">
+            <Col lg="3" sm="12">
+              <div className="text-left top-down">
                 <h1 className="mini-heading light-orange bold">
                   “Not all classrooms have four walls....”
                 </h1>

@@ -4,6 +4,22 @@ import Select from "react-select";
 const SelectInput = (props) => {
   return (
     <Select
+      styles={{
+        control: (styles) => ({
+          ...styles,
+          boxShadow: `none`,
+          border: "none",
+          borderBottom: "2px solid orange",
+          borderRadius: 0,
+          // ${
+          //   props.boxShadow ? props.boxShadow : "initial"
+          // }
+          // ${
+          //   props.boxShadow ? props.boxShadow : "initial"
+          // }`,
+          // border: props.boxShadow ? props.boxShadow : "initial",
+        }),
+      }}
       className="react-select primary"
       classNamePrefix="react-select"
       placeholder={props.placeholder}

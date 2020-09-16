@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./MainLogo.css";
-import Parallax from "../UI/Parallax/Parallax";
-import HamburgerIcon from "../UI/HamburgerIcon/HamburgerIcon";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const MainLogo = (props) => {
+  const [firstRef] = useState(props.getHomeRef());
+  const [secondRef] = useState(props.getSecondRef());
   const goto = (link) => {
     window.open(link, "_blank");
   };
 
   return (
-    <div className="one" id="home">
-      <div className="hamburgur-container">
-        <HamburgerIcon onClick={props.onClick} />
-      </div>
-      <div
+    <div
+      ref={firstRef}
+      className="one"
+      id="home"
+      style={{ boxSizing: "border-box" }}
+    >
+      <a
         className="social-links small responsive-small"
         style={{ background: "transparent" }}
       >
@@ -23,7 +25,8 @@ const MainLogo = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#139BF0"
+          align="center"
+          hoverColor="#3D548E"
           width="fit-content"
           height="fit-content"
           name="Facebook"
@@ -35,9 +38,10 @@ const MainLogo = (props) => {
         <MagneticButton
           id="main-ln"
           borderRadius="10px"
+          align="center"
           fontSize="20px"
           noimage
-          hoverColor="#A050FF"
+          hoverColor="#2464AD"
           width="fit-content"
           height="fit-content"
           name="Linkedin"
@@ -49,9 +53,10 @@ const MainLogo = (props) => {
         <MagneticButton
           id="main-twitter"
           borderRadius="10px"
+          align="center"
           fontSize="20px"
           noimage
-          hoverColor="#ddc736"
+          hoverColor="#1C9CEA"
           width="fit-content"
           height="fit-content"
           name="Twitter"
@@ -60,7 +65,7 @@ const MainLogo = (props) => {
           style={{ cursor: "pointer" }}
           className="bold green-hover social-icons-main"
         />
-      </div>
+      </a>
       <div className="rainbow"></div>
 
       <div className="main-logo-heading">
@@ -77,18 +82,18 @@ const MainLogo = (props) => {
         </div>
         {/* </Parallax> */}
       </div>
-      <div className="button-container">
+      <a href="#two" className="button-container">
         <MagneticButton
           id="mainLogoButton"
           name="E &nbsp;&nbsp;X &nbsp;&nbsp;P &nbsp;&nbsp;L &nbsp;&nbsp;O &nbsp;&nbsp;R &nbsp;&nbsp;E"
           onClick={() => {
-            window.location.href = "#two";
+            window.scroll(0, secondRef.current.offsetTop);
           }}
           rotate={"-30deg"}
-          width="180px"
-          height="180px"
+          width="150px"
+          height="150px"
         />
-      </div>
+      </a>
     </div>
   );
 };

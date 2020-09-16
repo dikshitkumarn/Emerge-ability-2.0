@@ -1,9 +1,9 @@
 .aboutus-image {
   position: relative;
-  width: 600px;
-  margin: auto;
-  height: 700px;
-  background-image: url("../../assets/images/Chidren/11.jpg");
+  width: 500px;
+  margin-left: 200px;
+  height: 500px;
+  /* background-image: url("../../assets/images/videos/rubix.gif"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,20 +23,47 @@
 .about-us-content {
   position: absolute;
   right: 0;
-  bottom: 50%;
+  bottom: 45%;
+}
+.aboutus-scroll-to {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .aboutus-image {
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+  }
+  .about-us-content {
+    bottom: 25%;
+  }
+  .aboutus-scroll-to {
+    bottom: -20px;
+  }
 }
 
 @media (max-width: 500px) {
   .aboutus-image h1 {
     display: none;
   }
+  .aboutus-scroll-to {
+    display: none;
+  }
   .about-us-content {
     position: relative !important;
     top: 0;
   }
+  .about-us-content h1 {
+    max-width: 250px;
+    margin-bottom: 30px;
+  }
   .aboutus-image {
     width: 90%;
-    height: 340px;
+    height: 300px;
+    margin: auto;
   }
   .aboutus-button {
     top: 40% !important;
@@ -56,6 +83,7 @@
   .aboutus-image {
     width: 90%;
     height: 340px;
+    margin: auto;
   }
 }
 

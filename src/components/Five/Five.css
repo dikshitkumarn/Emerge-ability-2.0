@@ -4,6 +4,36 @@
   transform: rotate(5deg);
 }
 
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .controlled h1 {
+    font-size: 22px !important;
+    max-width: 500px;
+  }
+  .umbrella {
+    width: 100px !important;
+    height: 100px !important;
+    top: -180px !important;
+  }
+  .number {
+    font-size: 150px !important;
+  }
+  .para {
+    max-width: 400px !important;
+  }
+  .each-row {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+.fifth-scroll {
+  position: absolute;
+  right: 100px;
+}
+.fifth-left-scroll {
+  position: absolute;
+  left: 100px;
+}
 @font-face {
   font-family: "Pistilli-Roman";
   src: url("../../assets/Font/Pistilli-Roman\ \(numbers\)/Pistilli-Roman.otf")
@@ -12,7 +42,7 @@
 
 .number {
   font-family: "Pistilli-Roman";
-  font-size: 200px !important;
+  font-size: 200px;
 }
 
 .each-row {
@@ -21,7 +51,7 @@
   justify-content: center;
   flex-wrap: wrap;
   /* margin-left: 50px; */
-  max-width: 100vw;
+  max-width: 80%;
 }
 .odd {
   justify-content: flex-end;
@@ -40,6 +70,15 @@
   background-color: transparent !important;
   margin: 0 40px;
 }
+/* .cover-div-red {
+  width: 100vw;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: green;
+  transform: translateX(-30deg);
+} */
 .brain-2 {
   background-image: url("../../assets/images/Chidren/brain-2.png");
 }
@@ -64,25 +103,143 @@
   filter: opacity(50%);
 } */
 
+.rainbow-small {
+  position: absolute;
+  top: -180px;
+  left: calc(100% - 100px);
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+}
+
+@media (max-width: 1040px) {
+  .rainbow-small {
+    left: calc(100% - 100px);
+  }
+}
+
 .part-1 {
   width: 120vw;
   margin-left: -70px;
-  transform: rotate(5deg);
+  /* background-color: #fd2655b8; */
+  /* transform: rotate(5deg); */
+  /* transform: skewY(10deg); */
   margin-top: 70px;
   min-height: fit-content;
-  padding-top: 50px;
+  /* padding-top: 0px; */
   padding-bottom: 50px;
 }
 
+/* .red-bg-image {
+  width: calc(100% + 100px);
+  width: 100%;
+  z-index: -1;
+  height: calc(100% + 210px);
+  position: absolute;
+  top: -210px;
+  right: 0;
+} */
+.slant-container {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -199.7px;
+  border-bottom: 1px solid #fd2655b8;
+  outline: none;
+  width: 100%;
+  left: 0;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.slant {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  background: #fd2655b8;
+  transform: skewY(4deg);
+}
+.slant-container-right {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -199.7px;
+  border-bottom: 1px solid #fa6b18db;
+  outline: none;
+  width: 100%;
+  left: 0;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+.slant-right {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  height: 200px;
+  background: #fa6b18db;
+  transform: skewY(-4deg);
+}
+.part-1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 130px;
+  width: 100%;
+  height: 200px;
+  /* background: #fd2655b8; */
+  z-index: -1;
+  transform: skewY(4deg);
+  -webkit-backface-visibility: hidden;
+}
+
+.umbrella {
+  position: absolute;
+  left: calc(40% + 150px);
+  z-index: 1;
+  top: -220px;
+  transform: translateX(-40%);
+  width: 150px;
+  height: 150px;
+}
+.part-3-bg {
+  background-image: url("../../assets/images/BackGround\ Images/orange.png");
+  background-size: 100% 100%;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .part-3 {
   width: 120vw;
   margin-left: -70px;
-  transform: rotate(-5deg);
+  /* transform: rotate(-5deg); */
   margin-top: 70px;
   min-height: fit-content;
   padding-top: 50px;
   padding-bottom: 50px;
+  background: #fa6b18db;
 }
+
+/* .part-3:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -70px;
+  width: 100%;
+  height: 200px;
+  background: #fa6b18db;
+  z-index: -1;
+  transform: skewY(-4deg);
+} */
 
 @media (max-width: 1050px) and (min-width: 701px) {
   .empty-div {
@@ -102,6 +259,8 @@
     top: 0;
   }
   .controlled {
+    display: flex;
+    flex-direction: row;
     margin: auto;
     padding: 10px;
   }
@@ -123,6 +282,55 @@
     margin-top: 10px;
     width: 150vw;
     padding: 100px 10px;
+    padding-top: 0;
+  }
+  .slant {
+    height: 100px;
+    top: 150px;
+  }
+  .slant-right {
+    height: 100px;
+    top: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  .umbrella {
+    width: 50px;
+    height: 50px;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .slant {
+    height: 100px;
+    top: 150px;
+  }
+  .fifth-left-scroll {
+    display: none;
+  }
+  .fifth-scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) and (min-width: 440px) {
+  .umbrella {
+    top: -50px;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 550px) {
+  .umbrella {
+    width: 70px;
+    height: 70px;
+    top: 0;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 550px) {
+  .umbrella {
+    top: -90px;
   }
 }
 
@@ -131,8 +339,11 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    right: 0;
+    right: 0px;
     top: 0;
+  }
+  .umbrella {
+    top: -87px;
   }
   .number {
     font-size: 70px !important;
@@ -152,6 +363,7 @@
     align-items: flex-start;
     margin-left: 100px !important;
     position: relative;
+    width: 100vw;
   }
   .odd {
     flex-direction: column-reverse;
@@ -159,16 +371,16 @@
   .part-3,
   .part-1 {
     margin-left: -100px;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 150vw;
     padding: 100px 10px;
   }
 }
 
-.no-rotate {
+/* .no-rotate {
   transform: rotate(-5deg);
 }
 
 .no-rotate-2 {
   transform: rotate(5deg);
-}
+} */

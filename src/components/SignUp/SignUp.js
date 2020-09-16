@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./SignUp.css";
 import TextBox from "../UI/TextBox/TextBox";
 import CheckBox from "../UI/CheckBox/CheckBox";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
+import Select from "../UI/Select/Select";
 const interestedAsOptions = [
   { name: "Parent", displayName: "Parent" },
   { name: "Gaurdian", displayName: "Gaurdian" },
@@ -14,6 +15,8 @@ const interestedAsOptions = [
 ];
 
 const SignUp = (props) => {
+  const [signUpRef, setSignUpRef] = useState(props.getSignUpRef());
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,7 +28,11 @@ const SignUp = (props) => {
     // whichGoals: "",
     website: "",
   });
-
+  const [locationOptions, setLocationOptions] = useState([]);
+  useEffect(() => {
+    const countryList = require("country-list");
+    setLocationOptions([...countryList.getNames()]);
+  }, []);
   const changeHandler = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({
@@ -50,14 +57,14 @@ const SignUp = (props) => {
   };
 
   return (
-    <div id="signup">
+    <div id="signup" ref={signUpRef}>
       <div className="heading-with-background">
         <h1 className="green">Sign Up</h1>
         <h2 className="mini-heading green">Sign Up</h2>
       </div>
-      <div>
+      <div style={{ marginTop: -40 }}>
         <h1
-          className="capitalise mini-heading"
+          className="capitalise mini-heading mani-p"
           style={{ maxWidth: 700, margin: "auto" }}
         >
           Join our community of innovative educators and changemakers as an
@@ -67,7 +74,7 @@ const SignUp = (props) => {
       <div>
         <div className="each-contact-row d-flex justify-content-left">
           <div className="emp"></div>
-          <div style={{ margin: 10 }}>
+          <div style={{ margin: "0 10px" }}>
             <h1 className="contact-us-number green" style={{ opacity: 0.3 }}>
               01
             </h1>
@@ -81,7 +88,7 @@ const SignUp = (props) => {
           </div>
         </div>
 
-        <div className="each-contact-row d-flex justify-content-end">
+        <div className="each-contact-row d-flex justify-content-end odd-one">
           <div style={{ margin: 10 }}>
             <h1 className="contact-us-number green" style={{ opacity: 0.3 }}>
               02
@@ -106,9 +113,24 @@ const SignUp = (props) => {
             </h1>
           </div>
           <div className="para text-left contact-us-para">
-            <p className="bold">
+            <p className="bold" style={{ position: "relative" }}>
               In the meantime, please let us know if you ’d like to receive news
               and updates about EmergeAbility ’s growth and evolution.
+              <div className="signup-scroll">
+                <MagneticButton
+                  rotate="30deg"
+                  hoverColor="#7ac054"
+                  name="S C R O L L &nbsp; F U R T H E R"
+                  id="signup-scroll-button"
+                  onClick={() => {
+                    window.scroll(
+                      0,
+                      formRef.current.offsetTop
+                      // props.ref.current.getBoundingClientRect().height + window.scrollY
+                    );
+                  }}
+                />
+              </div>
             </p>
           </div>
         </div>
@@ -116,9 +138,12 @@ const SignUp = (props) => {
       <br />
       <br />
       <form
+        ref={formRef}
+        id="form"
         onSubmit={submitHandler}
         className="signUp"
         style={{ position: "relative" }}
+        ref={formRef}
       >
         <TextBox
           value={formData.firstName}
@@ -180,7 +205,7 @@ const SignUp = (props) => {
             />
           ))}
         </div>
-        <TextBox
+        {/* <TextBox
           value={formData.location}
           type="text"
           placeholder="Type Your Location"
@@ -192,7 +217,29 @@ const SignUp = (props) => {
           color="orange"
           width="80vw"
           height="50px"
-        />
+        /> */}
+        <br />
+        <br />
+        <div style={{ width: "80vw", textAlign: "left", marginTop: 50 }}>
+          <label className="label">
+            <h1 className="textbox-label orange">Country</h1>
+          </label>
+          <p>What's your location?</p>
+          <Select
+            boxShadox="orange"
+            value={formData.location}
+            placeholder="What's your location?"
+            options={[...locationOptions]}
+            name="location"
+            onChange={(value, name) => {
+              setFormData((prev) => ({
+                ...prev,
+                location: value,
+              }));
+            }}
+          />
+          <br />
+        </div>
         <TextBox
           value={formData.whyChampion}
           type="text"
@@ -233,7 +280,7 @@ const SignUp = (props) => {
             disabled={!valid()}
             type="submit"
             color="green"
-            hoverColor="green"
+            hoverColor="#7ac054"
             name="S I G N &nbsp; U P"
             rotate="-30deg"
             onClick={() => {}}

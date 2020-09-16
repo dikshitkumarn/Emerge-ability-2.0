@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Seven.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Seven = (props) => {
+  const [seventhRef] = useState(props.getSeventhRef());
+  const [aboutRef] = useState(props.getAboutRef());
   return (
     <div>
       <br />
@@ -10,6 +13,7 @@ const Seven = (props) => {
       <br />
       <br />
       <br />
+      <div ref={seventhRef}></div>
       <Row className="d-flex justify-content-center seven">
         <Col
           lg="4"
@@ -20,7 +24,7 @@ const Seven = (props) => {
           style={{ position: "relative" }}
           //   className="flexy"
         >
-          <div className="slim-description text-left flexy-seven">
+          <div className="slim-description text-left flexy-seven" id="seven">
             <h1 className="mini-heading light-green">
               “Let your abilities define you.. ”
             </h1>
@@ -53,6 +57,19 @@ const Seven = (props) => {
             <div className=" img-9-shade"></div>
             <div className="img-10"></div>
             <div className=" img-10-shade"></div>
+          </div>
+          <div className="seventh-button">
+            <MagneticButton
+              id="seventh-magnetic-button"
+              name="K E E P &nbsp; E X P L O R I N G"
+              onClick={() => {
+                window.scroll(0, aboutRef.current.offsetTop);
+              }}
+              hoverColor="#7ac054"
+              rotate="20deg"
+              width="150px"
+              height="150px"
+            />
           </div>
         </Col>
       </Row>

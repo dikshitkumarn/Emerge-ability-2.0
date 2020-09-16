@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Second.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Second = (props) => {
+  const [secondRef] = useState(props.getSecondRef());
+  const [thirdRef] = useState(props.getThirdRef());
+
   return (
-    <div id="two">
+    <div id="two" style={{ boxSizing: "border-box" }} ref={secondRef}>
       <Row className="d-flex justify-content-center second">
         <Col
           lg="4"
@@ -18,12 +22,30 @@ const Second = (props) => {
             <h1 className="mini-heading orange">
               "Abilities Beyond Boundaries."
             </h1>
-            <p className="bold">
+            <p className="bold" style={{ position: "relative" }}>
               <br />
               Education is not a privilege, it is a fundamental human right. The
               UNESCO: Global Education 2030 Agenda Sustainable Development Goal
               (SDG) 4 on education calls for inclusive and equitable quality
               education.
+              <br />
+              <a
+                ref={secondRef}
+                style={{ textAlign: "right", marginTop: "50px" }}
+                className="second-scroll"
+                href="#three"
+              >
+                <MagneticButton
+                  rotate="30deg"
+                  hoverColor="#fa6a18"
+                  name="K E E P &nbsp; E X P L O R I N G"
+                  id="second-scroll-button"
+                  onClick={() => {
+                    window.scroll(0, thirdRef.current.offsetTop);
+                    // window.location.href = "#three";
+                  }}
+                />
+              </a>
             </p>
           </div>
         </Col>

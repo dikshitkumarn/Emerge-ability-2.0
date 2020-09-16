@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./WhatWeDo.css";
 import { Row, Col } from "reactstrap";
+import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const WhatWeDo = (props) => {
+  const [whatWeDo] = useState(props.getWhatWeDoRef());
+  const [teamRef] = useState(props.getTeamRef());
   return (
-    <div className="WhatWeDo">
+    <div
+      className="WhatWeDo"
+      id="whatwedo"
+      ref={whatWeDo}
+      style={{ position: "relative" }}
+    >
       <div className="heading-with-background">
         <h1 className="red">What We Do</h1>
         <h2 className="mini-heading red">What We Do</h2>
       </div>
+
       <div className="mobile-version">
         <Row>
           <img
@@ -24,6 +33,8 @@ const WhatWeDo = (props) => {
                 className="black light-weight text-left"
                 style={{ padding: 20 }}
               >
+                <br />
+                <br />
                 We provide data-enabled and technology - driven products and
                 services which focus on enabling individuals to explore and take
                 informed education/career decisions based on their interests and
@@ -50,7 +61,7 @@ const WhatWeDo = (props) => {
         <Row>
           <Col md="6" lg="6" sm="6" xs="6" className="WhatWeDo-content-1">
             <div>
-              <p className="white light-weight text-left">
+              <p className="white light-weight text-left controll-p">
                 We provide data-enabled and technology - driven products and
                 services which focus on enabling individuals to explore and take
                 informed education/career decisions based on their interests and
@@ -68,6 +79,21 @@ const WhatWeDo = (props) => {
             </div>
           </Col>
         </Row>
+        <div className="whatwedo-scroll-to">
+          <MagneticButton
+            id="whatwedo-magnetic-button"
+            name="K E E P &nbsp; E X P L O R I N G"
+            onClick={() => {
+              window.scroll(0, teamRef.current.offsetTop + 60);
+            }}
+            color="white"
+            hoverColor="white"
+            hoverTextColor="black"
+            rotate="20deg"
+            width="130px"
+            height="130px"
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,12 +1,30 @@
 .ourmission-image {
   position: relative;
-  width: 600px;
+  width: 500px;
   margin: auto;
-  height: 700px;
-  background-image: url("../../assets/images/Chidren/12.jpg");
+  height: 500px;
+  /* background-image: url("../../assets/images/videos/brain.gif"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.ourmission-scroll-to {
+  position: absolute;
+  top: 100px;
+  left: -20px;
+}
+@media (max-width: 1550px) and (min-width: 1100px) {
+  .ourmission-image {
+    width: 500px;
+    height: 500px;
+    background-size: 100% 100%;
+  }
+  .our-mission-content {
+    right: 70px !important;
+  }
+  .ourmission-scroll-to {
+    top: 0px;
+  }
 }
 
 .our-mission {
@@ -22,12 +40,15 @@
 
 .our-mission-content {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 50%;
   top: 150px;
 }
 
 @media (max-width: 500px) {
+  .ourmission-scroll-to {
+    display: none;
+  }
   .ourmission-image h1 {
     display: none;
   }
