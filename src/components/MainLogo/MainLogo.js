@@ -87,7 +87,7 @@ const MainLogo = (props) => {
           id="mainLogoButton"
           name="E &nbsp;&nbsp;X &nbsp;&nbsp;P &nbsp;&nbsp;L &nbsp;&nbsp;O &nbsp;&nbsp;R &nbsp;&nbsp;E"
           onClick={() => {
-            window.scroll(0, secondRef.current.offsetTop);
+            window.scroll(0, secondRef.current.offsetTop - 60);
           }}
           rotate={"-30deg"}
           width="150px"

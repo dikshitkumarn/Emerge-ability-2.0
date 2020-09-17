@@ -57,7 +57,7 @@ const SignUp = (props) => {
   };
 
   return (
-    <div id="signup" ref={signUpRef}>
+    <div ref={signUpRef} id="signup">
       <div className="heading-with-background">
         <h1 className="green">Sign Up</h1>
         <h2 className="mini-heading green">Sign Up</h2>

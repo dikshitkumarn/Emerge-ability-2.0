@@ -16,7 +16,7 @@
   src: url("../../assets/Font/Pistilli-Roman\ \(numbers\)/Pistilli-Roman.otf")
     format("opentype");
 }
-@media (max-width: 1550px) and (min-width: 1100px) {
+@media (max-width: 1550px) and (min-width: 1000px) {
   .contact-us-para {
     min-width: 500px;
   }

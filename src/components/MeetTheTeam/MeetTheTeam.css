@@ -19,7 +19,7 @@
   position: absolute;
   left: 100px;
 }
-@media (max-width: 1305px) and (min-width: 1100px) {
+@media (max-width: 1305px) and (min-width: 1101px) {
   .team-scroll-to {
     position: absolute;
     top: 700px !important;
@@ -41,6 +41,9 @@
   #team {
     margin-top: 0;
   }
+}
+
+@media (max-width: 1100px) {
   .team-scroll-to {
     display: none;
   }

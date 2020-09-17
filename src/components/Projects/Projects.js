@@ -4,9 +4,28 @@ import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 const Projects = (props) => {
-  const [projectRef] = useState(props.getProjectRef);
+  const [projectRef] = useState(props.getProjectRef());
+  const [contactRef] = useState(props.getContactRef());
   return (
-    <div ref={projectRef} id="project" style={{ boxSizing: "border-box" }}>
+    <div
+      ref={projectRef}
+      id="project"
+      style={{ boxSizing: "border-box" }}
+      style={{ position: "relative" }}
+    >
+      <div className="projects-left-scroll">
+        <MagneticButton
+          rotate="30deg"
+          hoverColor="#fa6a18"
+          name="K E E P &nbsp; E X P L O R I N G"
+          id="projects-scroll-button"
+          color="#fa6a18"
+          borderColor="#fa6a18"
+          onClick={() => {
+            window.scroll(0, contactRef.current.offsetTop - 60);
+          }}
+        />
+      </div>
       <div className="heading-with-background">
         <h1 className="light-orange" id="projeccts">
           Projects
@@ -70,7 +89,7 @@ const Projects = (props) => {
           </Row>
           <div className="projects-button">
             <MagneticButton
-              hoverColor="orange"
+              hoverColor="#fa6a18"
               id="projects-magnetic-button"
               name="S U R V E Y &nbsp; L I N K"
               rotate="-30deg"
@@ -78,7 +97,7 @@ const Projects = (props) => {
               align="right"
               width="150px"
               height="150px"
-              color="orange"
+              color="#fa6a18"
               align="center"
             />
           </div>

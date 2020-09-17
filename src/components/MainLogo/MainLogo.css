@@ -30,7 +30,7 @@
   background-size: 95% 95%;
   animation: grow-top 1s forwards;
 }
-@media (max-width: 1550px) and (min-width: 1100px) {
+@media (max-width: 1550px) and (min-width: 1000px) {
   .main-logo-heading {
     top: 80px;
     left: 130px;
@@ -134,12 +134,15 @@
     margin-top: -10px; */
     /* margin-bottom: 0; */
   }
+  .hamburgur-container {
+    right: 30px !important;
+  }
 }
 
 .hamburgur-container {
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 50px;
+  top: 50px;
   z-index: 100;
 }
 

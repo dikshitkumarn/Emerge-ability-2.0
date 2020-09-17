@@ -1,0 +1,12 @@
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  background-color: white;
+  box-shadow: 0 0 17px 0 rgb(199, 198, 198);
+  border-radius: 2px;
+  z-index: 100;
+  transform-style: preserve-3d;
+}

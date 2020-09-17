@@ -35,7 +35,11 @@ const Fourth = (props) => {
               unique learning and thinking processes.
               <br />
               <br />
-              <a href="#five" style={{ textAlign: "right" }}>
+              <a
+                href="#five"
+                style={{ textAlign: "right" }}
+                id="fourth-scroll-button"
+              >
                 <MagneticButton
                   rotate="30deg"
                   hoverColor="#3e92c6"

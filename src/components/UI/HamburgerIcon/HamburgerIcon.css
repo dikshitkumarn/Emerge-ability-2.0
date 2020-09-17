@@ -1,32 +1,29 @@
 .HamburgerIcon {
-  padding: 20px;
+  padding: 7px;
   display: flex;
   flex-direction: column;
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 65px;
   position: relative;
   transition: all 1s ease-out;
   cursor: pointer;
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 0 black;
+  background-color: white;
+  transition: all 0.3s ease-out;
 }
 
-.HamburgerIcon div:hover {
-  animation: move-collapse 1s forwards;
-}
-
-@keyframes move-collapse {
-  0% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.HamburgerIcon:hover {
+  box-shadow: 0 0 5px 0 black;
+  transform: translate3d(0px, 10px, -10px);
 }
 
 .HamburgerIcon div {
-  width: 50px;
+  width: 39px;
   height: 5px;
-  background-color: white !important;
-  margin: 5px;
+  background-color: black;
+  margin: 3.5px;
 }
 
 .HamburgerIcon :nth-child(odd) {
@@ -34,14 +31,18 @@
 }
 
 .HamburgerIcon .last {
-  margin-left: 25px;
+  margin-top: 5px;
+  margin-left: 18px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
+  .HamburgerIcon {
+    width: 60px;
+    height: 50px;
+  }
   .HamburgerIcon div {
-    background-color: black !important;
-    width: 40px;
-    height: 3px;
+    width: 37px;
+    height: 4px;
     margin: 3px;
   }
   .HamburgerIcon :nth-child(odd) {

@@ -57,7 +57,7 @@
   background-size: 100% 100%;
 }
 
-@media (max-width: 1550px) and (min-width: 1100px) {
+@media (max-width: 1550px) and (min-width: 1000px) {
   .img-3,
   .img-3-shade {
     width: 350px;

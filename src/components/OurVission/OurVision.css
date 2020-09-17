@@ -83,7 +83,7 @@
   background-size: 100% 100%;
 }
 
-@media (max-width: 1550px) and (min-width: 1100px) {
+@media (max-width: 1550px) and (min-width: 1000px) {
   .img-13,
   .img-13-shade {
     width: 250px;

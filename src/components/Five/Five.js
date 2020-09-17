@@ -224,7 +224,7 @@ const Five = (props) => {
                   <div className="fifth-left-scroll">
                     <MagneticButton
                       rotate="30deg"
-                      hoverColor="#fb8746"
+                      hoverColor="red"
                       name="K E E P &nbsp; E X P L O R I N G"
                       id="fivethreee"
                       color="white"

@@ -21,7 +21,7 @@
 .member-container {
   max-width: 360px;
 }
-@media (max-width: 1550px) and (min-width: 1100px) {
+@media (max-width: 1550px) and (min-width: 1000px) {
   .member-image {
     width: 200px;
     height: 250px;

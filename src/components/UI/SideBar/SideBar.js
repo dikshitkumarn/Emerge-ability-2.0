@@ -6,18 +6,41 @@ import MagneticButton from "../MagneticButton/MagneticButton";
 const SideBar = (props) => {
   const [homeref] = useState(props.getHomeRef());
   const [menuLinks, setMenuLinks] = useState([
-    { name: "Home", id: "01", goto: "#home", color: "yellow", active: true },
-    { name: "About", id: "02", goto: "#about", color: "red", active: false },
     {
+      name: "Home",
+      id: "01",
+      goto: "#home",
+      color: "yellow",
+      active: true,
+      adjust: 0,
+    },
+    {
+      name: "About",
+      id: "02",
+      goto: "#about",
+      color: "red",
+      active: false,
+      adjust: 0,
+    },
+    {
+      adjust: 0,
       name: "Project",
       id: "05",
       goto: "#projeccts",
       color: "purple",
       active: false,
     },
-    { name: "Blog", id: "06", goto: "#blog", color: "#00BFFF", active: false },
+    {
+      name: "Blog",
+      adjust: 0,
+      id: "06",
+      goto: "#blog",
+      color: "#00BFFF",
+      active: false,
+    },
     {
       name: "Team",
+      adjust: 0,
       id: "03",
       goto: "#theteam",
       color: "#FF69B4",
@@ -28,6 +51,7 @@ const SideBar = (props) => {
       id: "07",
       goto: "#signup",
       color: "green",
+      adjust: 60,
       active: false,
     },
     {
@@ -36,18 +60,24 @@ const SideBar = (props) => {
       goto: "#contact",
       color: "#A97AD0",
       active: false,
+      adjust: -100,
     },
   ]);
+
   useEffect(() => {
     setMenuLinks((prev) => {
       prev.map((el, index) => {
-        console.log(props.refs[index]);
         el.goto = props.refs[index];
       });
       return prev;
     });
   }, []);
-  var classNames = ["SideBar", props.show ? "open" : "close"];
+
+  // useEffect(() => {
+  //   if (props.show) setClassNames(["SideBar", "open"]);
+  //   else setClassNames(["SideBar", "close"]);
+  // }, [window.location.href, props.show]);
+
   const setActive = (id) => {
     setMenuLinks((prev) => {
       let clone = prev.map((el) => {
@@ -65,7 +95,7 @@ const SideBar = (props) => {
   const goto = (link) => {
     window.open(link, "_blank");
   };
-  console.log(props.refs);
+  var classNames = ["SideBar", props.show ? "open" : "close"];
   return (
     <div
       className={classNames.join(" ")}
@@ -76,11 +106,11 @@ const SideBar = (props) => {
       <div className="mobile-only">
         <CloseIcon
           onClick={() => {
-            window.scroll(
-              0,
-              homeref.current.offsetTop
-              // props.ref.current.getBoundingClientRect().height + window.scrollY
-            );
+            // window.scroll(
+            //   0,
+            //   homeref.current.offsetTop
+            //   // props.ref.current.getBoundingClientRect().height + window.scrollY
+            // );
             props.onClick();
           }}
         />
@@ -91,11 +121,11 @@ const SideBar = (props) => {
           name="B A C K"
           rotate="-20deg"
           onClick={() => {
-            window.scroll(
-              0,
-              homeref.current.offsetTop
-              // props.ref.current.getBoundingClientRect().height + window.scrollY
-            );
+            // window.scroll(
+            //   0,
+            //   homeref.current.offsetTop
+            //   // props.ref.current.getBoundingClientRect().height + window.scrollY
+            // );
             props.onClick();
           }}
         />
@@ -175,7 +205,7 @@ const SideBar = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#139BF0"
+          hoverColor="#3D548E"
           width="fit-content"
           height="fit-content"
           name="Facebook"
@@ -189,7 +219,7 @@ const SideBar = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#7354A4"
+          hoverColor="#2464AD"
           width="fit-content"
           height="fit-content"
           name="Linkedin"
@@ -203,7 +233,7 @@ const SideBar = (props) => {
           borderRadius="10px"
           fontSize="20px"
           noimage
-          hoverColor="#5FB434"
+          hoverColor="#1C9CEA"
           width="fit-content"
           height="fit-content"
           name="Twitter"
@@ -224,12 +254,11 @@ const SideBar = (props) => {
               className="nav-name"
               onClick={() => {
                 // window.location.href = el.goto;
-                // console.log(props.ids);
                 // props.ids[11].scrollIntoView();
                 let ref = el.goto();
                 window.scroll(
                   0,
-                  ref.current.offsetTop
+                  ref.current.offsetTop + el.adjust
                   // props.ref.current.getBoundingClientRect().height + window.scrollY
                 );
                 setActive(el.id);

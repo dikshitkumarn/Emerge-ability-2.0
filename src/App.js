@@ -20,6 +20,7 @@ import Footer from "./components/Footer/Footer";
 import SideBar from "./components/UI/SideBar/SideBar";
 import SkewAnimation from "./components/UI/Animations/SkewAnimation/SkewAnimation";
 import HamburgerIcon from "./components/UI/HamburgerIcon/HamburgerIcon";
+import Navbar from "./components/UI/Navbar/Navbar";
 
 // var main,
 //   second,
@@ -111,44 +112,11 @@ function App() {
     setShow(false);
   };
 
-  // useEffect(() => {
-  //   main = document.getElementById("my-main-logo");
-  //   second = document.getElementById("my-second-div");
-  //   third = document.getElementById("my-third-div");
-  //   fourth = document.getElementById("my-fourth-div");
-  //   fifth = document.getElementById("my-fivth-div");
-  //   sixth = document.getElementById("my-sixth-div");
-  //   seventh = document.getElementById("my-seventh-div");
-  //   aboutUs = document.getElementById("my-about-us");
-  //   ourMission = document.getElementById("my-our-mission");
-  //   ourVision = document.getElementById("my-our-vision");
-  //   whatWeDo = document.getElementById("my-what-we-do");
-  //   meetTheTeam = document.getElementById("my-my-team");
-  //   projects = document.getElementById("my-projects");
-  //   contactUs = document.getElementById("my-contact-us");
-  //   signUp = document.getElementById("my-sign-up");
-  //   // signUp = document.getElementById("my-sign-up")
-  //   setIds([
-  //     main,
-  //     second,
-  //     third,
-  //     fourth,
-  //     fifth,
-  //     sixth,
-  //     seventh,
-  //     aboutUs,
-  //     ourMission,
-  //     ourVision,
-  //     whatWeDo,
-  //     meetTheTeam,
-  //     projects,
-  //     contactUs,
-  //     signUp,
-  //   ]);
-  // }, []);
-
   return (
     <div className="App" id="appId">
+      <div className="navbar-container">
+        <Navbar />
+      </div>
       <div className="hamburgur-container">
         <HamburgerIcon onClick={getIn} />
       </div>
