@@ -32,6 +32,7 @@ const Third = (props) => {
               <div id="three-button">
                 <MagneticButton
                   rotate="30deg"
+                  color="#fd2955"
                   hoverColor="#fd2955"
                   name="K E E P &nbsp; E X P L O R I N G"
                   id="third-scroll-button"
@@ -55,19 +56,21 @@ const Third = (props) => {
             <br />
             <br />
             <h1 className="mini-heading red">
-              “I am different,
-              <br /> not less”
+              “Different, <br />
+              not less
             </h1>
             <p className="bold">
               75 million school-aged children and youth are in desperate need of
-              educational suppo, either in danger of, or already missing out on
-              their education.
+              educational support, either in danger of, or already missing out
+              on their education.
               <br />
               <br />
               Children and young people with disabilities and neurodivergent
               conditions are the most marginalised and vulnerable in many
               countries, and they are most likely to be excluded from education
-              and future employment.
+              and future employment. They often face a multitude of barriers
+              from an inaccessible learning environment to a lack of support and
+              understanding of their unique learning and thinking processes.
               <br />
               <br />
             </p>

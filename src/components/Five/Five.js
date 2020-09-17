@@ -8,13 +8,17 @@ const Five = (props) => {
   const fiveTwo = useRef();
   const fiveThree = useRef();
   return (
-    <div style={{ position: "relative" }} style={{ boxSizing: "border-box" }}>
+    <div
+      ref={fifthRef}
+      style={{ position: "relative" }}
+      style={{ boxSizing: "border-box" }}
+    >
       <div className="controlled text-left">
         <h1 className="mini-heading">
-          Neurodiversity <span className="red">is an</span>{" "}
-          <span className="violet">umbrella</span>{" "}
+          Neurodiversity <span className="red">is the</span>{" "}
+          <span className="violet">diversity</span>{" "}
           <span className="red">
-            term which includes a range of conditions including:
+            of all human brains and minds including conditions such as:
             <br />
             <br />
             <br />
@@ -24,7 +28,7 @@ const Five = (props) => {
       <div
       // style={{ position: "relative" }}>
       >
-        <div style={{ position: "relative" }} ref={fifthRef}>
+        <div style={{ position: "relative" }}>
           <div
             id="five"
             className="part-1"
@@ -56,9 +60,10 @@ const Five = (props) => {
                 <div className="para text-left">
                   <h5 className="bold yellow">ADHD</h5>
                   <p className="bold white light-weight">
-                    Aention decit hyperactivity disorder (ADHD) is a mental
-                    health disorder that can cause abovenormal levels of
-                    hyperactive and impulsive behaviors.
+                    ADHD stands for attention deficit hyperactivity disorder, a
+                    condition with symptoms such as inattentiveness,
+                    impulsivity, and hyperactivity. The symptoms differ from
+                    person to person.
                   </p>
                 </div>
                 <div className="empty-div">
@@ -70,15 +75,15 @@ const Five = (props) => {
                 </div>
               </div>
 
-              <div className="each-row odd">
+              <div id="first-second" className="each-row odd">
                 <div className="empty-div brain-2"></div>
                 <div className="para text-left">
-                  <h5 className="bold yellow">Autism Spectrum Conditions</h5>
+                  <h5 className="bold yellow">Autism Spectrum Condition</h5>
                   <p className="bold white light-weight">
-                    Autism spectrum disorder is a condition related to brain
-                    development that impacts how a person perceives and
-                    socializes with others, causing problems in social
-                    interaction and communication.
+                    Autistic Spectrum Condition (ASC) a developmental condition
+                    which includes a number of symptoms and behaviours which
+                    affect the way in which a group of people understand and
+                    react to the world around them
                   </p>
                 </div>
                 <div style={{ margin: 10 }}>
@@ -86,9 +91,25 @@ const Five = (props) => {
                     02
                   </h1>
                 </div>
+                <div className="fifth-left-scroll">
+                  <MagneticButton
+                    rotate="30deg"
+                    hoverColor="#d0254b"
+                    name="E X P L O R E &nbsp; M O R E"
+                    id="my-fivth-two-scroll-button"
+                    color="white"
+                    borderColor="white"
+                    onClick={() => {
+                      let firstSecond = document
+                        .getElementById("first-second")
+                        .getBoundingClientRect().height;
+                      window.scroll(0, firstSecond + window.scrollY);
+                    }}
+                  />
+                </div>
               </div>
 
-              <div className="each-row">
+              <div id="third-one" className="each-row">
                 <div style={{ boxSizing: "border-box" }}>
                   <h1 className="number" style={{ color: "#d0254b" }}>
                     03
@@ -97,11 +118,10 @@ const Five = (props) => {
                 <div className="para text-left">
                   <h5 className="bold yellow">Dyslexia</h5>
                   <p className="bold white light-weight">
-                    Dyslexia is a learning disorder that involves diculty
-                    reading due to problems identifying speech sounds and
-                    learning how they relate to leers and words (decoding). Also
-                    called reading disability, dyslexia aects areas of the brain
-                    that process language.
+                    Dyslexia is a learning difference that involves difficulty
+                    in reading due to problems identifying speech sounds and
+                    learning how they relate to letters and words (decoding). It
+                    affects areas of the brain that process language.
                   </p>
                 </div>
                 <div className="empty-div"></div>
@@ -109,7 +129,7 @@ const Five = (props) => {
                   <MagneticButton
                     rotate="30deg"
                     hoverColor="#d0254b"
-                    name="K E E P &nbsp; E X P L O R I N G"
+                    name="E X P L O R E &nbsp; M O R E"
                     id="my-fivth-scroll-button"
                     color="white"
                     borderColor="white"
@@ -123,17 +143,18 @@ const Five = (props) => {
           </div>
         </div>
 
-        <div className="part-1 odd-part" id="fivethtwo" ref={fiveTwo}>
+        <div ref={fiveTwo} className="part-1 odd-part" id="fivethtwo">
           <div className="no-rotate">
             <div className="each-row">
               <div style={{ margin: 10 }}>
                 <h1 className="number faded-pink">04</h1>
               </div>
               <div className="para text-left">
-                <h5 className="bold sky-blue">Dyspraxia</h5>
+                <h5 className="bold sky-blue">Dyscalculia</h5>
                 <p className="bold">
-                  a developmental disorder of the brain in childhood causing
-                  diculty in activities requiring coordination and movement.
+                  Dyscalculia is a specific and persistent difficulty in
+                  understanding numbers which can lead to a diverse range of
+                  difficulties with mathematics.
                 </p>
               </div>
               <div className="empty-div"></div>
@@ -142,12 +163,11 @@ const Five = (props) => {
             <div className="each-row odd">
               <div className="empty-div"></div>
               <div className="para text-left">
-                <h5 className="bold sky-blue">Dyscalculia</h5>
+                <h5 className="bold sky-blue">Dyspraxia</h5>
                 <p className="bold">
-                  Dyscalculia is a math learning disability that impairs an
-                  individual's ability to learn number-related concepts, peorm
-                  accurate math calculations, reason and problem solve, and
-                  peorm other basic math skills.
+                  Dyspraxia, also known as developmental coordination disorder
+                  (DSD), is a common disorder that affects movement and
+                  coordination.
                 </p>
               </div>
               <div style={{ margin: 10 }}>
@@ -162,22 +182,25 @@ const Five = (props) => {
               <div className="para text-left">
                 <h5 className="bold sky-blue">Dysgraphia</h5>
                 <p className="bold">
-                  Dysgraphia is a neurological disorder of wrien expression that
-                  06 impairs writing ability and ne motor skills.
+                  Dysgraphia is a learning condition that affects writing
+                  abilities. It can manifest itself as difficulties with
+                  spelling, poor handwriting and trouble putting thoughts on
+                  paper.
                 </p>
               </div>
-              <div className="empty-div brain-3"></div>
               <div className="fifth-scroll">
                 <MagneticButton
                   rotate="30deg"
+                  color="#ffd4dd"
                   hoverColor="#ffd4dd"
-                  name="K E E P &nbsp; E X P L O R I N G"
+                  name="E X P L O R E &nbsp; M O R E"
                   id="fivetwo"
                   onClick={() => {
                     window.scroll(0, fiveThree.current.offsetTop);
                   }}
                 />
               </div>
+              <div className="empty-div brain-3"></div>
             </div>
           </div>
         </div>
@@ -212,9 +235,10 @@ const Five = (props) => {
                       Developmental Language Disorders
                     </h5>
                     <p className="bold white light-weight">
-                      Developmental language disorder (DLD) is a type of speech,
-                      language and communication need (SLCN) that aects the way
-                      that children understand and use language.
+                      Developmental Language Disorder or DLD (previously known
+                      as Specific Language Impairment or SLI) is a persistent
+                      type of speech, language and communication that cannot be
+                      explained by an obvious cause.
                     </p>
                   </div>
                   <div className="empty-div"></div>
@@ -224,11 +248,13 @@ const Five = (props) => {
                   <div className="fifth-left-scroll">
                     <MagneticButton
                       rotate="30deg"
-                      hoverColor="red"
-                      name="K E E P &nbsp; E X P L O R I N G"
+                      hoverColor="#fa6b18db"
+                      hoverTextColor="white"
+                      backgroundColor="white"
+                      name="E X P L O R E &nbsp; M O R E"
                       id="fivethreee"
-                      color="white"
-                      borderColor="white"
+                      color="#fa6b18db"
+                      borderColor="transparent"
                       onClick={() => {
                         window.scroll(0, sixthRef.current.offsetTop);
                       }}
@@ -236,13 +262,11 @@ const Five = (props) => {
                   </div>
                   <div className="empty-div brain-2"></div>
                   <div className="para text-left">
-                    <h5 className="bold dark-red">Tourette’s Syndrome</h5>
+                    <h5 className="bold dark-red">Tourette Syndrome</h5>
                     <p className="bold white light-weight">
-                      Touree's syndrome is a problem with the nervous system
-                      that causes people to make sudden movements or sounds,
-                      called tics, that they can't control. For example, someone
-                      with Touree's might blink or clear their throat over and
-                      over again.
+                      Tourette syndrome (TS) is a neurological disorder
+                      characterized by repetitive, stereotyped, involuntary
+                      movements and vocalizations called tics
                     </p>
                   </div>
                   <div style={{ margin: 10 }}>

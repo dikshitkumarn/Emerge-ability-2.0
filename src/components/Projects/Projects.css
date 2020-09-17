@@ -79,8 +79,8 @@
 
 .projects-left-scroll {
   position: absolute;
-  bottom: 100px;
-  left: 300px;
+  bottom: 200px;
+  left: 100px;
   z-index: 10;
 }
 
@@ -195,7 +195,8 @@
     margin-left: 0 !important;
   }
   .projects-button {
-    bottom: 100px !important;
+    bottom: 450px !important;
+    left: 10vw;
   }
   .img-19,
   .img-19-shade {
@@ -237,6 +238,6 @@
 
 .projects-button {
   position: absolute;
-  bottom: 100px;
-  right: 300px;
+  bottom: 140px;
+  right: 500px;
 }

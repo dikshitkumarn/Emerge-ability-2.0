@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./AboutUs.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 var rubixVideo, playVideo;
 
 const AboutUs = (props) => {
@@ -47,12 +48,12 @@ const AboutUs = (props) => {
             </h1>
             <p className="bold">
               We are an innovative initiative with the aim to maximize the
-              potential of individuals with cognitive dierences via research and
-              consultancy
+              potential of individuals with cognitive differences via research,
+              product development and advocacy.
             </p>
           </div>
           <div className="aboutus-scroll-to">
-            <MagneticButton
+            {/* <MagneticButton
               id="about-us-magnetic-button"
               name="K E E P &nbsp; E X P L O R I N G"
               onClick={() => {
@@ -62,6 +63,14 @@ const AboutUs = (props) => {
               rotate="20deg"
               width="150px"
               height="150px"
+            /> */}
+            <ScrollButton
+              onClick={() => {
+                window.scroll(0, ourMissionRef.current.offsetTop + 60);
+              }}
+              name="Our Mission"
+              color="red"
+              textColor="red"
             />
           </div>
         </Col>
@@ -84,8 +93,8 @@ const AboutUs = (props) => {
                 id="aboutus-magnetic-button"
                 name={playing ? "P A U S E" : "P L A Y  V I D E O"}
                 onClick={playToggle}
-                width="200px"
-                height="200px"
+                width="150px"
+                height="150px"
               />
             </div>
           </div>

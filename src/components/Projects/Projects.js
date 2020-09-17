@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Projects.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const Projects = (props) => {
   const [projectRef] = useState(props.getProjectRef());
@@ -14,7 +15,7 @@ const Projects = (props) => {
       style={{ position: "relative" }}
     >
       <div className="projects-left-scroll">
-        <MagneticButton
+        {/* <MagneticButton
           rotate="30deg"
           hoverColor="#fa6a18"
           name="K E E P &nbsp; E X P L O R I N G"
@@ -24,6 +25,12 @@ const Projects = (props) => {
           onClick={() => {
             window.scroll(0, contactRef.current.offsetTop - 60);
           }}
+        /> */}
+        <ScrollButton
+          onClick={() => window.scroll(0, contactRef.current.offsetTop - 60)}
+          name="Contact Us"
+          textColor="#fa6a18"
+          color="orange"
         />
       </div>
       <div className="heading-with-background">
@@ -41,7 +48,7 @@ const Projects = (props) => {
                   “Inclusion is within everyone’s ability....”
                 </h1>
                 <p className="bold">
-                  The aim of this survey is to give us, a snapshot of the
+                  The aim of this survey is to give us a snapshot of the
                   perceptions of educators towards inclusive education, and to
                   get respondents’ views of relevant training, as well as to
                   identify what is working well and what the gaps are.

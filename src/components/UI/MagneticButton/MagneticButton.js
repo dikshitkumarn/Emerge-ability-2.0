@@ -74,6 +74,9 @@ const MagneticButton = (props) => {
         width: props.width ? props.width : 150,
         height: props.height ? props.height : 150,
         borderColor: props.color ? props.color : "black",
+        backgroundColor: props.backgroundColor
+          ? props.backgroundColor
+          : "transparent",
         textAlign: props.align ? props.align : "center",
       }}
       className={`rounded-button ${props.className ? props.className : ""}`}

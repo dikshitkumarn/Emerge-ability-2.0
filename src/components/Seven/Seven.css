@@ -59,8 +59,8 @@
 }
 .seventh-button {
   position: absolute;
-  left: 100px;
-  bottom: 0px;
+  left: -40px;
+  bottom: -50px;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
@@ -78,6 +78,9 @@
   }
   .flexy-seven {
     right: -100px !important;
+  }
+  .seventh-button {
+    left: 0px;
   }
 }
 

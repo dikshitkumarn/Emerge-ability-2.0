@@ -5,6 +5,8 @@ import CheckBox from "../UI/CheckBox/CheckBox";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
 import Select from "../UI/Select/Select";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
+import RadioButton from "../UI/RadioButton/RadioButton";
 const interestedAsOptions = [
   { name: "Parent", displayName: "Parent" },
   { name: "Gaurdian", displayName: "Gaurdian" },
@@ -14,6 +16,26 @@ const interestedAsOptions = [
   { name: "Other", displayName: "Other" },
 ];
 
+const genderOptions = [
+  { name: "Male", displayName: "Male" },
+  { name: "Female", displayName: "Female" },
+  { name: "Non Binary", displayName: "Non Binary" },
+  {
+    name: "Would not prefer to reveal",
+    displayName: "Would not prefer to reveal",
+  },
+];
+
+const neroDivergent = [
+  { name: "Yes", displayName: "Yes" },
+  { name: "No", displayName: "No" },
+];
+
+const disability = [
+  { name: "Yes ", displayName: "Yes " },
+  { name: "No ", displayName: "No " },
+];
+
 const SignUp = (props) => {
   const [signUpRef, setSignUpRef] = useState(props.getSignUpRef());
   const formRef = useRef();
@@ -21,12 +43,16 @@ const SignUp = (props) => {
     firstName: "",
     lastName: "",
     email: "",
-    interestedAs: "",
+    interestedAs: [],
     location: "",
     whyChampion: "",
     whatChallenges: "",
-    // whichGoals: "",
+    gender: "",
     website: "",
+    identifyNero: "",
+    neroReason: "",
+    disability: "",
+    disabilityReason: "",
   });
   const [locationOptions, setLocationOptions] = useState([]);
   useEffect(() => {
@@ -46,16 +72,33 @@ const SignUp = (props) => {
       formData.firstName,
       formData.lastName,
       formData.email,
-      formData.interestedAs,
       formData.location,
+      formData.website,
+      formData.gender,
+      formData.identifyNero,
+      formData.disability,
     ];
-    return requiredValues.every((el) => el.trim() !== "");
+    return (
+      requiredValues.every((el) => el.trim() !== "") &&
+      requiredValues.length !== 0
+    );
+  };
+
+  const changeDropdown = (el) => {
+    setFormData((prev) => {
+      return {
+        ...prev,
+        interestedAs: prev.interestedAs.includes(el)
+          ? prev.interestedAs.filter((ele) => ele !== el)
+          : [...prev.interestedAs, el],
+      };
+    });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
   };
-
+  console.log(formData);
   return (
     <div ref={signUpRef} id="signup">
       <div className="heading-with-background">
@@ -82,8 +125,8 @@ const SignUp = (props) => {
           <div className="para text-left contact-us-para">
             <p className="bold">
               Are you interested in driving change in education? If you are
-              interested in collaborating with us, please ll in the form below.
-              The more detail you can share, the better
+              interested in collaborating with us, please fill in the form
+              below. The more detail you can share, the better.
             </p>
           </div>
         </div>
@@ -117,7 +160,7 @@ const SignUp = (props) => {
               In the meantime, please let us know if you ’d like to receive news
               and updates about EmergeAbility ’s growth and evolution.
               <div className="signup-scroll">
-                <MagneticButton
+                {/* <MagneticButton
                   rotate="30deg"
                   hoverColor="#7ac054"
                   name="S C R O L L &nbsp; F U R T H E R"
@@ -129,6 +172,18 @@ const SignUp = (props) => {
                       // props.ref.current.getBoundingClientRect().height + window.scrollY
                     );
                   }}
+                /> */}
+                <ScrollButton
+                  onClick={() => {
+                    window.scroll(
+                      0,
+                      formRef.current.offsetTop
+                      // props.ref.current.getBoundingClientRect().height + window.scrollY
+                    );
+                  }}
+                  name="Go Further"
+                  color="green"
+                  textColor="#7ac054"
                 />
               </div>
             </p>
@@ -187,44 +242,140 @@ const SignUp = (props) => {
           <label className="label">
             <p className="red">*</p>
             <h1 className={`textbox-label`} style={{ color: "#81C35E" }}>
-              I am intrested as a
+              I am interested as a
             </h1>
           </label>
           <p>&nbsp;&nbsp;Please Select an Option</p>
-          {interestedAsOptions.map((el) => (
+          {interestedAsOptions.map((el, index) => (
             <CheckBox
+              key={index}
               name={el.name}
-              onChange={() =>
-                setFormData((prev) => ({
-                  ...prev,
-                  interestedAs: el.name,
-                }))
-              }
-              checked={formData.interestedAs === el.name}
+              onChange={() => changeDropdown(el.name)}
+              checked={formData.interestedAs.includes(el.name)}
               displayName={el.displayName}
             />
           ))}
         </div>
-        {/* <TextBox
-          value={formData.location}
-          type="text"
-          placeholder="Type Your Location"
-          onChange={changeHandler}
-          label="Location"
-          textboxName="location"
-          required
-          borderColor="orange"
-          color="orange"
-          width="80vw"
-          height="50px"
-        /> */}
+        <div className="text-left select-container">
+          <br />
+          <label className="label">
+            <p className="red">*</p>
+            <h1 className={`textbox-label`} style={{ color: "#fa6a18" }}>
+              Gender
+            </h1>
+          </label>
+          {genderOptions.map((el, index) => (
+            <RadioButton
+              key={index}
+              name={el.name}
+              onChange={() =>
+                setFormData((prev) => ({
+                  ...prev,
+                  gender: el.name,
+                }))
+              }
+              checked={formData.gender === el.name}
+              displayName={el.displayName}
+            />
+          ))}
+        </div>
+        <div className="text-left select-container">
+          <br />
+          <label className="label">
+            <p className="red">*</p>
+            <h1 className={`textbox-label`} style={{ color: "#ffc16a" }}>
+              Do you identify as a neurodivergent
+            </h1>
+          </label>
+          {neroDivergent.map((el, index) => (
+            <RadioButton
+              key={index}
+              name={el.name}
+              onChange={() =>
+                setFormData((prev) => ({
+                  ...prev,
+                  identifyNero: el.name,
+                }))
+              }
+              checked={formData.identifyNero === el.name}
+              displayName={el.displayName}
+            />
+          ))}
+        </div>
+        {formData.identifyNero === "Yes" ? (
+          <div>
+            <TextBox
+              value={formData.neroReason}
+              type="text"
+              placeholder="Specify if you prefer to reveal"
+              onChange={changeHandler}
+              label="Please mention your condition"
+              textboxName="neroReason"
+              borderColor="#ffc16a"
+              color="#ffc16a"
+              width="80vw"
+              height="50px"
+            />
+          </div>
+        ) : (
+          () =>
+            setFormData((prev) => ({
+              ...prev,
+              neroReason: "Would not prefer to reveal",
+            }))
+        )}
         <br />
+        <div className="text-left select-container">
+          <br />
+          <label className="label">
+            <p className="red">*</p>
+            <h1 className={`textbox-label`} style={{ color: "#FF6082" }}>
+              Do you have any disability
+            </h1>
+          </label>
+          {disability.map((el, index) => (
+            <RadioButton
+              key={index}
+              name={el.name}
+              onChange={() =>
+                setFormData((prev) => ({
+                  ...prev,
+                  disability: el.name,
+                }))
+              }
+              checked={formData.disability === el.name}
+              displayName={el.displayName}
+            />
+          ))}
+        </div>
+        {formData.disability === "Yes " ? (
+          <div>
+            <TextBox
+              value={formData.disabilityReason}
+              type="text"
+              placeholder="Specify if you prefer to reveal"
+              onChange={changeHandler}
+              label="Please mention your disability"
+              textboxName="disabilityReason"
+              borderColor="#FF6082"
+              color="#FF6082"
+              width="80vw"
+              height="50px"
+            />
+          </div>
+        ) : (
+          () =>
+            setFormData((prev) => ({
+              ...prev,
+              disabilityReason: "Would not prefer to reveal",
+            }))
+        )}
         <br />
         <div style={{ width: "80vw", textAlign: "left", marginTop: 50 }}>
           <label className="label">
             <h1 className="textbox-label orange">Country</h1>
           </label>
-          <p>What's your location?</p>
+          {/* <p>What's your location?</p> */}
           <Select
             boxShadox="orange"
             value={formData.location}
@@ -244,10 +395,10 @@ const SignUp = (props) => {
           value={formData.whyChampion}
           type="text"
           onChange={changeHandler}
-          label="Why would you like to become an EmergeAbility Champion?"
+          label="Why would you like to become an EmergeAbility Champion? (maximum 100 words)"
           textboxName="whyChampion"
-          borderColor="red"
-          color="red"
+          borderColor="#5FD4FF"
+          color="#5FD4FF"
           width="80vw"
           height="70px"
         />
@@ -257,8 +408,8 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="What challenges are you trying to address?"
           textboxName="whatChallenges"
-          borderColor="yellow"
-          color="yellow"
+          borderColor="#fee67d"
+          color="#fee67d"
           width="80vw"
           height="70px"
         />
@@ -272,6 +423,7 @@ const SignUp = (props) => {
           color="blue"
           width="80vw"
           height="70px"
+          required
         />
 
         <div className="signup-button">

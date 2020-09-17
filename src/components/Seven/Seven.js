@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Seven.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const Seven = (props) => {
   const [seventhRef] = useState(props.getSeventhRef());
@@ -38,7 +39,7 @@ const Seven = (props) => {
               <br />
               <br />
               Children with special needs have the right to receive the
-              schooling and social supports they need within the ordinary
+              schooling and social support they need within the ordinary
               structures available in their local communities. Strong advocacy
               is needed for this to happen. In particular parents need to be
               empowered, communities mobilised and professionals trained in new
@@ -50,6 +51,16 @@ const Seven = (props) => {
               future-ready paradigms for learning beyond boundaries.
             </p>
           </div>
+          <div className="seventh-button">
+            <ScrollButton
+              onClick={() => {
+                window.scroll(0, aboutRef.current.offsetTop);
+              }}
+              name="About Us"
+              color="green"
+              textColor="#7ac054"
+            />
+          </div>
         </Col>
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
           <div className="absolute-container-seven">
@@ -58,7 +69,8 @@ const Seven = (props) => {
             <div className="img-10"></div>
             <div className=" img-10-shade"></div>
           </div>
-          <div className="seventh-button">
+
+          {/* <div className="seventh-button">
             <MagneticButton
               id="seventh-magnetic-button"
               name="K E E P &nbsp; E X P L O R I N G"
@@ -70,7 +82,7 @@ const Seven = (props) => {
               width="150px"
               height="150px"
             />
-          </div>
+          </div> */}
         </Col>
       </Row>
     </div>

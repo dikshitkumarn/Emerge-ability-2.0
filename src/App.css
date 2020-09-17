@@ -36,6 +36,13 @@
   margin: auto;
 }
 
+@media (max-width: 600px) {
+  .controll-width {
+    max-width: 100vw;
+    margin: auto;
+  }
+}
+
 .scroll-to-top-button {
   position: fixed;
   width: 50px;

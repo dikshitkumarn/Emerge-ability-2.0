@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const ContactUs = (props) => {
   const [ref] = useState(props.getTeamRef());
   const [contactRef] = useState(props.getContactRef());
+  const [signUpRef] = useState(props.getSignUpRef());
 
   return (
     <div
@@ -46,58 +48,18 @@ const ContactUs = (props) => {
           color="pink"
           align="center"
         />
+        <div className="contact-left-scroll">
+          <ScrollButton
+            onClick={() => window.scroll(0, signUpRef.current.offsetTop + 60)}
+            name="Sign Up"
+            textColor="#78b16c"
+            color="green"
+          />
+        </div>
       </div>
+
       <br />
       <br />
-      {/* <div>
-        <div className="each-contact-row d-flex justify-content-left">
-          <div className="emp"></div>
-          <div style={{ margin: 10 }}>
-            <h1 className="contact-us-number pink" style={{ opacity: 0.3 }}>
-              01
-            </h1>
-          </div>
-          <div className="para text-left contact-us-para">
-            <p className="bold">
-              Are you interested in driving change in education? If you are
-              interested in collaborating with us, please ll in the form below.
-              The more detail you can share, the beer
-            </p>
-          </div>
-        </div>
-
-        <div className="each-contact-row d-flex justify-content-end">
-          <div style={{ margin: 10 }}>
-            <h1 className="contact-us-number pink" style={{ opacity: 0.3 }}>
-              02
-            </h1>
-          </div>
-          <div className="para text-left contact-us-para">
-            <p className="bold">
-              This will help us learn which hubs we could launch, where and
-              when, as well as put Champions in touch with each other to build
-              learning ecosystems. We will share this information later in the
-              year.
-            </p>
-          </div>
-          <div className="emp"></div>
-        </div>
-
-        <div className="each-contact-row d-flex justify-content-left">
-          <div className="emp"></div>
-          <div style={{ margin: 10 }}>
-            <h1 className="contact-us-number pink" style={{ opacity: 0.3 }}>
-              03
-            </h1>
-          </div>
-          <div className="para text-left contact-us-para">
-            <p className="bold">
-              In the meantime, please let us know if you ’d like to receive news
-              and updates about EmergeAbility ’s growth and evolution.
-            </p>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

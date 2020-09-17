@@ -20,7 +20,7 @@ const Second = (props) => {
         >
           <div className="slim-description text-left secont-adjust">
             <h1 className="mini-heading orange">
-              "Abilities Beyond Boundaries."
+              "Abilities Beyond Boundaries"
             </h1>
             <p className="bold" style={{ position: "relative" }}>
               <br />
@@ -29,7 +29,7 @@ const Second = (props) => {
               (SDG) 4 on education calls for inclusive and equitable quality
               education.
               <br />
-              <a
+              <div
                 ref={secondRef}
                 style={{ textAlign: "right", marginTop: "50px" }}
                 className="second-scroll"
@@ -37,6 +37,7 @@ const Second = (props) => {
               >
                 <MagneticButton
                   rotate="30deg"
+                  color="#fa6a18"
                   hoverColor="#fa6a18"
                   name="K E E P &nbsp; E X P L O R I N G"
                   id="second-scroll-button"
@@ -45,7 +46,7 @@ const Second = (props) => {
                     // window.location.href = "#three";
                   }}
                 />
-              </a>
+              </div>
             </p>
           </div>
         </Col>

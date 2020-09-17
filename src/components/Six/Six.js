@@ -31,17 +31,19 @@ const Six = (props) => {
         >
           <div className="slim-description text-left six-align">
             <h1 className="mini-heading purple">
-              “Neurodiversity is not a symptom, it’s a feature.. ”
+              “Neurodiversity is not a deficit, it’s an asset.."
             </h1>
             <p className="bold">
-              Neurodiversity considers brain dierences as normal, rather than
-              decits. Embracing this concept can benet children and young people
-              with learning and thinking differences.
+              Neurodiversity considers brain differences as normal, rather than
+              deficits. Neurodiversity (usually abbreviated to ND) is the
+              diversity of all human brains and minds. Embracing this concept
+              can benefit all children and young people with learning and
+              thinking differences.
               <br />
               <br />
               Inclusive education advocates that all children can learn and that
               all pupils, including many considered to be disabled, need some
-              form of suppo in learning during their time at school.
+              form of support in learning during their time at school.
             </p>
           </div>
         </Col>
@@ -49,10 +51,11 @@ const Six = (props) => {
       <div className="six-button">
         <MagneticButton
           id="sixth-magnetic-button"
-          name="K E E P &nbsp;E X P L O R I N G"
+          name="E X P L O R E &nbsp; M O R E"
           onClick={() => {
             window.scroll(0, seventhRef.current.offsetTop);
           }}
+          color=""
           hoverColor="#a356ff"
           rotate="20deg"
           width="150px"

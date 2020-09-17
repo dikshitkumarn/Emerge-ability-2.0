@@ -23,12 +23,12 @@
 .about-us-content {
   position: absolute;
   right: 0;
-  bottom: 45%;
+  top: 10%;
 }
 .aboutus-scroll-to {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 100px;
+  left: 50px;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
@@ -40,9 +40,9 @@
   .about-us-content {
     bottom: 25%;
   }
-  .aboutus-scroll-to {
+  /* .aboutus-scroll-to {
     bottom: -20px;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
@@ -89,6 +89,6 @@
 
 .aboutus-button {
   position: absolute;
-  bottom: -100px;
+  bottom: 0px;
   left: -100px;
 }

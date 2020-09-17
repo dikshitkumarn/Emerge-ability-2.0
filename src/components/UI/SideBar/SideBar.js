@@ -23,7 +23,7 @@ const SideBar = (props) => {
       adjust: 0,
     },
     {
-      adjust: 0,
+      adjust: 100,
       name: "Project",
       id: "05",
       goto: "#projeccts",
@@ -78,19 +78,19 @@ const SideBar = (props) => {
   //   else setClassNames(["SideBar", "close"]);
   // }, [window.location.href, props.show]);
 
-  const setActive = (id) => {
-    setMenuLinks((prev) => {
-      let clone = prev.map((el) => {
-        if (el.id === id) {
-          el.active = true;
-        } else {
-          el.active = false;
-        }
-        return el;
-      });
-      return clone;
-    });
-  };
+  // const setActive = (id) => {
+  //   setMenuLinks((prev) => {
+  //     let clone = prev.map((el) => {
+  //       if (el.id === id) {
+  //         el.active = true;
+  //       } else {
+  //         el.active = false;
+  //       }
+  //       return el;
+  //     });
+  //     return clone;
+  //   });
+  // };
 
   const goto = (link) => {
     window.open(link, "_blank");
@@ -139,7 +139,7 @@ const SideBar = (props) => {
             homeref.current.offsetTop
             // props.ref.current.getBoundingClientRect().height + window.scrollY
           );
-          setActive("01");
+          // setActive("01");
           props.onClick();
         }}
         style={{ cursor: "pointer" }}
@@ -261,7 +261,7 @@ const SideBar = (props) => {
                   ref.current.offsetTop + el.adjust
                   // props.ref.current.getBoundingClientRect().height + window.scrollY
                 );
-                setActive(el.id);
+                // setActive(el.id);
                 props.onClick();
               }}
             >

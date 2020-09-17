@@ -8,10 +8,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.ourmission-scroll-to {
+.myourmission-scroll-to {
   position: absolute;
-  top: 100px;
-  left: -20px;
+  bottom: 100px;
+  left: 0;
 }
 @media (max-width: 1550px) and (min-width: 1000px) {
   .ourmission-image {
@@ -21,9 +21,6 @@
   }
   .our-mission-content {
     right: 70px !important;
-  }
-  .ourmission-scroll-to {
-    top: 0px;
   }
 }
 
@@ -46,7 +43,7 @@
 }
 
 @media (max-width: 500px) {
-  .ourmission-scroll-to {
+  .myourmission-scroll-to {
     display: none;
   }
   .ourmission-image h1 {
@@ -87,6 +84,6 @@
 
 .our-mission-button {
   position: absolute;
-  bottom: -100px;
+  bottom: 0px;
   right: -110px;
 }

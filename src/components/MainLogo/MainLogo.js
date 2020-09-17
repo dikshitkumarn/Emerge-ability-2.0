@@ -14,9 +14,9 @@ const MainLogo = (props) => {
       ref={firstRef}
       className="one"
       id="home"
-      style={{ boxSizing: "border-box" }}
+      style={{ boxSizing: "border-box", overflow: "hidden" }}
     >
-      <a
+      <div
         className="social-links small responsive-small"
         style={{ background: "transparent" }}
       >
@@ -44,7 +44,7 @@ const MainLogo = (props) => {
           hoverColor="#2464AD"
           width="fit-content"
           height="fit-content"
-          name="Linkedin"
+          name="LinkedIn"
           borderWidth="0"
           onClick={() => goto("http://jsonplaceholder.com")}
           style={{ cursor: "pointer" }}
@@ -65,7 +65,7 @@ const MainLogo = (props) => {
           style={{ cursor: "pointer" }}
           className="bold green-hover social-icons-main"
         />
-      </a>
+      </div>
       <div className="rainbow"></div>
 
       <div className="main-logo-heading">
@@ -76,24 +76,24 @@ const MainLogo = (props) => {
             <span className="blue">Emerge</span>
             <span className="violet-fade">Ability</span>
           </h1>
-          <p className="uppercase font-size-small bold responsive-small">
-            A b i l i t i e s &nbsp; B e y o n d &nbsp; B o u n d a r i e s .
+          <p className="uppercase bold responsive-small expand">
+            A b i l i t i e s &nbsp; B e y o n d &nbsp; B o u n d a r i e s
           </p>
         </div>
         {/* </Parallax> */}
       </div>
-      <a href="#two" className="button-container">
+      <div href="#two" className="button-container">
         <MagneticButton
           id="mainLogoButton"
           name="E &nbsp;&nbsp;X &nbsp;&nbsp;P &nbsp;&nbsp;L &nbsp;&nbsp;O &nbsp;&nbsp;R &nbsp;&nbsp;E"
           onClick={() => {
-            window.scroll(0, secondRef.current.offsetTop - 60);
+            window.scroll(0, secondRef.current.offsetTop - 200);
           }}
           rotate={"-30deg"}
           width="150px"
           height="150px"
         />
-      </a>
+      </div>
     </div>
   );
 };

@@ -27,29 +27,30 @@ const Fourth = (props) => {
             style={{ maxWidth: 250 }}
           >
             <h1 className="mini-heading sky-blue">
-              “Every child deserves a future. ”
+              “Every child deserves a future ”
             </h1>
             <p className="bold">
               They often face a multitude of barriers from an inaccessible
-              learning environment to a lack of suppo and understanding of their
-              unique learning and thinking processes.
+              learning environment to a lack of support and understanding of
+              their unique learning and thinking processes.
               <br />
               <br />
-              <a
+              <div
                 href="#five"
                 style={{ textAlign: "right" }}
                 id="fourth-scroll-button"
               >
                 <MagneticButton
                   rotate="30deg"
+                  color="#3e92c6"
                   hoverColor="#3e92c6"
                   name="K E E P &nbsp; E X P L O R I N G"
                   id="_"
                   onClick={() => {
-                    window.scroll(0, fifthRef.current.offsetTop);
+                    window.scroll(0, fifthRef.current.offsetTop - 60);
                   }}
                 />
-              </a>
+              </div>
             </p>
           </div>
         </Col>

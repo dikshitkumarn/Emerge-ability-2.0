@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./OurMission.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 var brainVideo, playVideo;
 const OurMission = (props) => {
   const [playing, setPlaying] = useState(false);
@@ -38,6 +39,16 @@ const OurMission = (props) => {
         id="mission"
       >
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
+          <div className="myourmission-scroll-to">
+            <ScrollButton
+              onClick={() => {
+                window.scroll(0, ourVisionRef.current.offsetTop + 60);
+              }}
+              name="Our Vision"
+              textColor="#e36df9"
+              color="pink"
+            />
+          </div>
           <div className="ourmission-image">
             <video
               id="brain-video"
@@ -55,8 +66,8 @@ const OurMission = (props) => {
                 id="our-mission-magnetic-button"
                 name={playing ? "P A U S E" : "P L A Y V I D E O"}
                 onClick={playToggle}
-                width="200px"
-                height="200px"
+                width="150px"
+                height="150px"
               />
             </div>
           </div>
@@ -70,15 +81,17 @@ const OurMission = (props) => {
           style={{ minHeight: 300, position: "relative" }}
         >
           <div className="slim-description text-left our-mission-content">
-            <h1 className="mini-heading pink">“If you can, you should... ”</h1>
+            <h1 className="mini-heading pink">
+              “Breaking barriers by building inclusion... ”
+            </h1>
             <p className="bold">
-              Our goal is to remove barriers and ensure access and paicipation
+              Our goal is to remove barriers and ensure access and participation
               for all young people in education and employment regardless of
-              cognitive dierences. We are building an open, inclusive ecosystem
-              to bring education and employment into the 21st Century.
+              cognitive differences. We are building an open, inclusive
+              ecosystem to bring education and employment into the 21st Century.
             </p>
           </div>
-          <div className="ourmission-scroll-to">
+          {/* <div className="ourmission-scroll-to">
             <MagneticButton
               id="ourmission-magnetic-button"
               name="K E E P &nbsp;  E X P L O R I N G"
@@ -89,7 +102,7 @@ const OurMission = (props) => {
               width="130px"
               height="130px"
             />
-          </div>
+          </div> */}
         </Col>
       </Row>
     </div>

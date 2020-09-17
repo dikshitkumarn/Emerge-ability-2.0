@@ -36,8 +36,7 @@ const MeetTheTeam = (props) => {
             <EachMember
               position="C o - f o u n d e r"
               name="Bhuvana Meenakshi Koteeswaran"
-              job="Gender Gap and Socio-Technology Research| AR/
-                VR/XR Evangelist | Mozillian| Wikimedian"
+              job="Gender Gap and Socio-Technology Researcher | AR/VR/XR Evangelist | Mozillian | Wikimedian"
               email="Bhuvana@EmergeAbility.org"
               image={require("../../assets/images/Chidren/17.png")}
             />
@@ -48,8 +47,7 @@ const MeetTheTeam = (props) => {
             <EachMember
               position="C o - f o u n d e r"
               name="Leena Haque"
-              job="User Experience Designer | Neurodiversity
-            specialist | Innovation Architect"
+              job="User Experience Designer | Neurodiversity Specialist | Innovation Architect"
               email="Leena@EmergeAbility.org"
               image={require("../../assets/images/Chidren/18.png")}
             />
