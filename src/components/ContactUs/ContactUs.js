@@ -52,8 +52,8 @@ const ContactUs = (props) => {
           <ScrollButton
             onClick={() => window.scroll(0, signUpRef.current.offsetTop + 60)}
             name="Sign Up"
-            textColor="#78b16c"
-            color="green"
+            textColor="#a356ff"
+            color="pink"
           />
         </div>
       </div>

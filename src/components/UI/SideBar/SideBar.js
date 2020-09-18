@@ -11,7 +11,7 @@ const SideBar = (props) => {
       id: "01",
       goto: "#home",
       color: "yellow",
-      active: true,
+      active: false,
       adjust: 0,
     },
     {

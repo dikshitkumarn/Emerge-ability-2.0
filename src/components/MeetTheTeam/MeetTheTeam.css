@@ -20,11 +20,11 @@
   left: 100px;
 }
 @media (max-width: 1305px) and (min-width: 1101px) {
-  .team-scroll-to {
+  /* .team-scroll-to {
     position: absolute;
     top: 700px !important;
     right: 200px !important;
-  }
+  } */
   .MeetTheTeam {
     flex-direction: row !important;
     min-height: 700px;
@@ -82,7 +82,7 @@
 
 .team-scroll-to {
   position: absolute;
-  top: 500px;
-  right: 45%;
+  top: 600px;
+  left: 100px;
   z-index: 100;
 }

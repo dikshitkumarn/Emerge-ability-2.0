@@ -44,10 +44,10 @@ const Fourth = (props) => {
                   rotate="30deg"
                   color="#3e92c6"
                   hoverColor="#3e92c6"
-                  name="K E E P &nbsp; E X P L O R I N G"
+                  name="E X P L O R E &nbsp; M O R E"
                   id="_"
                   onClick={() => {
-                    window.scroll(0, fifthRef.current.offsetTop - 60);
+                    window.scroll(0, fifthRef.current.offsetTop - 70);
                   }}
                 />
               </div>

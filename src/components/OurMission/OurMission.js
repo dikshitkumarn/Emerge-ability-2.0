@@ -8,6 +8,9 @@ const OurMission = (props) => {
   const [playing, setPlaying] = useState(false);
   const [ourMissionRef] = useState(props.getMissionRef());
   const [ourVisionRef] = useState(props.getVisionRef());
+  const [image, setImage] = useState(
+    require("../../assets/images/icons/forward.png")
+  );
 
   useEffect(() => {
     playVideo = document.getElementById("our-mission-magnetic-button");
@@ -18,7 +21,13 @@ const OurMission = (props) => {
   }, []);
 
   const playToggle = () => {
-    playing ? brainVideo.pause() : brainVideo.play();
+    if (playing) {
+      brainVideo.pause();
+      setImage(require("../../assets/images/icons/forward.png"));
+    } else {
+      brainVideo.play();
+      setImage(require("../../assets/images/icons/pause.png"));
+    }
     setPlaying((prev) => !prev);
   };
 
@@ -51,6 +60,7 @@ const OurMission = (props) => {
           </div>
           <div className="ourmission-image">
             <video
+              poster={require("../../assets/images/videos/brainThumb.PNG")}
               id="brain-video"
               src={require("../../assets/images/videos/brain.mp4")}
               width="100%"
@@ -66,6 +76,7 @@ const OurMission = (props) => {
                 id="our-mission-magnetic-button"
                 name={playing ? "P A U S E" : "P L A Y V I D E O"}
                 onClick={playToggle}
+                src={image}
                 width="150px"
                 height="150px"
               />

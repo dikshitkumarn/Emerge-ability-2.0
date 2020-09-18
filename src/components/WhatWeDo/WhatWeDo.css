@@ -17,13 +17,16 @@
 }
 .whatwedo-scroll-to {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 150px;
+  left: 100px;
   z-index: 100;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
+  .whatwedo-scroll-to {
+    bottom: 70px;
+    left: 50px;
+  }
   .bg-boy {
     height: 200px !important;
     min-height: 300px;
@@ -40,6 +43,12 @@
     font-size: 20px !important;
     max-width: 90%;
     line-height: 25px !important;
+  }
+}
+
+@media (max-width: 999px) {
+  .whatwedo-scroll-to {
+    display: none;
   }
 }
 

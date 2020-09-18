@@ -9,6 +9,9 @@ const AboutUs = (props) => {
   const [playing, setPlaying] = useState(false);
   const [aboutUsRef] = useState(props.getAboutRef());
   const [ourMissionRef] = useState(props.getMissionRef());
+  const [image, setImage] = useState(
+    require("../../assets/images/icons/forward.png")
+  );
 
   useEffect(() => {
     playVideo = document.getElementById("about-us-button");
@@ -19,7 +22,13 @@ const AboutUs = (props) => {
   }, []);
 
   const playToggle = () => {
-    playing ? rubixVideo.pause() : rubixVideo.play();
+    if (playing) {
+      rubixVideo.pause();
+      setImage(require("../../assets/images/icons/forward.png"));
+    } else {
+      rubixVideo.play();
+      setImage(require("../../assets/images/icons/pause.png"));
+    }
     setPlaying((prev) => !prev);
   };
   return (
@@ -77,6 +86,7 @@ const AboutUs = (props) => {
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
           <div className="aboutus-image">
             <video
+              poster={require("../../assets/images/videos/aboutThumb.PNG")}
               id="rubix-video"
               src={require("../../assets/images/videos/rubix.mp4")}
               width="100%"
@@ -93,6 +103,7 @@ const AboutUs = (props) => {
                 id="aboutus-magnetic-button"
                 name={playing ? "P A U S E" : "P L A Y  V I D E O"}
                 onClick={playToggle}
+                src={image}
                 width="150px"
                 height="150px"
               />

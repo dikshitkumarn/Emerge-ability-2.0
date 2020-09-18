@@ -24,6 +24,9 @@
   .contact-us-para {
     min-width: 500px;
   }
+  .contact-left-scroll {
+    margin-top: -200px;
+  }
   .each-contact-row:nth-child(2),
   .each-contact-row:nth-child(3) {
     margin-top: -50px !important;

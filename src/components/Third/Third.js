@@ -34,7 +34,7 @@ const Third = (props) => {
                   rotate="30deg"
                   color="#fd2955"
                   hoverColor="#fd2955"
-                  name="K E E P &nbsp; E X P L O R I N G"
+                  name="E X P L O R E &nbsp; M O R E"
                   id="third-scroll-button"
                   onClick={() => {
                     window.scroll(0, fourthRef.current.offsetTop);

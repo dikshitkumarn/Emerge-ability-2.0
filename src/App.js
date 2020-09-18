@@ -21,6 +21,7 @@ import SideBar from "./components/UI/SideBar/SideBar";
 import SkewAnimation from "./components/UI/Animations/SkewAnimation/SkewAnimation";
 import HamburgerIcon from "./components/UI/HamburgerIcon/HamburgerIcon";
 import Navbar from "./components/UI/Navbar/Navbar";
+import PopOver from "./components/UI/PopOver/PopOver";
 
 // var main,
 //   second,
@@ -118,8 +119,11 @@ function App() {
 
   return (
     <div className="App" id="appId">
-      {/* <div className="navbar-container">
+      <div className="navbar-container">
         <Navbar getAppId={getAppId} />
+      </div>
+      {/* <div className="navbar-container">
+       
       </div> */}
       <div className="hamburgur-container">
         <HamburgerIcon onClick={getIn} />
@@ -139,73 +143,76 @@ function App() {
         getHomeRef={getHomeRef}
         // ids={ids}
       />
-      {/* <SkewAnimation> */}
-      <div id="my-main-logo">
-        <MainLogo
-          onClick={getIn}
-          getHomeRef={getHomeRef}
-          getSecondRef={getSecondRef}
-        />
-      </div>
-      <div className="controll-width">
-        <div id="my-second-div">
-          <Second getSecondRef={getSecondRef} getThirdRef={getThirdRef} />
-        </div>
-        <div id="my-third-div">
-          <Third getThirdRef={getThirdRef} getFourthRef={getFourthRef} />
-        </div>
-        <div id="my-fourth-div">
-          <Fourth getFourthRef={getFourthRef} getFifthRef={getFifthRef} />
-        </div>
-      </div>
-      <div id="my-fifth-div">
-        <Five getFifthRef={getFifthRef} getSixthRef={getSixthRef} />
-      </div>
-      <div className="controll-width">
-        <div id="my-sixth-div">
-          <Six getSixthRef={getSixthRef} getSeventhRef={getSeventhRef} />
-        </div>
-        <div id="my-seventh-div">
-          <Seven getAboutRef={getAboutRef} getSeventhRef={getSeventhRef} />
-        </div>
-        <div id="my-about-us">
-          <AboutUs getAboutRef={getAboutRef} getMissionRef={getMissionRef} />
-        </div>
-        <div id="my-our-mission">
-          <OurMission
-            getMissionRef={getMissionRef}
-            getVisionRef={getVisionRef}
+      <SkewAnimation>
+        <div id="my-main-logo">
+          <MainLogo
+            onClick={getIn}
+            getHomeRef={getHomeRef}
+            getSecondRef={getSecondRef}
           />
         </div>
-        <div id="my-our-vision">
-          <OurVision
-            getVisionRef={getVisionRef}
-            getWhatWeDoRef={getWhatWeDoRef}
+        <div className="controll-width">
+          <div id="my-second-div">
+            <Second getSecondRef={getSecondRef} getThirdRef={getThirdRef} />
+          </div>
+          <div id="my-third-div">
+            <Third getThirdRef={getThirdRef} getFourthRef={getFourthRef} />
+          </div>
+          <div id="my-fourth-div">
+            <Fourth getFourthRef={getFourthRef} getFifthRef={getFifthRef} />
+          </div>
+        </div>
+        <div id="my-fifth-div">
+          <Five getFifthRef={getFifthRef} getSixthRef={getSixthRef} />
+        </div>
+        <div className="controll-width">
+          <div id="my-sixth-div">
+            <Six getSixthRef={getSixthRef} getSeventhRef={getSeventhRef} />
+          </div>
+          <div id="my-seventh-div">
+            <Seven getAboutRef={getAboutRef} getSeventhRef={getSeventhRef} />
+          </div>
+          <div id="my-about-us">
+            <AboutUs getAboutRef={getAboutRef} getMissionRef={getMissionRef} />
+          </div>
+          <div id="my-our-mission">
+            <OurMission
+              getMissionRef={getMissionRef}
+              getVisionRef={getVisionRef}
+            />
+          </div>
+          <div id="my-our-vision">
+            <OurVision
+              getVisionRef={getVisionRef}
+              getWhatWeDoRef={getWhatWeDoRef}
+            />
+          </div>
+        </div>
+        <div id="my-what-we-do">
+          <WhatWeDo getWhatWeDoRef={getWhatWeDoRef} getTeamRef={getTeamRef} />
+        </div>
+        <div id="my-my-team">
+          <MeetTheTeam getTeamRef={getTeamRef} getProjectRef={getProjectRef} />
+        </div>
+        <div id="my-projects">
+          <Projects
+            getProjectRef={getProjectRef}
+            getContactRef={getContactRef}
           />
         </div>
-      </div>
-      <div id="my-what-we-do">
-        <WhatWeDo getWhatWeDoRef={getWhatWeDoRef} getTeamRef={getTeamRef} />
-      </div>
-      <div id="my-my-team">
-        <MeetTheTeam getTeamRef={getTeamRef} getProjectRef={getProjectRef} />
-      </div>
-      <div id="my-projects">
-        <Projects getProjectRef={getProjectRef} getContactRef={getContactRef} />
-      </div>
-      <div id="my-contact-us">
-        <ContactUs
-          getTeamRef={getTeamRef}
-          getContactRef={getContactRef}
-          getSignUpRef={getSignUpRef}
-        />
-      </div>
-      <div id="my-sign-up">
-        <SignUp getSignUpRef={getSignUpRef} />
-      </div>
+        <div id="my-contact-us">
+          <ContactUs
+            getTeamRef={getTeamRef}
+            getContactRef={getContactRef}
+            getSignUpRef={getSignUpRef}
+          />
+        </div>
+        <div id="my-sign-up">
+          <SignUp getSignUpRef={getSignUpRef} />
+        </div>
 
-      <Footer getHomeRef={getHomeRef} />
-      {/* </SkewAnimation> */}
+        <Footer getHomeRef={getHomeRef} />
+      </SkewAnimation>
       <div
         className="scroll-to-top-button"
         onClick={() => {

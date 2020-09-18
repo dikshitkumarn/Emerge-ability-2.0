@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 import "./Five.css";
 
 const Five = (props) => {
@@ -92,7 +93,18 @@ const Five = (props) => {
                   </h1>
                 </div>
                 <div className="fifth-left-scroll">
-                  <MagneticButton
+                  <ScrollButton
+                    onClick={() => {
+                      let firstSecond = document
+                        .getElementById("first-second")
+                        .getBoundingClientRect().height;
+                      window.scroll(0, firstSecond + window.scrollY);
+                    }}
+                    name="Continue"
+                    color="white"
+                    textColor="white"
+                  />
+                  {/* <MagneticButton
                     rotate="30deg"
                     hoverColor="#d0254b"
                     name="E X P L O R E &nbsp; M O R E"
@@ -105,7 +117,7 @@ const Five = (props) => {
                         .getBoundingClientRect().height;
                       window.scroll(0, firstSecond + window.scrollY);
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
 
@@ -189,7 +201,15 @@ const Five = (props) => {
                 </p>
               </div>
               <div className="fifth-scroll">
-                <MagneticButton
+                <ScrollButton
+                  onClick={() => {
+                    window.scroll(0, fiveThree.current.offsetTop);
+                  }}
+                  name="Explore More"
+                  color="pink"
+                  textColor="#a356ff"
+                />
+                {/* <MagneticButton
                   rotate="30deg"
                   color="#ffd4dd"
                   hoverColor="#ffd4dd"
@@ -198,7 +218,7 @@ const Five = (props) => {
                   onClick={() => {
                     window.scroll(0, fiveThree.current.offsetTop);
                   }}
-                />
+                /> */}
               </div>
               <div className="empty-div brain-3"></div>
             </div>
@@ -226,7 +246,7 @@ const Five = (props) => {
               <div className="no-rotate-2">
                 <div className="each-row">
                   <div style={{ margin: 10 }}>
-                    <h1 className="number" style={{ color: "#fb8746" }}>
+                    <h1 className="number" style={{ color: "#f1b490" }}>
                       07
                     </h1>
                   </div>
@@ -270,7 +290,7 @@ const Five = (props) => {
                     </p>
                   </div>
                   <div style={{ margin: 10 }}>
-                    <h1 className="number" style={{ color: "#fb8746" }}>
+                    <h1 className="number" style={{ color: "#f1b490" }}>
                       08
                     </h1>
                   </div>

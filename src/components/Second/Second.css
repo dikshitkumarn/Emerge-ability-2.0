@@ -31,13 +31,28 @@
 .secont-adjust {
   margin-left: -20px !important;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .second-scroll {
     display: none;
   }
 }
 .absolute-container {
   height: 600px !important;
+}
+
+@media (max-width: 900px) and (min-width: 500px) {
+  .absolute-container {
+    max-height: 300px;
+  }
+  .secont-adjust {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 900px) {
+  .secont-adjust {
+    max-width: 90%;
+  }
 }
 
 .img-2 {
@@ -63,6 +78,21 @@
   background-position: center center;
   opacity: 0.5;
   background-size: 100% 100%;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .img-1,
+  .img-1-shade {
+    width: 250px;
+    height: 200px;
+    left: 100px;
+  }
+  .img-2,
+  .img-2-shade {
+    width: 150px;
+    height: 300px;
+    left: 360px;
+  }
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {

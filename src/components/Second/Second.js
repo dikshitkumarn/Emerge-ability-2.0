@@ -39,7 +39,7 @@ const Second = (props) => {
                   rotate="30deg"
                   color="#fa6a18"
                   hoverColor="#fa6a18"
-                  name="K E E P &nbsp; E X P L O R I N G"
+                  name="E X P L O R E &nbsp; M O R E"
                   id="second-scroll-button"
                   onClick={() => {
                     window.scroll(0, thirdRef.current.offsetTop);

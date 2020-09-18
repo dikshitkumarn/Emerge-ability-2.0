@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./WhatWeDo.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const WhatWeDo = (props) => {
   const [whatWeDo] = useState(props.getWhatWeDoRef());
@@ -58,6 +59,16 @@ const WhatWeDo = (props) => {
         </Row>
       </div>
       <div className="bg-boy">
+        <div className="whatwedo-scroll-to">
+          <ScrollButton
+            onClick={() => {
+              window.scroll(0, teamRef.current.offsetTop + 60);
+            }}
+            name="Meet The Team"
+            textColor="white"
+            color="white"
+          />
+        </div>
         <Row>
           <Col md="6" lg="6" sm="6" xs="6" className="WhatWeDo-content-1">
             <div>
@@ -79,7 +90,7 @@ const WhatWeDo = (props) => {
             </div>
           </Col>
         </Row>
-        <div className="whatwedo-scroll-to">
+        {/* <div className="whatwedo-scroll-to">
           <MagneticButton
             id="whatwedo-magnetic-button"
             name="K E E P &nbsp; E X P L O R I N G"
@@ -93,7 +104,7 @@ const WhatWeDo = (props) => {
             width="130px"
             height="130px"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

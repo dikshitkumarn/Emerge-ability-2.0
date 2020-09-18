@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./OurVision.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const OurVision = (props) => {
   const [ourVisionRef] = useState(props.getVisionRef());
@@ -33,6 +34,16 @@ const OurVision = (props) => {
           className="d-flex justify-content-center"
           style={{ maxHeight: 300, position: "relative" }}
         >
+          <div className="ourvision-scroll-to">
+            <ScrollButton
+              onClick={() => {
+                window.scroll(0, whatWeDoRef.current.offsetTop + 60);
+              }}
+              name="What We Do"
+              textColor="#fa6a18"
+              color="orange"
+            />
+          </div>
           <div className="slim-description text-left flexy-our-vision">
             <h1 className="mini-heading orange">
               "Empowering by embracing difference"
@@ -42,7 +53,7 @@ const OurVision = (props) => {
               their unique strengths/abilities and giving them the skills they
               need to succeed in this new world.
             </p>
-            <div className="ourvision-scroll-to">
+            {/* <div className="ourvision-scroll-to">
               <MagneticButton
                 id="ourvision-magnetic-button"
                 name="K E E P &nbsp; E X P L O R I N G"
@@ -54,11 +65,11 @@ const OurVision = (props) => {
                 width="130px"
                 height="130px"
               />
-            </div>
+            </div> */}
           </div>
         </Col>
         <Col lg="7" md="12" sm="12" xs="12" style={{ position: "relative" }}>
-          <div className="absolute-container">
+          <div className="absolute-container-our-vision">
             <div className="img-13"></div>
             <div className=" img-13-shade"></div>
             <div className="img-14"></div>

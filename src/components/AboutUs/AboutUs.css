@@ -44,6 +44,13 @@
     bottom: -20px;
   } */
 }
+@media (min-width: 501px) and (max-width: 992px) {
+  .aboutus-button {
+    top: 40% !important;
+    position: absolute !important;
+    left: 40% !important;
+  }
+}
 
 @media (max-width: 500px) {
   .aboutus-image h1 {

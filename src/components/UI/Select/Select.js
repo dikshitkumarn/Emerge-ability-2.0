@@ -9,7 +9,7 @@ const SelectInput = (props) => {
           ...styles,
           boxShadow: `none`,
           border: "none",
-          borderBottom: "2px solid orange",
+          borderBottom: "2px solid #cc5417",
           borderRadius: 0,
           // ${
           //   props.boxShadow ? props.boxShadow : "initial"

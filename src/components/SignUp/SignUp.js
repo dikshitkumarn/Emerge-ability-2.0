@@ -27,11 +27,19 @@ const genderOptions = [
 ];
 
 const neroDivergent = [
+  {
+    name: "Would Not Prefer To Reveal",
+    displayName: "Would Not Prefer To Reveal",
+  },
   { name: "Yes", displayName: "Yes" },
   { name: "No", displayName: "No" },
 ];
 
 const disability = [
+  {
+    name: "Would Not Prefer To Reveal ",
+    displayName: "Would Not Prefer To Reveal ",
+  },
   { name: "Yes ", displayName: "Yes " },
   { name: "No ", displayName: "No " },
 ];
@@ -114,7 +122,7 @@ const SignUp = (props) => {
           EmergeAbility champion.
         </h1>
       </div>
-      <div>
+      <div style={{ position: "relative" }}>
         <div className="each-contact-row d-flex justify-content-left">
           <div className="emp"></div>
           <div style={{ margin: "0 10px" }}>
@@ -159,8 +167,11 @@ const SignUp = (props) => {
             <p className="bold" style={{ position: "relative" }}>
               In the meantime, please let us know if you ’d like to receive news
               and updates about EmergeAbility ’s growth and evolution.
-              <div className="signup-scroll">
-                {/* <MagneticButton
+            </p>
+          </div>
+        </div>
+        <div className="signup-scroll">
+          {/* <MagneticButton
                   rotate="30deg"
                   hoverColor="#7ac054"
                   name="S C R O L L &nbsp; F U R T H E R"
@@ -173,21 +184,18 @@ const SignUp = (props) => {
                     );
                   }}
                 /> */}
-                <ScrollButton
-                  onClick={() => {
-                    window.scroll(
-                      0,
-                      formRef.current.offsetTop
-                      // props.ref.current.getBoundingClientRect().height + window.scrollY
-                    );
-                  }}
-                  name="Go Further"
-                  color="green"
-                  textColor="#7ac054"
-                />
-              </div>
-            </p>
-          </div>
+          <ScrollButton
+            onClick={() => {
+              window.scroll(
+                0,
+                formRef.current.offsetTop - 60
+                // props.ref.current.getBoundingClientRect().height + window.scrollY
+              );
+            }}
+            name="Sign Up form"
+            color="green"
+            textColor="#7ac054"
+          />
         </div>
       </div>
       <br />
@@ -207,8 +215,8 @@ const SignUp = (props) => {
           label="FirstName"
           textboxName="firstName"
           required
-          borderColor="skyblue"
-          color="skyblue"
+          borderColor="#357FF7"
+          color="#357FF7"
           width="30vw"
           height="50px"
         />
@@ -219,8 +227,8 @@ const SignUp = (props) => {
           label="Last Name"
           textboxName="lastName"
           required
-          borderColor="skyblue"
-          color="skyblue"
+          borderColor="#357FF7"
+          color="#357FF7"
           width="30vw"
           height="50px"
         />
@@ -283,7 +291,7 @@ const SignUp = (props) => {
           <br />
           <label className="label">
             <p className="red">*</p>
-            <h1 className={`textbox-label`} style={{ color: "#ffc16a" }}>
+            <h1 className={`textbox-label`} style={{ color: "blue" }}>
               Do you identify as a neurodivergent
             </h1>
           </label>
@@ -329,7 +337,7 @@ const SignUp = (props) => {
           <br />
           <label className="label">
             <p className="red">*</p>
-            <h1 className={`textbox-label`} style={{ color: "#FF6082" }}>
+            <h1 className={`textbox-label`} style={{ color: "#BC34E8" }}>
               Do you have any disability
             </h1>
           </label>
@@ -377,7 +385,7 @@ const SignUp = (props) => {
           </label>
           {/* <p>What's your location?</p> */}
           <Select
-            boxShadox="orange"
+            boxShadox="#cc5417"
             value={formData.location}
             placeholder="What's your location?"
             options={[...locationOptions]}
@@ -397,8 +405,8 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="Why would you like to become an EmergeAbility Champion? (maximum 100 words)"
           textboxName="whyChampion"
-          borderColor="#5FD4FF"
-          color="#5FD4FF"
+          borderColor="#FACC90"
+          color="#FACC90"
           width="80vw"
           height="70px"
         />
@@ -408,8 +416,8 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="What challenges are you trying to address?"
           textboxName="whatChallenges"
-          borderColor="#fee67d"
-          color="#fee67d"
+          borderColor="#00B500"
+          color="#00B500"
           width="80vw"
           height="70px"
         />

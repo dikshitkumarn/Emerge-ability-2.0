@@ -80,13 +80,16 @@
 .projects-left-scroll {
   position: absolute;
   bottom: 200px;
-  left: 100px;
+  left: 50px;
   z-index: 10;
 }
 
 @media (max-width: 992px) {
   .projects-left-scroll {
     display: none;
+  }
+  .flexy-projects {
+    width: 90% !important;
   }
 }
 
@@ -96,6 +99,9 @@
     width: 200px;
     height: 150px;
     left: -60px;
+  }
+  .projects-left-scroll {
+    bottom: 300px;
   }
   .img-20,
   .img-20-shade {

@@ -258,6 +258,16 @@
     margin: auto;
   }
 }
+
+@media (min-width: 701px) and (max-width: 1049px) {
+  .controlled h1 {
+    font-size: 20px !important;
+  }
+  .controlled {
+    margin-left: 0 !important;
+    max-width: 500px;
+  }
+}
 @media (min-width: 828px) and (max-width: 1049px) {
   .controlled {
     margin-left: 0 !important;

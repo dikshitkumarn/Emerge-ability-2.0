@@ -32,6 +32,16 @@
   background: rgb(32, 31, 31);
 }
 
+.white-chevron:before,
+.white-chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: rgb(255, 255, 255);
+}
+
 .green-chevron:before,
 .green-chevron:after {
   content: " ";
@@ -59,7 +69,7 @@
   top: 0;
   height: 100%;
   width: 51%;
-  background: #ffd4dd;
+  background: #a356ff;
 }
 
 .orange-chevron:before,
@@ -70,6 +80,15 @@
   height: 100%;
   width: 51%;
   background: #fa6a18;
+}
+.blue-chevron:before,
+.blue-chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #3ebfc6;
 }
 
 .chevron:before {

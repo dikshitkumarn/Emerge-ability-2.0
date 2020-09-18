@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./MeetTheTeam.css";
 import { Row, Col } from "reactstrap";
 import EachMember from "./EachMember/EachMember";
-import MagneticButton from "../UI/MagneticButton/MagneticButton";
+// import MagneticButton from "../UI/MagneticButton/MagneticButton";
+import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const MeetTheTeam = (props) => {
   const [ref] = useState(props.getTeamRef());
@@ -10,6 +11,16 @@ const MeetTheTeam = (props) => {
   return (
     <div ref={ref} style={{ boxSizing: "border-box", position: "relative" }}>
       <div className="team-scroll-to">
+        <ScrollButton
+          onClick={() => {
+            window.scroll(0, projectRef.current.offsetTop + 60);
+          }}
+          name="Projects"
+          textColor="#3ebfc6"
+          color="blue"
+        />
+      </div>
+      {/* <div className="team-scroll-to">
         <MagneticButton
           id="my-team-magnetic-button"
           name="K E E P &nbsp; E X P L O R I N G"
@@ -23,7 +34,7 @@ const MeetTheTeam = (props) => {
           width="130px"
           height="130px"
         />
-      </div>
+      </div> */}
       <div className="heading-with-background">
         <h1 className="sky-blue" id="theteam">
           Meet The Team

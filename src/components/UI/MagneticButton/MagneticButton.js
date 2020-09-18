@@ -92,7 +92,11 @@ const MagneticButton = (props) => {
         >
           {props.noimage ? null : (
             <img
-              src={require("../../../assets/images/icons/forward.png")}
+              src={
+                props.src
+                  ? props.src
+                  : require("../../../assets/images/icons/forward.png")
+              }
               alt=" "
               className="skip-icon"
               color="#a717ee"
@@ -117,7 +121,11 @@ const MagneticButton = (props) => {
       )}
       {props.noimage ? null : (
         <img
-          src={require("../../../assets/images/icons/forward.png")}
+          src={
+            props.src
+              ? props.src
+              : require("../../../assets/images/icons/forward.png")
+          }
           alt=" "
           className="skip-icon"
         />

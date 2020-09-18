@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4553f09.chunk.css",
-    "main.js": "/static/js/main.93199065.chunk.js",
-    "main.js.map": "/static/js/main.93199065.chunk.js.map",
+    "main.css": "/static/css/main.208723f5.chunk.css",
+    "main.js": "/static/js/main.ec834447.chunk.js",
+    "main.js.map": "/static/js/main.ec834447.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5c7ef8c4.js",
     "runtime-main.js.map": "/static/js/runtime-main.5c7ef8c4.js.map",
     "static/css/2.49c38c8a.chunk.css": "/static/css/2.49c38c8a.chunk.css",
-    "static/js/2.c52df0e4.chunk.js": "/static/js/2.c52df0e4.chunk.js",
-    "static/js/2.c52df0e4.chunk.js.map": "/static/js/2.c52df0e4.chunk.js.map",
+    "static/js/2.f9b60fb7.chunk.js": "/static/js/2.f9b60fb7.chunk.js",
+    "static/js/2.f9b60fb7.chunk.js.map": "/static/js/2.f9b60fb7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.03b7e1f12d3c9c2f48e467eb775344fb.js": "/precache-manifest.03b7e1f12d3c9c2f48e467eb775344fb.js",
+    "precache-manifest.cc72484866cc9d56d91f3b6da05cadc5.js": "/precache-manifest.cc72484866cc9d56d91f3b6da05cadc5.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.49c38c8a.chunk.css.map": "/static/css/2.49c38c8a.chunk.css.map",
-    "static/css/main.c4553f09.chunk.css.map": "/static/css/main.c4553f09.chunk.css.map",
-    "static/js/2.c52df0e4.chunk.js.LICENSE.txt": "/static/js/2.c52df0e4.chunk.js.LICENSE.txt",
+    "static/css/main.208723f5.chunk.css.map": "/static/css/main.208723f5.chunk.css.map",
+    "static/js/2.f9b60fb7.chunk.js.LICENSE.txt": "/static/js/2.f9b60fb7.chunk.js.LICENSE.txt",
     "static/media/Second.css": "/static/media/2.43d9b98d.jpg",
     "static/media/Seven.css": "/static/media/9.a45f58d1.jpg",
     "static/media/OurVision.css": "/static/media/15.c6fc7dff.jpg",
@@ -29,7 +29,9 @@
     "static/media/ContactUs.css": "/static/media/Pistilli-Roman.4e3824d5.otf",
     "static/media/index.css": "/static/media/Product Sans Regular.eae9c18c.ttf",
     "static/media/App.css": "/static/media/RifficFree-Bold.a1caf164.ttf",
+    "static/media/aboutThumb.PNG": "/static/media/aboutThumb.c3cdc879.PNG",
     "static/media/brain.mp4": "/static/media/brain.f4cd3a2f.mp4",
+    "static/media/brainThumb.PNG": "/static/media/brainThumb.ca63337e.PNG",
     "static/media/email.png": "/static/media/email.fcc31763.png",
     "static/media/Footer.css": "/static/media/footer-bg.df6086b0.png",
     "static/media/footer-logo.png": "/static/media/footer-logo.fc7ad47f.png",
@@ -41,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.5c7ef8c4.js",
     "static/css/2.49c38c8a.chunk.css",
-    "static/js/2.c52df0e4.chunk.js",
-    "static/css/main.c4553f09.chunk.css",
-    "static/js/main.93199065.chunk.js"
+    "static/js/2.f9b60fb7.chunk.js",
+    "static/css/main.208723f5.chunk.css",
+    "static/js/main.ec834447.chunk.js"
   ]
 }
