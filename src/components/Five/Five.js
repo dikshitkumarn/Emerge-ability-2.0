@@ -201,15 +201,15 @@ const Five = (props) => {
                 </p>
               </div>
               <div className="fifth-scroll">
-                <ScrollButton
+                {/* <ScrollButton
                   onClick={() => {
                     window.scroll(0, fiveThree.current.offsetTop);
                   }}
                   name="Explore More"
                   color="pink"
                   textColor="#a356ff"
-                />
-                {/* <MagneticButton
+                /> */}
+                <MagneticButton
                   rotate="30deg"
                   color="#ffd4dd"
                   hoverColor="#ffd4dd"
@@ -218,7 +218,7 @@ const Five = (props) => {
                   onClick={() => {
                     window.scroll(0, fiveThree.current.offsetTop);
                   }}
-                /> */}
+                />
               </div>
               <div className="empty-div brain-3"></div>
             </div>

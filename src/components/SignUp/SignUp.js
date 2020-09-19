@@ -27,21 +27,21 @@ const genderOptions = [
 ];
 
 const neroDivergent = [
+  { name: "Yes", displayName: "Yes" },
+  { name: "No", displayName: "No" },
   {
     name: "Would Not Prefer To Reveal",
     displayName: "Would Not Prefer To Reveal",
   },
-  { name: "Yes", displayName: "Yes" },
-  { name: "No", displayName: "No" },
 ];
 
 const disability = [
+  { name: "Yes ", displayName: "Yes " },
+  { name: "No ", displayName: "No " },
   {
     name: "Would Not Prefer To Reveal ",
     displayName: "Would Not Prefer To Reveal ",
   },
-  { name: "Yes ", displayName: "Yes " },
-  { name: "No ", displayName: "No " },
 ];
 
 const SignUp = (props) => {
@@ -405,8 +405,8 @@ const SignUp = (props) => {
           onChange={changeHandler}
           label="Why would you like to become an EmergeAbility Champion? (maximum 100 words)"
           textboxName="whyChampion"
-          borderColor="#FACC90"
-          color="#FACC90"
+          borderColor="#421F0B"
+          color="#421F0B"
           width="80vw"
           height="70px"
         />

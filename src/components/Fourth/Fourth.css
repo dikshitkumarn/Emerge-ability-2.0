@@ -140,6 +140,12 @@
   .second {
     max-height: 1500px;
   }
+  /* .flexy {
+    max-width: 90% !important;
+  } */
+}
+
+@media (min-width: 500px) and (max-width: 992px) {
   .flexy {
     max-width: 90% !important;
   }

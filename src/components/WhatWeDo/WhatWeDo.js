@@ -65,8 +65,8 @@ const WhatWeDo = (props) => {
               window.scroll(0, teamRef.current.offsetTop + 60);
             }}
             name="Meet The Team"
-            textColor="white"
-            color="white"
+            textColor="red"
+            color="red"
           />
         </div>
         <Row>

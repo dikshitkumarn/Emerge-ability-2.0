@@ -17,25 +17,25 @@
 }
 .whatwedo-scroll-to {
   position: absolute;
-  bottom: 150px;
+  bottom: 47px;
   left: 100px;
   z-index: 100;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
   .whatwedo-scroll-to {
-    bottom: 70px;
+    bottom: 0px;
     left: 50px;
   }
   .bg-boy {
     height: 200px !important;
-    min-height: 300px;
+    min-height: 400px;
   }
   .WhatWeDo-content-1 div {
-    margin-top: 0 !important;
+    margin-top: 50px !important;
   }
   .WhatWeDo-content-2 div {
-    margin-top: 100px !important;
+    margin-top: 150px !important;
     margin-left: 100px !important;
   }
   .WhatWeDo-content-1 div p,

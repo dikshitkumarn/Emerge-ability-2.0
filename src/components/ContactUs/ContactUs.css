@@ -3,7 +3,7 @@
 }
 
 .contact-left-scroll {
-  margin-left: 70px;
+  margin-left: 100px;
 }
 
 .contact-us-para {
@@ -26,6 +26,7 @@
   }
   .contact-left-scroll {
     margin-top: -200px;
+    margin-left: 100px;
   }
   .each-contact-row:nth-child(2),
   .each-contact-row:nth-child(3) {

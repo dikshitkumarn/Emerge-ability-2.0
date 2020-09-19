@@ -28,7 +28,7 @@
 .aboutus-scroll-to {
   position: absolute;
   bottom: 100px;
-  left: 50px;
+  left: -10px;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
@@ -52,13 +52,23 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .aboutus-scroll-to {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-us-content {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 500px) {
   .aboutus-image h1 {
     display: none;
   }
-  .aboutus-scroll-to {
-    display: none;
-  }
+
   .about-us-content {
     position: relative !important;
     top: 0;

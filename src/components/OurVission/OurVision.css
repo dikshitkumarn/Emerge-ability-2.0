@@ -124,6 +124,12 @@
   bottom: -200px;
   left: 0;
 }
+
+@media (max-width: 1000px) {
+  .ourvision-scroll-to {
+    display: none;
+  }
+}
 /* mobile */
 @media (max-width: 500px) {
   .flexy-our-vision h1 {
@@ -139,9 +145,7 @@
   .absolute-container {
     height: 300px !important;
   }
-  .ourvision-scroll-to {
-    display: none;
-  }
+
   .img-13,
   .img-13-shade {
     width: 150px;

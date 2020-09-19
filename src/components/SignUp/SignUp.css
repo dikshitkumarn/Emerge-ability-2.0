@@ -66,7 +66,7 @@
   font-size: 20px !important;
 }
 @media (max-width: 1000px) {
-  .signUp {
+  .signup-scroll {
     display: none;
   }
 }

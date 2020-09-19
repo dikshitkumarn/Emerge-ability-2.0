@@ -28,6 +28,12 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .myourmission-scroll-to {
+    display: none;
+  }
+}
+
 .our-mission {
   margin-top: 100px;
 }
@@ -47,9 +53,6 @@
 }
 
 @media (max-width: 500px) {
-  .myourmission-scroll-to {
-    display: none;
-  }
   .ourmission-image h1 {
     display: none;
   }
