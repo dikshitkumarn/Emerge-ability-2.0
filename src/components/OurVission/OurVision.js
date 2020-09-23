@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./OurVision.css";
 import { Row, Col } from "reactstrap";
-import MagneticButton from "../UI/MagneticButton/MagneticButton";
+// import MagneticButton from "../UI/MagneticButton/MagneticButton";
 import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const OurVision = (props) => {
@@ -17,6 +17,16 @@ const OurVision = (props) => {
         ref={ourVisionRef}
         className="heading-with-background center-heading"
       >
+        <div className="ourvision-scroll-to">
+          <ScrollButton
+            onClick={() => {
+              window.scroll(0, whatWeDoRef.current.offsetTop + 60);
+            }}
+            name="What We Do"
+            textColor="#fa6a18"
+            color="orange"
+          />
+        </div>
         <h1 className="orange" id="vision">
           Our Vision
         </h1>
@@ -34,16 +44,6 @@ const OurVision = (props) => {
           className="d-flex justify-content-center"
           style={{ maxHeight: 300, position: "relative" }}
         >
-          <div className="ourvision-scroll-to">
-            <ScrollButton
-              onClick={() => {
-                window.scroll(0, whatWeDoRef.current.offsetTop + 60);
-              }}
-              name="What We Do"
-              textColor="#fa6a18"
-              color="orange"
-            />
-          </div>
           <div className="slim-description text-left flexy-our-vision">
             <h1 className="mini-heading orange">
               "Empowering by embracing difference"

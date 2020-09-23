@@ -55,9 +55,8 @@ const Third = (props) => {
             <br />
             <br />
             <br />
-            <h1 className="mini-heading red">
-              “Different, <br />
-              not less
+            <h1 className="mini-heading my-adjust-three red">
+              "Maximising potential "
             </h1>
             <p className="bold">
               75 million school-aged children and youth are in desperate need of

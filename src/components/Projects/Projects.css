@@ -79,7 +79,7 @@
 
 .projects-left-scroll {
   position: absolute;
-  bottom: 200px;
+  bottom: 270px;
   left: 100px;
   z-index: 10;
 }
@@ -101,7 +101,7 @@
     left: -60px;
   }
   .projects-left-scroll {
-    bottom: 300px;
+    bottom: 350px;
     left: 50px;
   }
   .img-20,
@@ -181,8 +181,8 @@
     max-width: 100%;
   }
   .projects-button {
-    bottom: 200px !important;
-    right: 100px !important;
+    bottom: 230px !important;
+    right: 130px !important;
   }
 }
 
@@ -245,6 +245,6 @@
 
 .projects-button {
   position: absolute;
-  bottom: 140px;
-  right: 500px;
+  bottom: 170px;
+  right: 450px;
 }

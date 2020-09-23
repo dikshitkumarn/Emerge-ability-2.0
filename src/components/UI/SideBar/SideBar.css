@@ -33,7 +33,7 @@
   text-decoration: none;
 }
 .each-nav a:hover {
-  opacity: 0.75 !important;
+  opacity: 095 !important;
   text-decoration: none;
 }
 
@@ -48,6 +48,19 @@
   .sidebar-button {
     right: 35vw !important;
     bottom: 50px !important;
+  }
+}
+
+@media (min-width: 614px) and (max-width: 800px) {
+  .navs {
+    max-width: 500px !important;
+  }
+}
+
+@media (max-width: 1030px) and (min-width: 801px) {
+  .rainbow-sidebar {
+    background-size: cover;
+    width: 100vw;
   }
 }
 
@@ -71,6 +84,11 @@
     right: 20px;
     bottom: 0;
   }
+  .rainbow-sidebar {
+    background-size: cover;
+    width: 100vw !important;
+    top: 70vh;
+  }
   .sidebar-social-links-words {
     display: none !important;
   }
@@ -84,11 +102,7 @@
   .sidebar-social-links-words {
     display: none;
   }
-  .rainbow-sidebar {
-    background-size: cover;
-    width: 100vw !important;
-    top: 70vh;
-  }
+
   .each-nav .nav-name a {
     font-size: 50px !important;
   }

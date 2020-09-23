@@ -16,7 +16,7 @@ const EachMember = (props) => {
             <img src={props.image} alt=" " className="member-image" />
           </div>
           <p className="name"> {props.name}</p>
-          <p> {props.job} </p>
+          <p style={{ whiteSpace: "wrap" }}> {props.job} </p>
           <div className="email">
             <p
               style={{ marginTop: 0 }}

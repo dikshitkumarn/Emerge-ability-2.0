@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./WhatWeDo.css";
 import { Row, Col } from "reactstrap";
-import MagneticButton from "../UI/MagneticButton/MagneticButton";
+// import MagneticButton from "../UI/MagneticButton/MagneticButton";
 import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const WhatWeDo = (props) => {
@@ -65,8 +65,8 @@ const WhatWeDo = (props) => {
               window.scroll(0, teamRef.current.offsetTop + 60);
             }}
             name="Meet The Team"
-            textColor="red"
-            color="red"
+            textColor="white"
+            color="white"
           />
         </div>
         <Row>

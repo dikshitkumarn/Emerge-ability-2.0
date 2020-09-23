@@ -42,7 +42,7 @@ const Second = (props) => {
                   name="E X P L O R E &nbsp; M O R E"
                   id="second-scroll-button"
                   onClick={() => {
-                    window.scroll(0, thirdRef.current.offsetTop);
+                    window.scroll(0, thirdRef.current.offsetTop + 100);
                     // window.location.href = "#three";
                   }}
                 />

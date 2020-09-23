@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { findDOMNode } from "react-dom";
+import React, { useEffect, useRef } from "react";
+// import { findDOMNode } from "react-dom";
 import useWindowSize from "./hooks/useWindowSize";
 import "./SkewAnimation.css";
 function SkewAnimation(props) {
@@ -27,44 +27,44 @@ function SkewAnimation(props) {
   useEffect(() => {
     setBodyHeight();
   }, [size.height]);
-  const getBoundingClientRect = (element) => {
-    var style = findDOMNode(element).style;
-    // var style = window.getComputedStyle(element);
-    var margin = {
-      left: parseInt(style["margin-left"]),
-      right: parseInt(style["margin-right"]),
-      top: parseInt(style["margin-top"]),
-      bottom: parseInt(style["margin-bottom"]),
-    };
-    var padding = {
-      left: parseInt(style["padding-left"]),
-      right: parseInt(style["padding-right"]),
-      top: parseInt(style["padding-top"]),
-      bottom: parseInt(style["padding-bottom"]),
-    };
-    var border = {
-      left: parseInt(style["border-left"]),
-      right: parseInt(style["border-right"]),
-      top: parseInt(style["border-top"]),
-      bottom: parseInt(style["border-bottom"]),
-    };
+  // const getBoundingClientRect = (element) => {
+  //   var style = findDOMNode(element).style;
+  //   // var style = window.getComputedStyle(element);
+  //   var margin = {
+  //     left: parseInt(style["margin-left"]),
+  //     right: parseInt(style["margin-right"]),
+  //     top: parseInt(style["margin-top"]),
+  //     bottom: parseInt(style["margin-bottom"]),
+  //   };
+  //   var padding = {
+  //     left: parseInt(style["padding-left"]),
+  //     right: parseInt(style["padding-right"]),
+  //     top: parseInt(style["padding-top"]),
+  //     bottom: parseInt(style["padding-bottom"]),
+  //   };
+  //   var border = {
+  //     left: parseInt(style["border-left"]),
+  //     right: parseInt(style["border-right"]),
+  //     top: parseInt(style["border-top"]),
+  //     bottom: parseInt(style["border-bottom"]),
+  //   };
 
-    var rect = element.current.getBoundingClientRect();
-    rect = {
-      left: rect.left - margin.left,
-      right: rect.right - margin.right - padding.left - padding.right,
-      top: rect.top - margin.top,
-      bottom:
-        rect.bottom -
-        margin.bottom -
-        padding.top -
-        padding.bottom -
-        border.bottom,
-    };
-    rect.width = rect.right - rect.left;
-    rect.height = rect.bottom - rect.top;
-    return rect;
-  };
+  //   var rect = element.current.getBoundingClientRect();
+  //   rect = {
+  //     left: rect.left - margin.left,
+  //     right: rect.right - margin.right - padding.left - padding.right,
+  //     top: rect.top - margin.top,
+  //     bottom:
+  //       rect.bottom -
+  //       margin.bottom -
+  //       padding.top -
+  //       padding.bottom -
+  //       border.bottom,
+  //   };
+  //   rect.width = rect.right - rect.left;
+  //   rect.height = rect.bottom - rect.top;
+  //   return rect;
+  // };
   //Set the height of the body to the height of the scrolling div
   const setBodyHeight = () => {
     document.body.style.height = `${
@@ -85,8 +85,8 @@ function SkewAnimation(props) {
     // Difference between
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
-    const velocity = +acceleration;
-    const skew = velocity * 7.5;
+    // const velocity = +acceleration;
+    // const skew = velocity * 7.5;
 
     scrollContainer.current.style.transform = `translateY(-${data.rounded}px)`;
     //Assign skew and smooth scrolling to the scroll container

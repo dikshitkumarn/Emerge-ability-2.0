@@ -22,6 +22,9 @@
   .odd-one {
     margin-left: 300px;
   }
+  .signup-scroll {
+    left: 50px !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -54,7 +57,7 @@
 .signup-scroll {
   position: absolute;
   left: 100px;
-  bottom: 100px;
+  bottom: 150px;
 }
 
 .textbox-label {

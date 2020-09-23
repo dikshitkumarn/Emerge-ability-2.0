@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./MainLogo.css";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
 
@@ -87,7 +87,7 @@ const MainLogo = (props) => {
           id="mainLogoButton"
           name="E &nbsp;&nbsp;X &nbsp;&nbsp;P &nbsp;&nbsp;L &nbsp;&nbsp;O &nbsp;&nbsp;R &nbsp;&nbsp;E"
           onClick={() => {
-            window.scroll(0, secondRef.current.offsetTop - 200);
+            window.scroll(0, secondRef.current.offsetTop - 130);
           }}
           rotate={"-30deg"}
           width="150px"

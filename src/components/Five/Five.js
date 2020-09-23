@@ -76,7 +76,11 @@ const Five = (props) => {
                 </div>
               </div>
 
-              <div id="first-second" className="each-row odd">
+              <div
+                id="first-second"
+                className="each-row odd"
+                style={{ position: "relative" }}
+              >
                 <div className="empty-div brain-2"></div>
                 <div className="para text-left">
                   <h5 className="bold yellow">Autism Spectrum Condition</h5>
@@ -98,7 +102,7 @@ const Five = (props) => {
                       let firstSecond = document
                         .getElementById("first-second")
                         .getBoundingClientRect().height;
-                      window.scroll(0, firstSecond + window.scrollY);
+                      window.scroll(0, firstSecond + window.scrollY + 40);
                     }}
                     name="Continue"
                     color="white"
@@ -136,7 +140,7 @@ const Five = (props) => {
                     affects areas of the brain that process language.
                   </p>
                 </div>
-                <div className="empty-div"></div>
+                <div className="empty-div my-3-brain"></div>
                 <div className="fifth-scroll">
                   <MagneticButton
                     rotate="30deg"
@@ -169,7 +173,7 @@ const Five = (props) => {
                   difficulties with mathematics.
                 </p>
               </div>
-              <div className="empty-div"></div>
+              <div className="empty-div my-5-brain"></div>
             </div>
 
             <div className="each-row odd">
@@ -211,8 +215,8 @@ const Five = (props) => {
                 /> */}
                 <MagneticButton
                   rotate="30deg"
-                  color="#ffd4dd"
-                  hoverColor="#ffd4dd"
+                  color="#FD4F73"
+                  hoverColor="#FD4F73"
                   name="E X P L O R E &nbsp; M O R E"
                   id="fivetwo"
                   onClick={() => {
@@ -261,11 +265,11 @@ const Five = (props) => {
                       explained by an obvious cause.
                     </p>
                   </div>
-                  <div className="empty-div"></div>
+                  <div className="empty-div my-7-brain"></div>
                 </div>
 
                 <div className="each-row odd">
-                  <div className="fifth-left-scroll">
+                  <div className="fifth-left-scroll-2">
                     <MagneticButton
                       rotate="30deg"
                       hoverColor="#fa6b18db"
@@ -276,11 +280,11 @@ const Five = (props) => {
                       color="#fa6b18db"
                       borderColor="transparent"
                       onClick={() => {
-                        window.scroll(0, sixthRef.current.offsetTop);
+                        window.scroll(0, sixthRef.current.offsetTop + 100);
                       }}
                     />
                   </div>
-                  <div className="empty-div brain-2"></div>
+                  <div className="empty-div my-8-brain"></div>
                   <div className="para text-left">
                     <h5 className="bold dark-red">Tourette Syndrome</h5>
                     <p className="bold white light-weight">

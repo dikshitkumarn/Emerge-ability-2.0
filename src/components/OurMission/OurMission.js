@@ -13,11 +13,30 @@ const OurMission = (props) => {
   );
 
   useEffect(() => {
-    playVideo = document.getElementById("our-mission-magnetic-button");
+    playVideo = document.getElementById("mi-mag-but");
     brainVideo = document.getElementById("brain-video");
     brainVideo.onended = () => {
+      playVideo.style.opacity = 1;
       setPlaying(false);
+      setImage(require("../../assets/images/icons/forward.png"));
     };
+    brainVideo.addEventListener("mouseover", () => {
+      playVideo.style.opacity = 1;
+    });
+    brainVideo.addEventListener("mouseleave", () => {
+      playVideo.style.opacity = 0;
+    });
+    playVideo.addEventListener("mouseover", () => {
+      playVideo.style.opacity = 1;
+    });
+    playVideo.addEventListener("mouseleave", () => {
+      playVideo.style.opacity = 0;
+    });
+    playVideo.addEventListener("click", () => {
+      setTimeout(() => {
+        playVideo.style.opacity = 0;
+      }, 500);
+    });
   }, []);
 
   const playToggle = () => {
@@ -71,7 +90,7 @@ const OurMission = (props) => {
               Brain
               <br /> Video
             </h1> */}
-            <div className="our-mission-button">
+            <div className="our-mission-button" id="mi-mag-but">
               <MagneticButton
                 id="our-mission-magnetic-button"
                 name={playing ? "P A U S E" : "P L A Y V I D E O"}

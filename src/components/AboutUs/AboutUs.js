@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutUs.css";
 import { Row, Col } from "reactstrap";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
@@ -14,11 +14,30 @@ const AboutUs = (props) => {
   );
 
   useEffect(() => {
-    playVideo = document.getElementById("about-us-button");
+    playVideo = document.getElementById("aboutus-button");
     rubixVideo = document.getElementById("rubix-video");
     rubixVideo.onended = () => {
+      playVideo.style.opacity = 1;
       setPlaying(false);
+      setImage(require("../../assets/images/icons/forward.png"));
     };
+    rubixVideo.addEventListener("mouseover", () => {
+      playVideo.style.opacity = 1;
+    });
+    rubixVideo.addEventListener("mouseleave", () => {
+      playVideo.style.opacity = 0;
+    });
+    playVideo.addEventListener("mouseover", () => {
+      playVideo.style.opacity = 1;
+    });
+    playVideo.addEventListener("mouseleave", () => {
+      playVideo.style.opacity = 0;
+    });
+    playVideo.addEventListener("click", () => {
+      setTimeout(() => {
+        if (!playing) playVideo.style.opacity = 0;
+      }, 500);
+    });
   }, []);
 
   const playToggle = () => {
@@ -75,7 +94,7 @@ const AboutUs = (props) => {
             /> */}
             <ScrollButton
               onClick={() => {
-                window.scroll(0, ourMissionRef.current.offsetTop + 60);
+                window.scroll(0, ourMissionRef.current.offsetTop + 50);
               }}
               name="Our Mission"
               color="red"
@@ -97,7 +116,7 @@ const AboutUs = (props) => {
               Rubix
               <br /> Video
             </h1> */}
-            <div className="aboutus-button">
+            <div className="aboutus-button" id="aboutus-button">
               <MagneticButton
                 hoverColor="#fd2955"
                 id="aboutus-magnetic-button"

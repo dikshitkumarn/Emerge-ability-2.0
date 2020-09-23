@@ -1,6 +1,6 @@
 .bg-boy {
   display: block;
-  background-image: url("../../assets/images/Chidren/16.png");
+  background-image: url("../../assets/images/Chidren/16-2.png");
   background-position: center center;
   background-size: 100% 100%;
   min-width: 100vw;
@@ -17,14 +17,14 @@
 }
 .whatwedo-scroll-to {
   position: absolute;
-  bottom: 47px;
+  bottom: 147px;
   left: 100px;
   z-index: 100;
 }
 
 @media (max-width: 1550px) and (min-width: 1000px) {
   .whatwedo-scroll-to {
-    bottom: 0px;
+    bottom: 100px;
     left: 50px;
   }
   .bg-boy {

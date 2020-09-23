@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Seven.css";
 import { Row, Col } from "reactstrap";
-import MagneticButton from "../UI/MagneticButton/MagneticButton";
+// import MagneticButton from "../UI/MagneticButton/MagneticButton";
 import ScrollButton from "../UI/ScrollButton/ScrollButton";
 
 const Seven = (props) => {
@@ -54,7 +54,7 @@ const Seven = (props) => {
           <div className="seventh-button">
             <ScrollButton
               onClick={() => {
-                window.scroll(0, aboutRef.current.offsetTop);
+                window.scroll(0, aboutRef.current.offsetTop + 50);
               }}
               name="About Us"
               color="green"

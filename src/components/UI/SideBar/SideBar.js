@@ -60,7 +60,7 @@ const SideBar = (props) => {
       goto: "#contact",
       color: "#A97AD0",
       active: false,
-      adjust: -100,
+      adjust: -70,
     },
   ]);
 
@@ -68,6 +68,7 @@ const SideBar = (props) => {
     setMenuLinks((prev) => {
       prev.map((el, index) => {
         el.goto = props.refs[index];
+        return null;
       });
       return prev;
     });
@@ -266,7 +267,7 @@ const SideBar = (props) => {
               }}
             >
               <a
-                style={{ color: el.color, opacity: el.active ? 1 : 0.15 }}
+                style={{ color: el.color, opacity: el.active ? 1 : 0.35 }}
                 href={el.goto}
               >
                 {el.name}

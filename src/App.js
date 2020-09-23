@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.css";
 import MainLogo from "./components/MainLogo/MainLogo";
 import Second from "./components/Second/Second";
@@ -21,7 +21,7 @@ import SideBar from "./components/UI/SideBar/SideBar";
 import SkewAnimation from "./components/UI/Animations/SkewAnimation/SkewAnimation";
 import HamburgerIcon from "./components/UI/HamburgerIcon/HamburgerIcon";
 import Navbar from "./components/UI/Navbar/Navbar";
-import PopOver from "./components/UI/PopOver/PopOver";
+// import PopOver from "./components/UI/PopOver/PopOver";
 
 // var main,
 //   second,

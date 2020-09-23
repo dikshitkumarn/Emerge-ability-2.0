@@ -60,15 +60,17 @@
 @media (max-width: 1550px) and (min-width: 1000px) {
   .img-3,
   .img-3-shade {
-    width: 350px;
-    height: 250px;
-    top: 50px;
+    width: 400px;
+    height: 300px;
+    top: 0;
+    /* right: 20%; */
+    left: 10%;
   }
   .img-4,
   .img-4-shade {
-    width: 250px;
-    height: 180px;
-    top: 350px;
+    width: 300px;
+    height: 230px;
+    top: 400px;
   }
   .three-align {
     margin-left: 0 !important;
@@ -78,6 +80,7 @@
 .three-align {
   margin-left: 100px;
   max-width: 320px;
+  margin-top: -50px;
 }
 
 @media (min-width: 100px) and (max-width: 992px) {
@@ -170,6 +173,9 @@
   .three-align {
     max-width: 90% !important;
   }
+  .my-adjust-three {
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 680px) and (min-width: 501px) {
@@ -177,4 +183,9 @@
   .img-4-shade {
     left: 10%;
   }
+}
+
+.my-adjust-three {
+  min-width: 100%;
+  white-space: nowrap;
 }

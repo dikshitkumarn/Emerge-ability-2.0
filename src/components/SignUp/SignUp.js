@@ -9,7 +9,7 @@ import ScrollButton from "../UI/ScrollButton/ScrollButton";
 import RadioButton from "../UI/RadioButton/RadioButton";
 const interestedAsOptions = [
   { name: "Parent", displayName: "Parent" },
-  { name: "Gaurdian", displayName: "Gaurdian" },
+  { name: "Guardian", displayName: "Guardian" },
   { name: "Educator", displayName: "Educator" },
   { name: "Learner", displayName: "Learner" },
   { name: "Advocate", displayName: "Advocate" },
@@ -21,8 +21,8 @@ const genderOptions = [
   { name: "Female", displayName: "Female" },
   { name: "Non Binary", displayName: "Non Binary" },
   {
-    name: "Would not prefer to reveal",
-    displayName: "Would not prefer to reveal",
+    name: "Do not prefer to reveal",
+    displayName: "Do not prefer to reveal",
   },
 ];
 
@@ -30,8 +30,8 @@ const neroDivergent = [
   { name: "Yes", displayName: "Yes" },
   { name: "No", displayName: "No" },
   {
-    name: "Would Not Prefer To Reveal",
-    displayName: "Would Not Prefer To Reveal",
+    name: "Do Not Prefer To Reveal",
+    displayName: "Do Not Prefer To Reveal",
   },
 ];
 
@@ -39,13 +39,13 @@ const disability = [
   { name: "Yes ", displayName: "Yes " },
   { name: "No ", displayName: "No " },
   {
-    name: "Would Not Prefer To Reveal ",
-    displayName: "Would Not Prefer To Reveal ",
+    name: "Do Not Prefer To Reveal ",
+    displayName: "Do Not Prefer To Reveal ",
   },
 ];
 
 const SignUp = (props) => {
-  const [signUpRef, setSignUpRef] = useState(props.getSignUpRef());
+  const [signUpRef] = useState(props.getSignUpRef());
   const formRef = useRef();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -106,7 +106,6 @@ const SignUp = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
   };
-  console.log(formData);
   return (
     <div ref={signUpRef} id="signup">
       <div className="heading-with-background">

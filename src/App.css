@@ -412,8 +412,14 @@ label {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  margin: 5px 2px;
+  margin: 5px 5px;
   border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .fa {
+    font-size: 15px;
+  }
 }
 
 /* .fa:hover {

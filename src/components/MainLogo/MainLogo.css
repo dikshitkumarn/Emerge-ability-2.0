@@ -94,6 +94,14 @@
   }
 }
 
+@media (max-width: 1030px) and (min-width: 801px) {
+  .rainbow {
+    background-size: cover;
+    width: 100vw;
+    animation: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .main-logo-heading .logo {
     width: 90px;

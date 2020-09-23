@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PopOver from "../PopOver/PopOver";
 import "./Navbar.css";
 

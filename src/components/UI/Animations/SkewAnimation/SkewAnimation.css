@@ -8,6 +8,7 @@
   overflow-y: scroll !important;
   overflow-x: hidden;
   background-image: url("../../../../assets/images/BackGround Images/BackgroundElements.png");
+  object-fit: cover;
   animation: slide 100s linear infinite;
 }
 
