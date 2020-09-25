@@ -41,7 +41,7 @@ const Projects = (props) => {
       </div>
       <div className="projects-content">
         <div className="My-Projects" style={{ position: "relative" }}>
-          <Row className="d-flex justify-content-center">
+          <Row>
             <Col>
               <div className="text-left flexy-projects">
                 <h1 className="mini-heading light-orange bold">

@@ -41,28 +41,47 @@ const MeetTheTeam = (props) => {
         </h1>
         <h2 className="mini-heading sky-blue">Meet The Team</h2>
       </div>
-      <Row className="MeetTheTeam">
-        <Col md="6" lg="6" sm="12" xs="12">
-          <div className="adjust-team-1">
-            <EachMember
-              position="C o - f o u n d e r"
-              name="Bhuvana Meenakshi Koteeswaran"
-              job="Gender Gap and Socio-Technology Researcher | AR/VR/XR Evangelist | Mozillian | Wikimedian"
-              email="Bhuvana@EmergeAbility.org"
-              image={require("../../assets/images/Chidren/17.png")}
-            />
-          </div>
+      <Row className="d-flex justify-content-center">
+        {/* className="MeetTheTeam" */}
+        <Col
+          md="6"
+          lg="6"
+          sm="12"
+          xs="12"
+          style={{ maxWidth: "fit-content", marginRight: 30 }}
+        >
+          {/* <div className="adjust-team-1"> */}
+          <EachMember
+            position="C o - f o u n d e r"
+            name="Bhuvana Meenakshi Koteeswaran"
+            job="Gender Gap and Socio-Technology Researcher | AR/VR/XR Evangelist | Mozillian | Wikimedian"
+            email="Bhuvana@EmergeAbility.org"
+            image={require("../../assets/images/Chidren/17.png")}
+            facebook="https://www.facebook.com/kbmtechie"
+            twitter="https://twitter.com/bhuvanakotees1"
+            linkedIn="https://www.linkedin.com/in/bhuvana-meenakshi-koteeswaran-a67b58103/"
+          />
+          {/* </div> */}
         </Col>
-        <Col md="6" lg="6" sm="12" xs="12">
-          <div className="adjust-team-2">
-            <EachMember
-              position="C o - f o u n d e r"
-              name="Leena Haque"
-              job="User Experience Designer | Neurodiversity Specialist | Innovation Architect"
-              email="Leena@EmergeAbility.org"
-              image={require("../../assets/images/Chidren/18.png")}
-            />
-          </div>
+        <Col
+          md="6"
+          lg="6"
+          sm="12"
+          xs="12"
+          style={{ maxWidth: "fit-content", marginRight: 30 }}
+        >
+          {/* <div className="adjust-team-2"> */}
+          <EachMember
+            position="C o - f o u n d e r"
+            name="Leena Haque"
+            job="User Experience Designer | Neurodiversity Specialist | Innovation Architect"
+            email="Leena@EmergeAbility.org"
+            image={require("../../assets/images/Chidren/18.png")}
+            facebook="https://www.facebook.com/leena.haque.3"
+            twitter="https://twitter.com/L1LHulk"
+            linkedIn="https://www.linkedin.com/in/leenajhaque/"
+          />
+          {/* </div> */}
         </Col>
       </Row>
     </div>

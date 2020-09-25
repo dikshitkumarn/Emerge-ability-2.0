@@ -37,9 +37,7 @@ const EachMember = (props) => {
         <div style={{ position: "relative" }}>
           <div className="social-cont">
             <MagneticButton
-              onClick={() =>
-                window.open("https://jsonplaceholder.com", "_blank")
-              }
+              onClick={() => window.open(props.twitter, "_blank")}
               className="fa fa-twitter bg-transparent shadow"
               width="30px"
               component={<i className="fa fa-twitter bg-transparent shadow" />}
@@ -54,9 +52,7 @@ const EachMember = (props) => {
             />
             <MagneticButton
               className="fa fa-linkedin bg-transparent shadow"
-              onClick={() =>
-                window.open("https://jsonplaceholder.com", "_blank")
-              }
+              onClick={() => window.open(props.linkedIn, "_blank")}
               // noInner
               component={<i className="fa fa-linkedin bg-transparent shadow" />}
               width="30px"
@@ -70,9 +66,7 @@ const EachMember = (props) => {
             />
             <MagneticButton
               className="fa fa-facebook bg-transparent shadow"
-              onClick={() =>
-                window.open("https://jsonplaceholder.com", "_blank")
-              }
+              onClick={() => window.open(props.facebook, "_blank")}
               component={<i className="fa fa-facebook bg-transparent shadow" />}
               // noInner
               width="30px"

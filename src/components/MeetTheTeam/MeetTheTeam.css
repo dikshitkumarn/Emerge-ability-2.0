@@ -26,7 +26,6 @@
     right: 200px !important;
   } */
   .team-scroll-to {
-    top: 550px !important;
     left: 60px !important;
   }
   .MeetTheTeam {
@@ -86,7 +85,7 @@
 
 .team-scroll-to {
   position: absolute;
-  top: 600px;
+  bottom: 15vh !important;
   left: 100px;
   z-index: 100;
 }

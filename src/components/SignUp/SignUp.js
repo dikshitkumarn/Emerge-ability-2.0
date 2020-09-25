@@ -3,10 +3,11 @@ import "./SignUp.css";
 import TextBox from "../UI/TextBox/TextBox";
 import CheckBox from "../UI/CheckBox/CheckBox";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
-
+import axios from "axios";
 import Select from "../UI/Select/Select";
 import ScrollButton from "../UI/ScrollButton/ScrollButton";
 import RadioButton from "../UI/RadioButton/RadioButton";
+import { Button } from "reactstrap";
 const interestedAsOptions = [
   { name: "Parent", displayName: "Parent" },
   { name: "Guardian", displayName: "Guardian" },
@@ -62,6 +63,7 @@ const SignUp = (props) => {
     disability: "",
     disabilityReason: "",
   });
+  const [other, setOther] = useState("");
   const [locationOptions, setLocationOptions] = useState([]);
   useEffect(() => {
     const countryList = require("country-list");
@@ -85,6 +87,7 @@ const SignUp = (props) => {
       formData.gender,
       formData.identifyNero,
       formData.disability,
+      other,
     ];
     return (
       requiredValues.every((el) => el.trim() !== "") &&
@@ -105,6 +108,31 @@ const SignUp = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    let submitData = {
+      ...formData,
+      interestedAs: [...formData.interestedAs, other],
+    };
+    console.log(submitData);
+    const url =
+      "https://script.google.com/macros/s/AKfycbxDu1SUh3M9ECXpsz2rNIcaLfad1Zb2ascJHv5dPzWN_4F-3ZcU/exec";
+    fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      cache: "no-cache",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: "Mani" }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log("Something Went Wrong");
+      });
   };
   return (
     <div ref={signUpRef} id="signup">
@@ -262,6 +290,20 @@ const SignUp = (props) => {
               displayName={el.displayName}
             />
           ))}
+          {formData.interestedAs.includes("Other") ? (
+            <TextBox
+              value={other}
+              type="text"
+              placeholder="Your Answer"
+              onChange={(event) => setOther(event.target.value)}
+              textboxName="other"
+              required
+              borderColor="violet"
+              color="#EE82EE"
+              width="80vw"
+              height="50px"
+            />
+          ) : null}
         </div>
         <div className="text-left select-container">
           <br />
@@ -448,8 +490,15 @@ const SignUp = (props) => {
             height="150px"
             align="center"
           />
+          <div className="warning">
+            ⚠️ Your personal information will be kept strictly confidential and
+            will not be sold, reused, rented, loaned or otherwise disclosed. Any
+            information you give us will be treated with the utmost care and
+            will not be used in ways that you have not consented to, unless you
+            have used our website in an unlawful manner.
+          </div>
         </div>
-        {/* <Button disabled={!valid()} type="submit" color="success">
+        {/* <Button onClick={submitHandler} type="button" color="success">
           Submit
         </Button> */}
       </form>

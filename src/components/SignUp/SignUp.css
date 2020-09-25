@@ -27,6 +27,15 @@
   }
 }
 
+.warning {
+  font-size: x-small !important;
+  max-width: 205px;
+  margin-left: 10px;
+  text-align: left;
+  border: 1px solid #f7e771;
+  padding: 2px;
+}
+
 @media (max-width: 600px) {
   .input {
     width: 90vw !important;
@@ -102,5 +111,10 @@
 .signup-button {
   position: absolute;
   bottom: -150px;
-  right: 30vw;
+  right: calc(30vw - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
