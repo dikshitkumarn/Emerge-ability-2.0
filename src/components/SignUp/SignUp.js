@@ -47,6 +47,8 @@ const SignUp = (props) => {
   const [signUpRef] = useState(props.getSignUpRef());
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
+  const [touched, setTouched] = useState(false);
+  const [emailValid, setEmailValid] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -67,10 +69,19 @@ const SignUp = (props) => {
 
   const changeHandler = (event) => {
     const { name, value } = event.target;
+    if (name === "email") {
+      setTouched(true);
+      setEmailValid(validateEmail(event.target.value));
+    }
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+  };
+
+  const validateEmail = (emailAddr) => {
+    const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    return pattern.test(emailAddr);
   };
 
   const valid = () => {
@@ -79,7 +90,6 @@ const SignUp = (props) => {
       formData.lastName,
       formData.email,
       formData.location,
-      formData.website,
       formData.gender,
       formData.identifyNero,
       formData.disability,
@@ -119,17 +129,17 @@ const SignUp = (props) => {
         ...formData,
         interestedAs: [...formData.interestedAs, other],
       };
-      console.log(submitData);
+      // console.log(submitData);
       setLoading(true);
       props.setStatus("Error");
       props.setMessage("Signing up... Please Wait......");
       const form = document.forms["submit-to-google-sheet"];
       fetch(
-        "https://script.google.com/macros/s/AKfycbxDu1SUh3M9ECXpsz2rNIcaLfad1Zb2ascJHv5dPzWN_4F-3ZcU/exec",
+        "https://script.google.com/macros/s/AKfycbyvwWlk7TJw9HIuDUN50EPhr41qb6O1zE6VRQ0darAUuPa6oaFO/exec",
         { method: "POST", body: new FormData(form) }
       )
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setLoading(false);
           props.setStatus("Success");
           props.setMessage("Success");
@@ -138,8 +148,8 @@ const SignUp = (props) => {
           setLoading(false);
           props.setStatus("Error");
           props.setMessage("Error");
-          console.log("error: " + err);
-          console.log("Something Went Wrong");
+          // console.log("error: " + err);
+          // console.log("Something Went Wrong");
         });
     }
   };
@@ -290,19 +300,25 @@ const SignUp = (props) => {
           width="30vw"
           height="50px"
         />
-        <TextBox
-          value={formData.email}
-          type="email"
-          placeholder="Email"
-          onChange={changeHandler}
-          label="Email"
-          textboxName="email"
-          required
-          borderColor="violet"
-          color="#EE82EE"
-          width="80vw"
-          height="50px"
-        />
+        <div>
+          <TextBox
+            value={formData.email}
+            type="email"
+            placeholder="Email"
+            onChange={changeHandler}
+            label="Email"
+            textboxName="email"
+            required
+            borderColor="violet"
+            color="#EE82EE"
+            width="80vw"
+            height="50px"
+          />
+          {touched && !emailValid ? (
+            <p className="visual-correction">⚠️Please enter a valid email !</p>
+          ) : null}
+          <br />
+        </div>
         <br />
         <div className="text-left select-container">
           <label className="label">
@@ -374,7 +390,7 @@ const SignUp = (props) => {
           <label className="label">
             <p className="red">*</p>
             <h1 className={`textbox-label`} style={{ color: "blue" }}>
-              Do you identify as a neurodivergent
+              Do you identify as a neurodivergent ?
             </h1>
           </label>
           <input
@@ -425,7 +441,7 @@ const SignUp = (props) => {
           <label className="label">
             <p className="red">*</p>
             <h1 className={`textbox-label`} style={{ color: "#BC34E8" }}>
-              Do you have any disability
+              Do you have any disability ?
             </h1>
           </label>
           <input
@@ -520,7 +536,8 @@ const SignUp = (props) => {
         />
         <TextBox
           value={formData.website}
-          type="text"
+          type="url"
+          pattern="https?://.+"
           onChange={changeHandler}
           label="Enter the URL of Your website"
           textboxName="website"
@@ -528,7 +545,6 @@ const SignUp = (props) => {
           color="blue"
           width="80vw"
           height="70px"
-          required
         />
 
         <div className="signup-button">
@@ -540,7 +556,7 @@ const SignUp = (props) => {
             hoverColor="#7ac054"
             name="S I G N &nbsp; U P"
             rotate="-30deg"
-            onClick={() => {}}
+            onClick={submitHandler}
             align="right"
             width="150px"
             height="150px"

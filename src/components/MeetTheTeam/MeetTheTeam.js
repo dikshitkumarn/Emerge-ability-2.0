@@ -55,7 +55,7 @@ const MeetTheTeam = (props) => {
             position="C o - f o u n d e r"
             name="Bhuvana Meenakshi Koteeswaran"
             job="Gender Gap and Socio-Technology Researcher | AR/VR/XR Evangelist | Mozillian | Wikimedian"
-            email="Bhuvana@EmergeAbility.org"
+            email="bhuvana@emergeability.org"
             image={require("../../assets/images/Chidren/17.png")}
             facebook="https://www.facebook.com/kbmtechie"
             twitter="https://twitter.com/bhuvanakotees1"
@@ -75,7 +75,7 @@ const MeetTheTeam = (props) => {
             position="C o - f o u n d e r"
             name="Leena Haque"
             job="User Experience Designer | &nbsp;&nbsp;&nbsp; Neurodiversity Specialist | Innovation Architect"
-            email="Leena@EmergeAbility.org"
+            email="leena@emergeability.org"
             image={require("../../assets/images/Chidren/18.png")}
             facebook="https://www.facebook.com/leena.haque.3"
             twitter="https://twitter.com/L1LHulk"

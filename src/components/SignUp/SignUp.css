@@ -26,7 +26,14 @@
     left: 50px !important;
   }
 }
-
+.visual-correction {
+  font-size: 15px;
+  color: red;
+  font-weight: lighter;
+  margin: 0;
+  margin-left: 10px !important;
+  text-align: left;
+}
 .warning-2 {
   font-size: x-small !important;
   max-width: 205px;
