@@ -3,11 +3,9 @@ import "./SignUp.css";
 import TextBox from "../UI/TextBox/TextBox";
 import CheckBox from "../UI/CheckBox/CheckBox";
 import MagneticButton from "../UI/MagneticButton/MagneticButton";
-import axios from "axios";
 import Select from "../UI/Select/Select";
 import ScrollButton from "../UI/ScrollButton/ScrollButton";
 import RadioButton from "../UI/RadioButton/RadioButton";
-import { Button } from "reactstrap";
 const interestedAsOptions = [
   { name: "Parent", displayName: "Parent" },
   { name: "Guardian", displayName: "Guardian" },
@@ -45,9 +43,18 @@ const disability = [
   },
 ];
 
+var gapi = window.gapi;
+
+const SPREADSHEET_ID = "18QZZacuhNzh0IT_e29_irSMUZwVeJbdSd6O4zsR1__o"; //from the URL of your blank Google Sheet
+const CLIENT_ID =
+  "2d280542491u-3aofp4eFeftog7q0u5a73ro566h8vi.apps.googleusercontent.com"; //from https://console.developers.google.com/apis/credentials
+const API_KEY = "AIzaSyC56DAG2ORrEQ1RN5jjY6j_zVTaICvCGjs"; //https://console.developers.google.com/apis/credentials
+const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
+
 const SignUp = (props) => {
   const [signUpRef] = useState(props.getSignUpRef());
   const formRef = useRef();
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -65,10 +72,7 @@ const SignUp = (props) => {
   });
   const [other, setOther] = useState("");
   const [locationOptions, setLocationOptions] = useState([]);
-  useEffect(() => {
-    const countryList = require("country-list");
-    setLocationOptions([...countryList.getNames()]);
-  }, []);
+
   const changeHandler = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({
@@ -87,13 +91,17 @@ const SignUp = (props) => {
       formData.gender,
       formData.identifyNero,
       formData.disability,
-      other,
     ];
     return (
       requiredValues.every((el) => el.trim() !== "") &&
       requiredValues.length !== 0
     );
   };
+
+  useEffect(async () => {
+    const countryList = require("country-list");
+    await setLocationOptions([...countryList.getNames()]);
+  }, []);
 
   const changeDropdown = (el) => {
     setFormData((prev) => {
@@ -107,33 +115,61 @@ const SignUp = (props) => {
   };
 
   const submitHandler = (e) => {
+    // https://script.google.com/macros/s/AKfycbxDu1SUh3M9ECXpsz2rNIcaLfad1Zb2ascJHv5dPzWN_4F-3ZcU/exec
     e.preventDefault();
-    let submitData = {
-      ...formData,
-      interestedAs: [...formData.interestedAs, other],
-    };
-    console.log(submitData);
-    const url =
-      "https://script.google.com/macros/s/AKfycbxDu1SUh3M9ECXpsz2rNIcaLfad1Zb2ascJHv5dPzWN_4F-3ZcU/exec";
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      cache: "no-cache",
-      redirect: "follow",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name: "Mani" }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("Something Went Wrong");
-      });
+    if (!valid()) {
+      props.setStatus("Error");
+      props.setMessage("Please fill out the required fields");
+    } else {
+      let submitData = {
+        ...formData,
+        interestedAs: [...formData.interestedAs, other],
+      };
+      console.log(submitData);
+      setLoading(true);
+      props.setStatus("Error");
+      props.setMessage("Signing up... Please Wait......");
+      const form = document.forms["submit-to-google-sheet"];
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxDu1SUh3M9ECXpsz2rNIcaLfad1Zb2ascJHv5dPzWN_4F-3ZcU/exec",
+        { method: "POST", body: new FormData(form) }
+      )
+        .then((res) => {
+          console.log(res);
+          setLoading(false);
+          props.setStatus("Success");
+          props.setMessage("Success");
+        })
+        .catch((err) => {
+          setLoading(false);
+          props.setStatus("Error");
+          props.setMessage("Error");
+          console.log("error: " + err);
+          console.log("Something Went Wrong");
+        });
+    }
   };
+
+  useEffect(() => {
+    if (props.status === "Success" || props.status === "Error") {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        interestedAs: [],
+        location: "",
+        whyChampion: "",
+        whatChallenges: "",
+        gender: "",
+        website: "",
+        identifyNero: "",
+        neroReason: "",
+        disability: "",
+        disabilityReason: "",
+      });
+    }
+  }, [props.status]);
+
   return (
     <div ref={signUpRef} id="signup">
       <div className="heading-with-background">
@@ -228,6 +264,7 @@ const SignUp = (props) => {
       <br />
       <br />
       <form
+        name="submit-to-google-sheet"
         ref={formRef}
         id="form"
         onSubmit={submitHandler}
@@ -280,6 +317,11 @@ const SignUp = (props) => {
               I am interested as a
             </h1>
           </label>
+          <input
+            style={{ display: "none" }}
+            name="interestedAs"
+            value={formData.interestedAs.join(", ")}
+          />
           <p>&nbsp;&nbsp;Please Select an Option</p>
           {interestedAsOptions.map((el, index) => (
             <CheckBox
@@ -313,6 +355,11 @@ const SignUp = (props) => {
               Gender
             </h1>
           </label>
+          <input
+            style={{ display: "none" }}
+            name="gender"
+            value={formData.gender}
+          />
           {genderOptions.map((el, index) => (
             <RadioButton
               key={index}
@@ -336,6 +383,11 @@ const SignUp = (props) => {
               Do you identify as a neurodivergent
             </h1>
           </label>
+          <input
+            style={{ display: "none" }}
+            name="Do You Identify As nerodivergent ?"
+            value={formData.identifyNero}
+          />
           {neroDivergent.map((el, index) => (
             <RadioButton
               key={index}
@@ -382,6 +434,11 @@ const SignUp = (props) => {
               Do you have any disability
             </h1>
           </label>
+          <input
+            style={{ display: "none" }}
+            name="Do you have any disability"
+            value={formData.disability}
+          />
           {disability.map((el, index) => (
             <RadioButton
               key={index}
@@ -422,9 +479,14 @@ const SignUp = (props) => {
         <br />
         <div style={{ width: "80vw", textAlign: "left", marginTop: 50 }}>
           <label className="label">
-            <h1 className="textbox-label orange">Country</h1>
+            <h1 className="textbox-label orange">*Country</h1>
           </label>
           {/* <p>What's your location?</p> */}
+          <input
+            style={{ display: "none" }}
+            name="location"
+            value={formData.location}
+          />
           <Select
             boxShadox="#cc5417"
             value={formData.location}
@@ -478,7 +540,7 @@ const SignUp = (props) => {
         <div className="signup-button">
           <MagneticButton
             id="signup-magnetic-button"
-            disabled={!valid()}
+            // disabled={!valid()}
             type="submit"
             color="green"
             hoverColor="#7ac054"
@@ -490,7 +552,7 @@ const SignUp = (props) => {
             height="150px"
             align="center"
           />
-          <div className="warning">
+          <div className="warning-2">
             ⚠️ Your personal information will be kept strictly confidential and
             will not be sold, reused, rented, loaned or otherwise disclosed. Any
             information you give us will be treated with the utmost care and
@@ -498,9 +560,6 @@ const SignUp = (props) => {
             have used our website in an unlawful manner.
           </div>
         </div>
-        {/* <Button onClick={submitHandler} type="button" color="success">
-          Submit
-        </Button> */}
       </form>
 
       <br />

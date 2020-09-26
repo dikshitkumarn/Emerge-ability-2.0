@@ -26,6 +26,7 @@ const TextBox = (props) => {
         onChange={props.onChange}
         required={props.required}
         type={props.type ? props.type : "text"}
+        {...props}
       />
     </div>
   );

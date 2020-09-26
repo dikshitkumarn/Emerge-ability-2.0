@@ -74,7 +74,7 @@ const MeetTheTeam = (props) => {
           <EachMember
             position="C o - f o u n d e r"
             name="Leena Haque"
-            job="User Experience Designer | Neurodiversity Specialist | Innovation Architect"
+            job="User Experience Designer | &nbsp;&nbsp;&nbsp; Neurodiversity Specialist | Innovation Architect"
             email="Leena@EmergeAbility.org"
             image={require("../../assets/images/Chidren/18.png")}
             facebook="https://www.facebook.com/leena.haque.3"

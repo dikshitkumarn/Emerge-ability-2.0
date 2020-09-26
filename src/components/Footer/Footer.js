@@ -9,7 +9,14 @@ const Footer = (props) => {
   // };
 
   return (
-    <div className="Footer-container">
+    <div className="Footer-container" style={{ position: "relative" }}>
+      <div className="warning">
+        ⚠️ Your personal information will be kept strictly confidential and will
+        not be sold, reused, rented, loaned or otherwise disclosed. Any
+        information you give us will be treated with the utmost care and will
+        not be used in ways that you have not consented to, unless you have used
+        our website in an unlawful manner.
+      </div>
       <div className="Footer">
         <img
           src={require("../../assets/images/BackGround Images/footer-logo.png")}

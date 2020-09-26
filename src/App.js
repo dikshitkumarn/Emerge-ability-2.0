@@ -21,6 +21,7 @@ import SideBar from "./components/UI/SideBar/SideBar";
 import SkewAnimation from "./components/UI/Animations/SkewAnimation/SkewAnimation";
 import HamburgerIcon from "./components/UI/HamburgerIcon/HamburgerIcon";
 import Navbar from "./components/UI/Navbar/Navbar";
+import Alert from "./components/UI/Alert/Alert";
 // import PopOver from "./components/UI/PopOver/PopOver";
 
 // var main,
@@ -42,6 +43,8 @@ import Navbar from "./components/UI/Navbar/Navbar";
 
 function App() {
   const [show, setShow] = useState(false);
+  const [status, setstatus] = useState(null);
+  const [message, setmessage] = useState("");
   // const [ids, setIds] = useState([]);
   const meetTheTeamRef = useRef();
   const signUpRef = useRef();
@@ -58,6 +61,19 @@ function App() {
   const missionRef = useRef();
   const visionRef = useRef();
   const whatWeDoRef = useRef();
+
+  const setStatus = (s) => {
+    setstatus(s);
+  };
+
+  const setMessage = (m) => {
+    setmessage(m);
+  };
+
+  const hideAlert = () => {
+    setstatus(null);
+    setmessage("");
+  };
 
   const getAppId = () => {
     return document.getElementById("appId");
@@ -208,7 +224,13 @@ function App() {
           />
         </div>
         <div id="my-sign-up">
-          <SignUp getSignUpRef={getSignUpRef} />
+          <SignUp
+            getSignUpRef={getSignUpRef}
+            setStatus={setStatus}
+            setMessage={setMessage}
+            hideAlert={hideAlert}
+            status={status}
+          />
         </div>
 
         <Footer getHomeRef={getHomeRef} />
@@ -230,6 +252,7 @@ function App() {
           height="30px"
         />
       </div>
+      <Alert status={status} message={message} hideAlert={hideAlert} />
     </div>
   );
 }
