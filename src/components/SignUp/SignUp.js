@@ -43,14 +43,6 @@ const disability = [
   },
 ];
 
-var gapi = window.gapi;
-
-const SPREADSHEET_ID = "18QZZacuhNzh0IT_e29_irSMUZwVeJbdSd6O4zsR1__o"; //from the URL of your blank Google Sheet
-const CLIENT_ID =
-  "2d280542491u-3aofp4eFeftog7q0u5a73ro566h8vi.apps.googleusercontent.com"; //from https://console.developers.google.com/apis/credentials
-const API_KEY = "AIzaSyC56DAG2ORrEQ1RN5jjY6j_zVTaICvCGjs"; //https://console.developers.google.com/apis/credentials
-const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
-
 const SignUp = (props) => {
   const [signUpRef] = useState(props.getSignUpRef());
   const formRef = useRef();
@@ -119,7 +111,9 @@ const SignUp = (props) => {
     e.preventDefault();
     if (!valid()) {
       props.setStatus("Error");
-      props.setMessage("Please fill out the required fields");
+      props.setMessage(
+        "Please fill out all the required fields and Try again !"
+      );
     } else {
       let submitData = {
         ...formData,
